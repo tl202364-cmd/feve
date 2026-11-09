@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>SkyHunt RPG Wiki</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700;800;900&display=swap">
+<style>
+/* layout: 1 cot doc, nav dinh tren; theme TOI co dinh (nhan dien game) */
+:root{
+  --bg:#0d0b16; --panel:#161322; --panel2:#1d1930; --line:#2b2640;
+  --fg:#e8e4f4; --mut:#9a93b2; --gold:#ffd24d; --accent:#c77dff;
+  --b:#7fd4ff; --s:#ffd24d; --ss:#ff6fd8; --sss:#ff4a3c;
+  color-scheme:dark;
+}
+body{background:var(--bg);color:var(--fg);font-family:'Be Vietnam Pro',system-ui,sans-serif;line-height:1.65;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:0}
+.wrap{max-width:880px;margin:0 auto;padding-block:0 60px}
+a{color:var(--b);text-decoration:none}
+h1,h2,h3{text-wrap:balance;line-height:1.25}
+header.hero{text-align:center;padding:42px 0 10px}
+.hero .tag{display:inline-block;font-size:12.5px;font-weight:700;letter-spacing:.3em;color:var(--accent);text-transform:uppercase;
+  border:1px solid #4b3f6e;border-radius:999px;padding:5px 14px;background:#1a1430}
+.hero h1{margin:12px 0 4px;font-size:clamp(34px,7vw,54px);font-weight:900;
+  background:linear-gradient(180deg,#fff3cf 15%,#ffd24d 55%,#eda62b 85%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p{color:var(--mut);max-width:560px;margin:0 auto}
+.ip{display:inline-flex;align-items:center;gap:8px;margin-top:14px;font-weight:800;font-size:17px;color:#d9f7c9;
+  background:rgba(90,200,90,.1);border:1px solid rgba(120,220,120,.35);border-radius:999px;padding:8px 20px}
+.ip i{width:9px;height:9px;border-radius:50%;background:#6fe26f;box-shadow:0 0 8px #6fe26f}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;display:flex;gap:6px;overflow-x:auto;padding:10px 2px;margin-top:18px;
+  background:rgba(13,11,22,.92);backdrop-filter:blur(6px);border-bottom:1px solid var(--line)}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:rgba(13,11,22,.92)}
+nav a{flex:none;font-size:13.5px;font-weight:700;color:var(--mut);padding:7px 13px;border-radius:999px;border:1px solid transparent}
+nav a:hover{color:var(--fg);border-color:var(--line);background:var(--panel)}
+section{margin-top:44px}
+section h2{font-size:24px;font-weight:900;color:var(--gold);display:flex;align-items:center;gap:10px}
+section h2::after{content:"";flex:1;height:1px;background:var(--line)}
+section h3{font-size:17px;font-weight:800;margin-top:22px;color:#d9d2ef}
+p,li{color:#c9c3dc}
+ul{padding-left:22px}
+li{margin:4px 0}
+b{color:var(--fg)}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:16px 18px;margin-top:14px}
+.steps{counter-reset:s;display:flex;flex-direction:column;gap:10px;margin-top:14px}
+.steps .st{counter-increment:s;display:flex;gap:14px;background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:13px 16px}
+.steps .st::before{content:counter(s);flex:none;width:28px;height:28px;border-radius:50%;background:var(--gold);color:#241b05;
+  font-weight:900;display:flex;align-items:center;justify-content:center;margin-top:2px}
+.tablewrap{overflow-x:auto;margin-top:14px;border:1px solid var(--line);border-radius:12px}
+table{border-collapse:collapse;width:100%;min-width:560px;font-size:14.5px}
+th{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--mut);text-align:left;padding:11px 14px;background:var(--panel2)}
+td{padding:10px 14px;border-top:1px solid var(--line)}
+td:first-child{font-weight:700;white-space:nowrap}
+.lv{color:var(--mut);font-variant-numeric:tabular-nums;white-space:nowrap}
+.rank{display:inline-block;font-size:11.5px;font-weight:900;border-radius:6px;padding:1px 8px;color:#16101e}
+.rB{background:var(--b)}.rS{background:var(--s)}.rSS{background:var(--ss)}.rSSS{background:var(--sss);color:#fff}
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:12px;margin-top:14px}
+.phu{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:13px 15px}
+.phu b{display:block;margin-bottom:2px}
+.phu .plus{color:#8fe28f;font-weight:700}
+kbd{font-family:inherit;font-weight:700;background:var(--panel2);border:1px solid var(--line);border-bottom-width:3px;border-radius:7px;padding:1px 9px;white-space:nowrap}
+.note{font-size:13.5px;color:var(--mut)}
+footer{margin-top:56px;padding:22px 0 10px;border-top:1px solid var(--line);text-align:center;color:var(--mut);font-size:13.5px}
+footer .big{font-size:20px;font-weight:900;color:var(--gold)}
+</style>
+
+</head>
+<body style="margin:0">
+<div class="wrap">
+<header class="hero">
+  <span class="tag">Wiki chính thức</span>
+  <h1>SkyHunt RPG</h1>
+  <p>Server Minecraft RPG Việt: nhân vật gacha có tuyệt kỹ cutscene, cổng phụ bản theo cấp, trùm thế giới và Liệt Giới Hư Không.</p>
+  <div class="ip"><i></i> skyhunt.online</div>
+</header>
+
+<nav>
+  <a href="#batdau">Bắt đầu</a><a href="#nhanvat">Nhân vật</a><a href="#gacha">Gacha</a><a href="#cong">Cổng</a>
+  <a href="#lietgioi">Liệt Giới</a><a href="#phuchu">Phù Chú</a><a href="#tudo">Tủ Đồ</a><a href="#nap">Nạp</a><a href="#lenh">Lệnh</a>
+</nav>
+
+<section id="batdau">
+<h2>Bắt đầu</h2>
+<div class="steps">
+  <div class="st"><div><b>Vào server</b> bằng Minecraft Java, địa chỉ <kbd>skyhunt.online</kbd>. Nhận gói tài nguyên khi được hỏi — toàn bộ vũ khí 3D, giao diện, trang phục đều nằm trong đó.</div></div>
+  <div class="st"><div><b>Chọn nhân vật</b> tại Đảo Cổng Trời: ngắm từng nhân vật đứng trước mặt rồi chuột trái lao vào cổng để về Trại.</div></div>
+  <div class="st"><div><b>Đánh trận đầu</b>: bấm nút <b>Bắt Đầu Cuộc Chiến</b> để vào Cổng Lão Bí bản siêu dễ — làm quen kỹ năng, nhặt đồ, thắng là lên cấp ngay.</div></div>
+  <div class="st"><div><b>Hành Trình Tân Thủ</b>: đạt <b>Lv 10 = 1 Vé Premium</b>, <b>Lv 20 = 1 Vé Premium</b>, <b>Lv 25 = 3 Vé Premium</b> + danh hiệu <b>Người Gác Cổng</b>. Quà phát thẳng, lên cấp là có.</div></div>
+  <div class="st"><div><b>Quay lại ngày 2 và 3</b>: điểm danh ngày 2 nhận <b>3 Vé Premium</b>, ngày 3 có quà tiếp. Dưới Lv 40 còn được cộng thêm XP để đuổi kịp người chơi cũ.</div></div>
+</div>
+</section>
+
+<section id="nhanvat">
+<h2>Nhân vật</h2>
+<p>Mỗi nhân vật là một bộ kỹ năng + tuyệt kỹ có cutscene riêng. Sở hữu qua gacha, nâng cấp bằng Bồi Dưỡng và Đột Phá. Trùng nhân vật khi quay sẽ lên <b>tinh (C1–C6)</b> làm nhân vật mạnh hơn.</p>
+<div class="tablewrap"><table>
+<tr><th>Hạng</th><th>Nhân vật</th><th>Danh hiệu</th><th>Vai trò</th></tr>
+<tr><td><span class="rank rSSS">SSS</span></td><td>Tu La</td><td>Hư Không Kiếm Đế</td><td>Kiếm đế hút máu, Huyết Nộ càng đánh càng sôi</td></tr>
+<tr><td><span class="rank rSSS">SSS</span></td><td>Minh Chung</td><td>Thánh Chùy Phán Quang</td><td>Chiến tư tế — vừa đánh vừa hồi máu cả đội</td></tr>
+<tr><td><span class="rank rSSS">SSS</span></td><td>Tàn Dương</td><td>Sát Thủ Hoàng Hôn</td><td>Lướt xuyên hàng, gắn Ấn Hoàng Hôn rồi kích nổ</td></tr>
+<tr><td><span class="rank rSSS">SSS</span></td><td>Thiên Thu</td><td>Vĩnh Hằng Thời Chủ</td><td>Pháp sư thời gian, Dư Âm vọng lại sát thương</td></tr>
+<tr><td><span class="rank rSS">SS</span></td><td>Dạ Lôi</td><td>Lôi Đế Cửu Thiên</td><td>DPS cận chiến tốc độ cao</td></tr>
+<tr><td><span class="rank rSS">SS</span></td><td>Nguyệt Ly</td><td>Tàn Nguyệt Ảnh Sát</td><td>Sát thủ dồn sát thương một mục tiêu</td></tr>
+<tr><td><span class="rank rSS">SS</span></td><td>Tinh Dao</td><td>Tinh Hà Thánh Nữ</td><td>Hỗ trợ cao cấp: khiên, buff, hồi năng lượng</td></tr>
+<tr><td><span class="rank rSS">SS</span></td><td>Mặc Ảnh</td><td>Ám Dạ Tử Thần</td><td>Song đao bóng tối, kết liễu dây chuyền</td></tr>
+<tr><td><span class="rank rSS">SS</span></td><td>Lạc Ảnh</td><td>Thâm Vực Liêm Chủ</td><td>Lưỡi hái nuốt hồn, hút máu bám trụ</td></tr>
+<tr><td><span class="rank rSS">SS</span></td><td>Đan Thanh</td><td>Thánh Bút Họa Tiên</td><td>Pháp sư thủy mặc, nổ mực lan dây chuyền</td></tr>
+<tr><td><span class="rank rSS">SS</span></td><td>Kính Hoa</td><td>Toái Kính Sát Cơ</td><td>Sát thủ gương vỡ, dư ảnh chém theo</td></tr>
+<tr><td><span class="rank rSS">SS</span></td><td>Bạch Hổ</td><td>Thương Thần Hổ Khiếu</td><td>Thương thủ lao xuyên hàng, thần thú vồ theo</td></tr>
+<tr><td><span class="rank rSS">SS</span></td><td>Quyền Phong</td><td>Nắm Đấm Bão Tố</td><td>Quyền thủ combo — càng cao đánh càng đau</td></tr>
+<tr><td><span class="rank rSS">SS</span></td><td>Nham Nguyệt</td><td>Trăng Trên Vách Đá</td><td>Tank khiên đá, càng trâu đánh càng đau</td></tr>
+<tr><td><span class="rank rSS">SS</span></td><td>Tịch Vũ</td><td>Tứ Yến Nguyệt Xạ</td><td>Cung thủ 4 én ánh trăng bắn theo tâm nhìn</td></tr>
+<tr><td><span class="rank rSS">SS</span></td><td>Tiểu Nhi</td><td>Thâm Vực Đăng Nữ</td><td>Pháp sư đèn lồng, quỷ hỏa nảy giữa quái</td></tr>
+<tr><td><span class="rank rS">S</span></td><td>Lam Uyên</td><td>Long Cơ Biển Thẳm</td><td>Tank chặn sát thương, che chở cả đội</td></tr>
+<tr><td><span class="rank rS">S</span></td><td>Bích Linh</td><td>Ngọc Thụ Thần Nữ</td><td>Xạ thủ triệu hồi, vừa bắn vừa hồi máu đội</td></tr>
+<tr><td><span class="rank rB">B</span></td><td>Hàn Dạ</td><td>Kiếm Khách Băng</td><td>Tank khởi đầu — đỡ đòn, kéo quái</td></tr>
+<tr><td><span class="rank rB">B</span></td><td>Phong Linh</td><td>Xạ Thủ Gió</td><td>Bắn xa, giữ khoảng cách</td></tr>
+<tr><td><span class="rank rB">B</span></td><td>Viêm Hy</td><td>Pháp Sư Lửa</td><td>Phép lan diện rộng, máu mỏng</td></tr>
+<tr><td><span class="rank rB">B</span></td><td>Thánh Ca</td><td>Thánh Nữ Ánh Sáng</td><td>Hồi máu, giữ cả đội sống sót</td></tr>
+</table></div>
+</section>
+
+<section id="gacha">
+<h2>Gacha</h2>
+<ul>
+  <li><b>Vé Thường</b> — kiếm từ chơi game: mốc tân thủ, điểm danh, sự kiện, phần thưởng cổng.</li>
+  <li><b>Vé Premium</b> — vé cao cấp từ mốc tân thủ, điểm danh ngày 2, Mốc Nạp và sự kiện lớn.</li>
+  <li>Quay ra <b>nhân vật trùng</b> → tăng tinh C1–C6. Đạt C6 rồi vẫn ra trùng sẽ được <b>bù vé</b>.</li>
+  <li>Ra nhân vật mới có <b>cutscene ra mắt</b> riêng — SSS là khoảnh khắc cả server nhìn thấy.</li>
+</ul>
+</section>
+
+<section id="cong">
+<h2>Cổng — phụ bản theo cấp</h2>
+<p>Lập đội tại hub rồi mở cổng. Mỗi cổng nhiều phòng, cuối cùng là trùm. Càng khó thưởng càng lớn.</p>
+<h3>Cổng chính</h3>
+<div class="tablewrap"><table>
+<tr><th>Cổng</th><th>Cấp</th><th>Trùm</th></tr>
+<tr><td>Cổng Lão Bí</td><td class="lv">1–20</td><td>Vua Bí Ngô</td></tr>
+<tr><td>Cổng Sương Lĩnh</td><td class="lv">20–40</td><td>Băng Hậu Vô Diện</td></tr>
+<tr><td>Cổng Lò Than</td><td class="lv">40–60</td><td>Hỏa Ma Diệm Ảnh</td></tr>
+<tr><td>Cổng Hải Cung Thâm Uyên</td><td class="lv">60–75</td><td>Hải Long Vương Ô Uế</td></tr>
+<tr><td>Cổng Rừng Già Vạn Niên</td><td class="lv">70–85</td><td>Mộc Ma Mẫu Thụ</td></tr>
+<tr><td>Cổng Thiên Ma Điện</td><td class="lv">85–100</td><td>Thiên Ma Vô Diện</td></tr>
+<tr><td>Cổng Vân Đoạn Nhai</td><td class="lv">100+</td><td>Phích Lịch</td></tr>
+</table></div>
+<h3>Đền thử thách</h3>
+<div class="tablewrap"><table>
+<tr><th>Đền</th><th>Cấp đề nghị</th><th>Trùm</th></tr>
+<tr><td>Đền Lá Phong</td><td class="lv">10</td><td>Diệp Cơ</td></tr>
+<tr><td>Cầu Huyết Nguyệt</td><td class="lv">50</td><td>Xích Nguyệt</td></tr>
+<tr><td>Tháp Đồng Hồ</td><td class="lv">75</td><td>Thời Linh — trùm tua ngược thời gian</td></tr>
+</table></div>
+<h3>Trùm thế giới</h3>
+<p>Xuất hiện theo lịch, cả server cùng đánh: <b>Cự Thần Chiến</b> (Nham Hoàng), <b>Hải Vương Cửu Uyên</b> (Hải Vương), <b>Mẫu Thụ Cổ Nhân</b> (Mộc Yêu), <b>Thiết Chung Vạn Cổ</b> (Thiết Chung). Muốn tập đánh thử mọi kỹ năng: vào <b>Đấu Trường Phong Diệp</b>.</p>
+</section>
+
+<section id="lietgioi">
+<h2>Liệt Giới Hư Không <span class="note" style="letter-spacing:0">(Lv 70+ · endgame)</span></h2>
+<p>Phụ bản vô hạn tầng theo luật <b>rút lui hay tham lam</b>. Hạ trùm mỗi chu kỳ xong, cả đội rơi xuống <b>Bến Lặng Hư Không</b> — hòn đảo nghỉ giữa hư không — và mỗi người tự chọn:</p>
+<ul>
+  <li><b>Mở rương rút lui</b>: nhận toàn bộ túi thưởng đang gom, về nhà an toàn. Ai về thì về.</li>
+  <li><b>Nhảy vào giếng kính tím đi tiếp</b>: tầng sau khó hơn, nhưng túi thưởng nhân lên — <b>x1.6 → x2.5 → x4</b> và tiếp tục tăng theo độ sâu. Thua giữa chừng là <b>mất cả túi</b>.</li>
+</ul>
+<div class="card">
+<b>Ba dân làng trên đảo nghỉ</b> (giá tăng theo độ sâu, mỗi món chỉ mua 1 lần/lượt):
+<ul>
+  <li><b>Y Sư</b> — hồi đầy máu cả đội.</li>
+  <li><b>Thương Nhân</b> — bán <b>Hộ Mệnh</b> (+1 mạng) và <b>Bảo Hiểm</b> (thua vẫn giữ 50% túi).</li>
+  <li><b>Thầy Bói</b> — <b>Thám Báo</b>: xem trước phù chú tầng kế.</li>
+</ul>
+</div>
+<p class="note">Đồ rơi vật lý nhặt được trong trận vẫn là của bạn — chỉ phần thưởng kết thúc mới nằm trong túi cược.</p>
+</section>
+
+<section id="phuchu">
+<h2>Phù Chú Map</h2>
+<p>Gắn phù vào cổng trước khi mở để tự làm khó bản thân — đổi lấy thưởng cộng thêm. Gắn từ <b>3 phù trở lên</b> được +1 món đồ cuối trận. Phù rơi từ trùm (tỉ lệ tăng theo độ khó). Mỗi cổng có bảng kỷ lục đội phá nhiều phù nhất.</p>
+<div class="grid2">
+  <div class="phu"><b>Cuồng Thể</b> Quái +30% máu <span class="plus">· thưởng +12%</span></div>
+  <div class="phu"><b>Sát Ý</b> Quái +20% sát thương <span class="plus">· thưởng +12%</span></div>
+  <div class="phu"><b>Tật Phong</b> Quái chạy nhanh +25% <span class="plus">· thưởng +15%</span></div>
+  <div class="phu"><b>Bạo Liệt</b> Quái phát nổ khi chết <span class="plus">· thưởng +18%</span></div>
+  <div class="phu"><b>Thiên Lôi</b> Sét đánh ngẫu nhiên cả trận <span class="plus">· thưởng +18%</span></div>
+  <div class="phu"><b>Tù Ước</b> Cả đội −1 mạng <span class="plus">· thưởng +25%</span></div>
+</div>
+</section>
+
+<section id="tudo">
+<h2>Tủ Đồ — trang phục <kbd>/cos</kbd></h2>
+<ul>
+  <li><b>16 bộ trang phục</b>: mũ 3D, giáp/đồ sau lưng, hình vũ khí. Mua bằng <b>SHP</b>, một lần là vĩnh viễn cho cả tài khoản.</li>
+  <li>Mỗi ngày rương Tủ Đồ ở hub chỉ <b>bán 1 bộ</b>, đổi vòng tròn — ưng bộ nào canh ngày nó lên kệ. Đã có 1 món của bộ nào thì mua tiếp bộ đó lúc nào cũng được.</li>
+  <li>Mua lẻ từng món được (chỉ ngoại hình). <b>Gom đủ bộ mới có chỉ số</b>, và chỉ số các bộ <b>cộng dồn</b> — sưu tập càng nhiều càng mạnh.</li>
+  <li>Món sau lưng (cánh, áo choàng, balo…) hiện trên người bạn ở hub cho cả server thấy.</li>
+</ul>
+</section>
+
+<section id="nap">
+<h2>Nạp & Top Nạp</h2>
+<ul>
+  <li>Nạp qua web nhận <b>SHP</b> + tích <b>Mốc Nạp</b> trong tháng (500K → 5M, mỗi mốc một phần quà, lịch reset đầu tháng).</li>
+  <li><b>Top Nạp mùa</b>: từ ngày 9 đến ngày 8 tháng sau. Quà tự trao qua hộp thư khi hết mùa:
+    <ul>
+      <li><b>Top 1</b> — 1 nhân vật SSS tự chọn <i>hoặc</i> Thần Khí tự chọn (Tu La / Minh Chung) + bộ trang phục mùa + danh hiệu.</li>
+      <li><b>Top 2</b> — 1 Thần Khí tự chọn + trang phục mùa + danh hiệu.</li>
+      <li><b>Top 3</b> — trang phục mùa + danh hiệu. Top 4–5 có quà nhỏ hơn.</li>
+    </ul>
+  </li>
+  <li>Bảng xếp hạng hiển thị hologram tại cả 4 hub, cập nhật trực tiếp.</li>
+</ul>
+</section>
+
+<section id="lenh">
+<h2>Lệnh hay dùng</h2>
+<div class="tablewrap"><table>
+<tr><th>Lệnh</th><th>Công dụng</th></tr>
+<tr><td><kbd>/cos</kbd></td><td>Tủ đồ trang phục + thú cưng</td></tr>
+<tr><td><kbd>/trangbi</kbd></td><td>Trang bị thật của nhân vật</td></tr>
+<tr><td><kbd>/pvp</kbd></td><td>Đấu Trường Nguyệt Đài — solo 1v1 bằng 3 nhân vật cân bằng riêng</td></tr>
+<tr><td><kbd>/nuoithu</kbd></td><td>Nuôi thú cưng lấy thiên phú</td></tr>
+<tr><td><kbd>/samtruy</kbd></td><td>Bay lượn một chiều ngắm toàn server</td></tr>
+<tr><td><kbd>/store</kbd></td><td>Nạp SHP</td></tr>
+</table></div>
+<p class="note">Mẹo: hầu hết tính năng mở được từ <b>Sổ Tay</b> trong túi đồ — không cần nhớ lệnh.</p>
+</section>
+
+<footer>
+  <div class="big">skyhunt.online</div>
+  <div>SkyHunt RPG · wiki cập nhật theo phiên bản server · nội dung game có thể thay đổi sau các bản update</div>
+</footer>
+</div>
+
+</body>
+</html>
