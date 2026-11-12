@@ -75,6 +75,8 @@ button,input{font:inherit;color:inherit}
 .card h4{margin:0;font-size:15px}
 .card p{margin:4px 0 0;font-size:13px;color:var(--mut)}
 .card .x{position:absolute;right:8px;top:8px;width:28px;height:28px;border-radius:8px;border:0;background:transparent;font-size:18px;cursor:pointer;color:var(--mut)}
+.hubtag{position:absolute;left:50%;top:56px;translate:-50% 0;z-index:6;font-weight:800;font-size:13px;background:rgba(10,10,16,.85);border:1px solid var(--line);padding:4px 12px;border-radius:999px;white-space:nowrap;pointer-events:none}
+#layer{transition:opacity .25s}
 .hint{position:absolute;left:50%;bottom:10px;translate:-50% 0;z-index:6;font-size:12px;color:#ccc;background:rgba(10,10,16,.75);padding:4px 10px;border-radius:999px;white-space:nowrap;pointer-events:none}
 /* panel */
 .panel{min-width:0}
@@ -95,6 +97,7 @@ button,input{font:inherit;color:inherit}
 .mat span{display:block;font-size:11.5px;color:var(--mut);line-height:1.3}
 .note{font-size:12.5px;color:var(--mut)}
 @media (max-width:920px){ .cols{grid-template-columns:1fr} .mapwrap{height:58svh;height:58vh} }
+@media (max-width:620px){ .hubs{display:grid;grid-template-columns:1fr 1fr;overflow:visible} .hub{justify-content:center;padding:9px 8px;font-size:13px;white-space:normal;text-align:center} }
 @media (max-width:420px){ .mats{grid-template-columns:1fr} .chip{display:none} .q{font-size:12.5px;padding:6px 10px} }
 </style>
 </head>
@@ -119,6 +122,7 @@ button,input{font:inherit;color:inherit}
         <span class="lgi" data-cat="ti"><i style="background:var(--ti)"></i>NPC / tiện ích</span>
       </div>
       <div class="zoomui"><button id="zin" aria-label="Phóng to">+</button><button id="zout" aria-label="Thu nhỏ">−</button><button id="zfit" aria-label="Vừa khung" style="font-size:14px">⤢</button></div>
+      <div class="hubtag" id="hubtag"></div>
       <div class="hint" id="hint">Kéo để di chuyển · 2 ngón / lăn chuột để phóng to</div>
       <div class="card" id="card"><h4 id="ct"></h4><p id="cd"></p><button class="x" id="cx" aria-label="Đóng">×</button></div>
     </div>
@@ -145,26 +149,26 @@ button,input{font:inherit;color:inherit}
 </div>
 <script>
 const HUBS = [
- {id:0,img:'img/hub0.png',x0:-168,z0:-168,x1:168,z1:168,col:'#FFB36B',name:'Torii Thiên Môn',
+ {id:0,img:'img/hub0.png?v=2',x0:-168,z0:-168,x1:168,z1:168,col:'#FFB36B',name:'Torii Thiên Môn',
   desc:'Hub khởi đầu — thung lũng phong đỏ, sông Torii chảy qua trấn.',
   dd:[['Quảng Trường Xuất Hiện',0.5,19.5,'ti'],['Bếp Linh Thú',11.5,6.5,'ti'],['Lão Ngư · Hồ Koi',99.5,74.5,'ti'],
       ['Quán Trà Bên Sông',-5.5,56.5,'dd'],['Chùa Năm Tầng',78.5,-67.5,'dd'],['Suối Nước Nóng',-105.5,36.5,'dd'],
       ['Làng Phong Diệp',-45.5,106.5,'dd'],['Ruộng Bậc Thang',34.5,114.5,'dd'],['Sông Torii',-104.5,-0.5,'dd'],
       ['Đền Đỉnh Núi',-95.5,-109.5,'dd'],['Rương Tủ Đồ',1.5,4.5,'ti'],['NPC Lữ Hành',3.5,17.5,'ti']]},
- {id:1,img:'img/hub1.png',x0:-168,z0:-168,x1:168,z1:168,col:'#9A7BFF',name:'Bằng Nguyệt Sơn Môn',
+ {id:1,img:'img/hub1.png?v=2',x0:-168,z0:-168,x1:168,z1:168,col:'#9A7BFF',name:'Bằng Nguyệt Sơn Môn',
   desc:'Sơn môn tuyết phủ dưới trăng — hồ băng, rừng thông và núi cao.',
   dd:[['Quảng Trường Xuất Hiện',0.5,13.5,'ti'],['Bếp Linh Thú',4.5,-0.5,'ti'],['Lão Ngư · Ao Sương Linh',-21.5,90.5,'ti'],
       ['Hồ Băng Vạn Niên',-96.5,15.5,'dd'],['Nhà Cối Xay',34.5,76.5,'dd'],['Nhà Bỏ Hoang',-14.5,-76.5,'dd'],
       ['Bãi Tiều Phu',46.5,-87.5,'dd'],['Am Ẩn Sĩ',-3.5,-105.5,'dd'],['Nhà Thợ Săn',100.5,-73.5,'dd'],
       ['Trại Nghỉ',118.5,20.5,'dd'],['Chòi Canh Đổ Nát',-125.5,-49.5,'dd'],['Rương Tủ Đồ',1.5,5.5,'ti'],['NPC Lữ Hành',-3.5,12.5,'ti']]},
- {id:2,img:'img/hub2.png',x0:-168,z0:-168,x1:168,z1:168,col:'#7EE07A',name:'Cổ Mộc Thủy Trấn',
+ {id:2,img:'img/hub2.png?v=2',x0:-168,z0:-168,x1:168,z1:168,col:'#7EE07A',name:'Cổ Mộc Thủy Trấn',
   desc:'Thủy trấn giữa rừng rễ cổ — làng chài, đầm lầy sương và cây đại thụ.',
   dd:[['Quảng Trường Xuất Hiện',0.5,13.5,'ti'],['Bếp Linh Thú',4.5,6.5,'ti'],['Lão Ngư · Phá Rễ Cổ',47.5,61.5,'ti'],
       ['Mỏm Đá Ngắm Phá',66.5,64.5,'dd'],['Làng Chài',-51.5,70.5,'dd'],['Nhà Thầy Lang',-94.5,-14.5,'dd'],
       ['Đầm Lầy Sương Mù',-110.5,-30.5,'dd'],['Cây Đại Thụ',96.5,-15.5,'dd'],['Vòng Nấm',80.5,-89.5,'dd'],
       ['Đền Rêu Cổ',-41.5,-103.5,'dd'],['Ao Đom Đóm',22.5,-107.5,'dd'],['Trại Nuôi Ong',114.5,48.5,'dd'],
       ['Rương Tủ Đồ',6.5,0.5,'ti'],['NPC Lữ Hành',-3.5,12.5,'ti']]},
- {id:3,img:'img/hub3.png',x0:-135,z0:-138,x1:139,z1:140,col:'#C77DFF',name:'Thiên Không Phố Thành',
+ {id:3,img:'img/hub3.png?v=2',x0:-135,z0:-138,x1:139,z1:140,col:'#C77DFF',name:'Thiên Không Phố Thành',
   desc:'Phố thành lơ lửng giữa hư không — thạch anh, vườn tím và đài thiên văn.',
   dd:[['Quảng Trường Xuất Hiện',0.5,13.5,'ti'],['Bếp Linh Thú',3.5,6.5,'ti'],['Lão Ngư · Ao Trăng',-57.5,11.5,'ti'],
       ['Vườn Trắng',-63.5,2.5,'dd'],['Đảo Cổng Vỡ',64.5,0.5,'dd'],['Hốc Thạch Anh',71.5,85.5,'dd'],
@@ -218,8 +222,8 @@ function matEl(m, sub){
 }
 function loadHub(i, keepView){
   H = HUBS[i]; hubIx = i; sel = -1; $('card').classList.remove('on');
-  if (img.getAttribute('src') !== H.img) img.src = H.img;
-  $('hname').textContent = H.name; $('hdesc').textContent = H.desc;
+  if (img.getAttribute('src') !== H.img) { layer.style.opacity = .25; img.src = H.img; }
+  $('hname').textContent = H.name; $('hdesc').textContent = H.desc; $('hubtag').innerHTML = `<span style="color:${H.col}">■</span> ${H.name}`;
   document.querySelectorAll('.hub').forEach((e, j) => e.classList.toggle('on', j === i));
   marks.innerHTML = ''; $('ddlist').innerHTML = ''; $('tilist').innerHTML = '';
   H.dd.forEach((d, j) => {
@@ -241,7 +245,7 @@ function loadHub(i, keepView){
   $('timed').innerHTML = ''; TIMED.forEach(m => $('timed').appendChild(matEl(m)));
   $('rare').innerHTML = ''; RARE.forEach(m => $('rare').appendChild(matEl(m)));
   filterApply();
-  const done = () => { fit(); };
+  const done = () => { fit(); layer.style.opacity = 1; };
   img.complete && img.naturalWidth ? done() : img.onload = done;
 }
 function select(j, zoom){
