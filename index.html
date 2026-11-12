@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="vi">
+<html lang="vi" data-theme="dark">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
@@ -15,6 +15,9 @@
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap">
 <style>
+article.page{scroll-margin-top:80px}
+.mi{width:20px;height:20px;image-rendering:pixelated;vertical-align:-4px;margin-right:5px}
+
 /* layout: docs 2 cot — sidebar 250px + noi dung 720px; gan don sac, 1 mau nhan */
 :root{
   --bg:#fafaf9; --panel:#ffffff; --fg:#1c1b1f; --mut:#6e6b76; --line:#e7e5ec;
@@ -131,7 +134,8 @@ footer{max-width:1060px;margin:0 auto;padding:18px 0 26px;border-top:1px solid v
     <a href="#nhanvat">Nhân vật</a>
     <a href="#nangcap">Nâng cấp nhân vật</a>
     <a href="#nguyento">Nguyên Tố</a>
-    <a href="#trangbi">Trang bị &amp; Thần Khí</a>
+    <a href="#trangbi">Trang bị</a>
+    <a href="#thankhi">Thần Khí</a>
     <a href="#gacha">Gacha</a>
     <a href="#cong">Cổng &amp; Trùm</a>
     <a href="#lietgioi">Liệt Giới Hư Không</a>
@@ -139,6 +143,7 @@ footer{max-width:1060px;margin:0 auto;padding:18px 0 26px;border-top:1px solid v
   </div>
   <div class="grp"><div class="lbl">Hoạt động</div>
     <a href="#hoatdong">Hoạt động tại hub</a>
+    <a href="#nuoithu">Nuôi Thú &amp; Nguyên Liệu</a>
   </div>
   <div class="grp"><div class="lbl">Cửa hàng</div>
     <a href="#tudo">Tủ Đồ (trang phục)</a>
@@ -166,8 +171,10 @@ footer{max-width:1060px;margin:0 auto;padding:18px 0 26px;border-top:1px solid v
     <li><a href="#cong">Cổng &amp; Trùm</a> — phụ bản theo cấp, đền thử thách, trùm thế giới.</li>
     <li><a href="#lietgioi">Liệt Giới Hư Không</a> — chế độ rút lui hay tham lam (Lv 70+).</li>
     <li><a href="#nguyento">Nguyên Tố</a> — 4 hệ, khắc chế, Nguyên Lực tài khoản.</li>
-    <li><a href="#trangbi">Trang bị &amp; Thần Khí</a> — rune, luyện khí, thức tỉnh M0–M5.</li>
+    <li><a href="#trangbi">Trang bị</a> — rune, luyện khí, trang sức.</li>
+    <li><a href="#thankhi">Thần Khí</a> — 11 bảo vật, thức tỉnh M0–M5, Ngộ Đạo, Khắc Ấn, Hiến Tế.</li>
     <li><a href="#hoatdong">Hoạt động tại hub</a> — câu cá, đấu giá, linh thú, địa danh, PvP.</li>
+    <li><a href="#nuoithu">Nuôi Thú &amp; Nguyên Liệu</a> — thu thập, nguyên liệu theo giờ, Sổ Thảo Mộc, minigame nấu ăn, Lò Phù.</li>
     <li><a href="#tudo">Tủ Đồ</a> — 16 bộ trang phục, cách mua và chỉ số.</li>
   </ul>
   <h2>Thông tin</h2>
@@ -299,7 +306,7 @@ footer{max-width:1060px;margin:0 auto;padding:18px 0 26px;border-top:1px solid v
     <li>Đầy thanh → sàn vỡ, cả đội rơi xuống tầng dưới. Hạ quái liên tục đạt mốc combo 50 / 100 / 150… sẽ có <b>mưa vàng</b>.</li>
     <li>Mỗi tầng có 1–2 <b>hòm chém vỡ</b> (cả đội đều có phần) và một <b>bao rương chạy trốn</b> — chém rơi vàng, hạ được là nổ đồ.</li>
     <li><b>Cấp Liệt Giới</b> tăng vô hạn: mỗi cấp quái trâu hơn (×1.12 máu) và đau hơn (×1.06), thêm giáp. Mỗi ngày có <b>3 lượt miễn phí</b>.</li>
-    <li>Thắng mang về <b>Hòm Liệt Giới</b> mở tại Trại: Đồng → Bạc → Vàng → Hư Không theo cấp, kèm Mảnh Thần và tích lũy Thần Khí.</li>
+    <li>Thắng mang về <b>Hòm Liệt Giới</b> mở tại Trại: Đồng → Bạc → Vàng → Hư Không theo cấp, kèm Mảnh Thần và tích lũy <a href="#thankhi">Thần Khí</a> (đủ 110 chắc chắn ra).</li>
   </ul>
   <h2>Ấn Hỗn Loạn — buff của quái</h2>
   <p>Mỗi lượt quái mang <b>2–3 ấn ngẫu nhiên</b>; càng xuống sâu (chơi kiểu tham lam) ấn càng chồng thêm. Mỗi ấn làm lượt khó hơn khoảng 20%.</p>
@@ -326,19 +333,21 @@ footer{max-width:1060px;margin:0 auto;padding:18px 0 26px;border-top:1px solid v
 <article class="page" id="phuchu">
   <div class="crumb">Wiki / Hệ thống</div>
   <h1>Phù Chú Map</h1>
-  <p class="lead">Gắn phù vào cổng trước khi mở để tự làm khó bản thân, đổi lấy thưởng cộng thêm.</p>
+  <p class="lead">Gắn phù vào cổng trước khi mở để tự làm khó bản thân, đổi lấy thêm vàng và XP cho cả đội.</p>
+  <div class="callout">Phù <b>không rơi từ trùm</b> nữa — tự chế ở <b>Lò Phù</b> trong menu NPC Bếp Linh Thú (cả 4 hub) bằng nguyên liệu thu thập. Xem <a href="#nuoithu">Nuôi Thú &amp; Nguyên Liệu</a>.</div>
   <div class="tbl"><table>
-    <tr><th>Phù</th><th>Hiệu ứng</th><th>Thưởng</th></tr>
-    <tr><td>Cuồng Thể</td><td>Quái +30% máu</td><td class="dim">+12%</td></tr>
-    <tr><td>Sát Ý</td><td>Quái +20% sát thương</td><td class="dim">+12%</td></tr>
-    <tr><td>Tật Phong</td><td>Quái chạy nhanh +25%</td><td class="dim">+15%</td></tr>
-    <tr><td>Bạo Liệt</td><td>Quái phát nổ khi chết</td><td class="dim">+18%</td></tr>
-    <tr><td>Thiên Lôi</td><td>Sét đánh ngẫu nhiên cả trận</td><td class="dim">+18%</td></tr>
-    <tr><td>Tù Ước</td><td>Cả đội bớt 1 mạng</td><td class="dim">+25%</td></tr>
+    <tr><th>Phù</th><th>Hiệu ứng</th><th>Thưởng</th><th>Công thức (Lò Phù)</th></tr>
+    <tr><td><img class="mi" src="img/p_trau.png" alt=""><b>Cường Thể</b></td><td>Quái +30% máu</td><td class="dim">+12%</td><td><img class="mi" src="img/m_dong_reu.png" alt="">3 Quặng Đồng Rêu, <img class="mi" src="img/m_thach_suong.png" alt="">2 Thạch Anh Sương, <img class="mi" src="img/m_dareu.png" alt="">4 Đá Rêu Phong</td></tr>
+    <tr><td><img class="mi" src="img/p_hung.png" alt=""><b>Sát Ý</b></td><td>Quái +20% sát thương</td><td class="dim">+12%</td><td><img class="mi" src="img/m_nhua_phong.png" alt="">3 Nhựa Phong Đỏ, <img class="mi" src="img/m_da_lua.png" alt="">2 Đá Lửa Phế Thành, <img class="mi" src="img/m_cophong.png" alt="">4 Cỏ Phong Diệp</td></tr>
+    <tr><td><img class="mi" src="img/p_nhanh.png" alt=""><b>Tật Phong</b></td><td>Quái nhanh hơn 25%</td><td class="dim">+15%</td><td><img class="mi" src="img/m_long_may.png" alt="">3 Lông Vũ Mây, <img class="mi" src="img/m_hat_nguyet.png" alt="">2 Hạt Nguyệt Bạch, <img class="mi" src="img/m_sen_dam.png" alt="">2 Lá Sen Đầm, <img class="mi" src="img/m_nang_trua.png" alt="">1 Tinh Hoa Ráng Chiều</td></tr>
+    <tr><td><img class="mi" src="img/p_no.png" alt=""><b>Bạo Liệt</b></td><td>Quái chết phát nổ sau 1 giây</td><td class="dim">+18%</td><td><img class="mi" src="img/m_set_phusa.png" alt="">3 Đất Sét Phù Sa, <img class="mi" src="img/m_bui_sao.png" alt="">3 Bụi Sao Trời, <img class="mi" src="img/m_nam_la.png" alt="">2 Nấm Lá Khô, <img class="mi" src="img/m_hoang_hon.png" alt="">1 Hoa Hoàng Hôn</td></tr>
+    <tr><td><img class="mi" src="img/p_set.png" alt=""><b>Thiên Lôi</b></td><td>Sét truy đuổi người chơi</td><td class="dim">+18%</td><td><img class="mi" src="img/m_bui_sao.png" alt="">2 Bụi Sao Trời, <img class="mi" src="img/m_tuyet_lien.png" alt="">3 Tuyết Liên, <img class="mi" src="img/m_mam_duoc.png" alt="">2 Mầm Đước Thơm, <img class="mi" src="img/m_suong_mai.png" alt="">1 Sương Đêm Ngọc</td></tr>
+    <tr><td><img class="mi" src="img/p_tu.png" alt=""><b>Tử Ước</b></td><td>Cả đội bớt 1 mạng</td><td class="dim">+25%</td><td><img class="mi" src="img/m_da_quang.png" alt="">1 Quả Dạ Quang, <img class="mi" src="img/m_dom_dom.png" alt="">1 Đom Đóm Linh, <img class="mi" src="img/m_linhchi.png" alt="">1 Linh Chi, <img class="mi" src="img/m_huyenthach.png" alt="">4 Huyền Vũ Thạch</td></tr>
   </table></div>
   <ul>
+    <li>Đội trưởng gắn phù ở menu cổng; phù bị trừ khi mở cổng, áp cho cả đội.</li>
     <li>Gắn từ <b>3 phù trở lên</b>: +1 món đồ ở phần thưởng cuối trận.</li>
-    <li>Phù rơi từ trùm; độ khó càng cao tỉ lệ rơi càng lớn.</li>
+    <li>Phù cao cấp cần <b>nguyên liệu theo giờ</b> — phải online đúng khung giờ mới gom đủ.</li>
     <li>Mỗi cổng có bảng kỷ lục đội phá được nhiều phù nhất.</li>
   </ul>
   <div class="pn"><a href="#lietgioi"><span class="dir">Trước</span>← Liệt Giới</a><a href="#tudo"><span class="dir">Tiếp theo</span>Tủ Đồ →</a></div>
@@ -422,7 +431,7 @@ footer{max-width:1060px;margin:0 auto;padding:18px 0 26px;border-top:1px solid v
     <tr><td>Thiết Chung Vạn Cổ</td><td>✦ Lôi (phụ Hỏa)</td><td class="dim">55</td></tr>
     <tr><td>Cổng Vân Đoạn Nhai</td><td>➤ Phong (phụ Lôi)</td><td class="dim">60</td></tr>
   </table></div>
-  <div class="pn"><a href="#nangcap"><span class="dir">Trước</span>← Nâng cấp nhân vật</a><a href="#trangbi"><span class="dir">Tiếp theo</span>Trang bị &amp; Thần Khí →</a></div>
+  <div class="pn"><a href="#nangcap"><span class="dir">Trước</span>← Nâng cấp nhân vật</a><a href="#trangbi"><span class="dir">Tiếp theo</span>Trang bị →</a></div>
 </article>
 
 <article class="page" id="nangcap">
@@ -453,7 +462,7 @@ footer{max-width:1060px;margin:0 auto;padding:18px 0 26px;border-top:1px solid v
 
 <article class="page" id="trangbi">
   <div class="crumb">Wiki / Hệ thống</div>
-  <h1>Trang bị &amp; Thần Khí</h1>
+  <h1>Trang bị</h1>
   <p class="lead">Đồ trong SkyHunt là dữ liệu gắn với tài khoản — không dupe được, không mang ra ngoài chế độ Cổng. Xem đồ bằng <kbd>/trangbi</kbd>.</p>
   <h2>Trang bị &amp; Rune</h2>
   <p>Giáp và vũ khí rơi trong cổng có độ hiếm và dòng chỉ số; món xịn mang <b>Rune</b> — hiệu ứng đặc biệt khi chiến đấu:</p>
@@ -472,14 +481,75 @@ footer{max-width:1060px;margin:0 auto;padding:18px 0 26px;border-top:1px solid v
     <li>Mỗi vũ khí có 2–3 <b>dòng ngẫu nhiên</b>; mỗi lần đột phá thêm 1 dòng (tối đa 5), đủ 5 dòng thì cường hóa một dòng ngẫu nhiên.</li>
     <li><b>Đá Tẩy Luyện</b>: random lại một dòng tự chọn. Vũ khí 5 sao luyện đủ sẽ đạt danh hiệu <b>Viên Mãn</b>.</li>
   </ul>
-  <h2>Thần Khí</h2>
+  <h2>Trang sức Huyền Thoại</h2>
   <ul>
-    <li>Bảo vật <b>nội tại của cả tài khoản</b> — mỗi nhân vật đeo một món, ô riêng.</li>
-    <li>Mỗi món: chỉ số chính lớn + một <b>Đại Nội Tại</b> (bị động có điều kiện) + 2 dòng phụ có độ đẹp 0–100%.</li>
-    <li><b>Thức tỉnh M0 → M5</b>: nhặt trùng món là lên bậc, mỗi bậc +10% chỉ số chính và mạnh thêm Đại Nội Tại. M5 mà nhặt trùng nữa → đổi thành 40 Mảnh Thần. Có hệ thống pity tích lũy.</li>
     <li><b>Nhẫn &amp; Dây chuyền Huyền Thoại</b>: trang sức hiếm theo kho từng nhân vật — bán lại được ở Đấu Giá.</li>
+    <li>Bảo vật mạnh nhất của tài khoản là <b>Thần Khí</b> — xem trang <a href="#thankhi">Thần Khí</a>.</li>
   </ul>
-  <div class="pn"><a href="#nguyento"><span class="dir">Trước</span>← Nguyên Tố</a><a href="#gacha"><span class="dir">Tiếp theo</span>Gacha →</a></div>
+  <div class="pn"><a href="#nguyento"><span class="dir">Trước</span>← Nguyên Tố</a><a href="#thankhi"><span class="dir">Tiếp theo</span>Thần Khí →</a></div>
+</article>
+
+<article class="page" id="thankhi">
+  <div class="crumb">Wiki / Hệ thống</div>
+  <h1>Thần Khí</h1>
+  <p class="lead">Bảo vật của cả tài khoản, rơi từ <a href="#lietgioi">Liệt Giới Hư Không</a>. Mỗi nhân vật đeo một món, ô riêng. Mở menu bằng <b>Sổ Tay → Thần Khí</b> hoặc chuột phải vào <b>Bàn Thờ Hư Không</b> trong Điện Thần Khí ở Trại.</p>
+  <h2>Cách có Thần Khí</h2>
+  <ul>
+    <li>Rơi khi hạ trùm Liệt Giới và khi mở <b>Hòm Vàng / Hòm Hư Không</b>. Tỉ lệ thấp, cấp Liệt Giới càng sâu tỉ lệ càng cao.</li>
+    <li><b>Tích lũy</b>: mỗi lần có cơ hội mà không ra sẽ cộng tích lũy. Đủ <b>110</b> thì chắc chắn nhận 1 Thần Khí.</li>
+    <li>Nhặt trùng món đã có = <b>Thức Tỉnh</b> M0 → M5, mỗi bậc +10% chỉ số chính và mạnh thêm Đại Nội Tại. M5 nhặt trùng nữa đổi thành 40 <b>Mảnh Thần</b>.</li>
+    <li>Thần Khí rao bán được ở <b>Đấu Giá Kim Diệp</b>.</li>
+  </ul>
+  <h2>11 Thần Khí</h2>
+  <p>Mỗi món: chỉ số chính lớn + một <b>Đại Nội Tại</b> (bị động có điều kiện, mạnh dần theo bậc M) + 2 dòng phụ có độ đẹp 0–100%.</p>
+  <div class="tbl"><table>
+    <tr><th>Thần Khí</th><th>Chỉ số chính</th><th>Đại Nội Tại</th></tr>
+    <tr><td><img class="mi" src="img/r_thiennhan.png" alt=""><b>Thiên Nhãn</b><br><span class="dim">Chí mạng</span></td><td>20% tỉ lệ chí mạng, 50% ST chí mạng</td><td>Chí mạng 3 lần liền: đòn chí mạng kế tiếp nhân thêm sát thương.</td></tr>
+    <tr><td><img class="mi" src="img/r_thoisa.png" alt=""><b>Thời Sa</b><br><span class="dim">Spam kỹ năng</span></td><td>20% giảm hồi chiêu, 15% năng lượng tuyệt kỹ</td><td>Dùng 1 kỹ năng: các kỹ năng khác hồi nhanh thêm vài giây.</td></tr>
+    <tr><td><img class="mi" src="img/r_lientram.png" alt=""><b>Liên Trảm Ấn</b><br><span class="dim">Đánh liên tục</span></td><td>25% sát thương</td><td>Mỗi đòn trúng +2% sát thương (có trần), ngừng đánh 2 giây thì mất hết.</td></tr>
+    <tr><td><img class="mi" src="img/r_cuonghuyet.png" alt=""><b>Cuồng Huyết Châu</b><br><span class="dim">Liều mạng</span></td><td>35% sát thương, 10% hút máu</td><td>Mất bao nhiêu % máu thì tăng bấy nhiêu % sát thương (có trần).</td></tr>
+    <tr><td><img class="mi" src="img/r_batdiet.png" alt=""><b>Bất Diệt Giáp</b><br><span class="dim">Đỡ đòn vẫn đánh đau</span></td><td>60% máu</td><td>Giáp +30%. Mỗi 50 máu tối đa: +1% sát thương (có trần).</td></tr>
+    <tr><td><img class="mi" src="img/r_dietvuong.png" alt=""><b>Diệt Vương Hạch</b><br><span class="dim">Săn trùm</span></td><td>40% ST lên trùm</td><td>Bỏ qua 30% giáp trùm. Trùm dưới 30% máu nhận thêm sát thương.</td></tr>
+    <tr><td><img class="mi" src="img/r_hukhong.png" alt=""><b>Hư Không Hạch</b><br><span class="dim">Dọn quái diện rộng</span></td><td>30% ST kỹ năng</td><td>Kỹ năng trúng 5 quái trong 1 giây: tăng ST kỹ năng trong 6 giây.</td></tr>
+    <tr><td><img class="mi" src="img/r_thanhtam.png" alt=""><b>Thánh Tâm Miện</b><br><span class="dim">Hỗ trợ</span></td><td>20% máu</td><td>Hồi máu nhận +25%. Còn trên 70% máu: cả đội tăng sát thương.</td></tr>
+    <tr><td><img class="mi" src="img/r_songnguyet.png" alt=""><b>Song Nguyệt Kính</b><br><span class="dim">Đòn lặp</span></td><td>20% sát thương, 6% tỉ lệ chí mạng</td><td>Một phần đòn đánh được gương lặp lại, đòn lặp gây x1.8 sát thương.</td></tr>
+    <tr><td><img class="mi" src="img/r_phongan.png" alt=""><b>Phong Ấn Lục</b><br><span class="dim">Dọn phòng</span></td><td>20% ST kỹ năng, 15% ST lên tinh anh</td><td>Hạ quái tích Ấn, đủ 50 ấn: nổ Cầu Phong Ấn, quái quanh 8 ô mất % máu tối đa (trùm miễn).</td></tr>
+    <tr><td><img class="mi" src="img/r_kimthiem.png" alt=""><b>Kim Thiềm</b><br><span class="dim">Làm giàu</span></td><td>30% vàng nhận thêm, 10% sát thương</td><td>Hạ quái có tỉ lệ Kim Thiềm nhả Túi Vàng (gấp 3 vàng con đó).</td></tr>
+  </table></div>
+  <h2>Ngộ Đạo — Thần Khí lên cấp</h2>
+  <ul>
+    <li>Thần Khí đang đeo nhận kinh nghiệm khi bạn hạ quái: quái thường 1, tinh anh 4, trùm 40.</li>
+    <li>Cấp <b>1 → 20</b>, mỗi cấp <b>+1% chỉ số chính</b>.</li>
+    <li>Tới <b>Lv 10</b> và <b>Lv 20</b> được chọn <b>1 trong 2 Đạo</b> (nhánh) — mỗi món có lối chơi riêng. Chọn sai? <b>Tẩy Đạo</b> tốn 200 Mảnh Thần.</li>
+  </ul>
+  <div class="tbl"><table>
+    <tr><th>Thần Khí</th><th>Đạo Lv 10 (chọn 1)</th><th>Đạo Lv 20 (chọn 1)</th></tr>
+    <tr><td><img class="mi" src="img/r_thiennhan.png" alt="">Thiên Nhãn</td><td><b>Nhãn Tốc</b>: Chỉ cần 2 chí mạng liền để kích<br><b>Nhãn Hủy</b>: Đòn kích +0.8x nhưng cần 4 chí mạng liền</td><td><b>Song Đồng</b>: +6% tỉ lệ chí mạng<br><b>Tuyệt Nhãn</b>: Đòn kích thêm +0.4x</td></tr>
+    <tr><td><img class="mi" src="img/r_thoisa.png" alt="">Thời Sa</td><td><b>Lưu Sa</b>: Mỗi kỹ năng hồi thêm 0.6 giây cho kỹ năng khác<br><b>Nghịch Sa</b>: +10% tích năng lượng tuyệt kỹ</td><td><b>Tĩnh Sa</b>: +5% giảm hồi chiêu<br><b>Vĩnh Sa</b>: Hồi thêm 0.4 giây mỗi lần dùng kỹ năng</td></tr>
+    <tr><td><img class="mi" src="img/r_lientram.png" alt="">Liên Trảm Ấn</td><td><b>Bạo Phong</b>: Mỗi đòn +4% nhưng ngừng 1.5 giây là mất<br><b>Trường Lưu</b>: Ngừng 5 giây mới mất tầng</td><td><b>Thiên Trảm</b>: Trần cộng dồn +15%<br><b>Bất Đoạn</b>: Hết giờ chỉ mất một nửa số tầng</td></tr>
+    <tr><td><img class="mi" src="img/r_cuonghuyet.png" alt="">Cuồng Huyết Châu</td><td><b>Huyết Tế</b>: Trần sát thương +15%<br><b>Bất Khuất</b>: +5% hút máu</td><td><b>Cuồng Tâm</b>: Máu đã mất tính x1.25<br><b>Huyết Thể</b>: +10% máu</td></tr>
+    <tr><td><img class="mi" src="img/r_batdiet.png" alt="">Bất Diệt Giáp</td><td><b>Kim Cương</b>: Giáp +45%<br><b>Phản Chấn</b>: Mỗi 40 máu tối đa +1% sát thương</td><td><b>Bất Hoại</b>: Trần sát thương +15%<br><b>Thái Sơn</b>: +15% máu</td></tr>
+    <tr><td><img class="mi" src="img/r_dietvuong.png" alt="">Diệt Vương Hạch</td><td><b>Trảm Thủ</b>: Kích từ khi trùm dưới 45% máu<br><b>Phá Giáp</b>: Bỏ qua 45% giáp trùm</td><td><b>Đồ Vương</b>: +10% ST lên trùm<br><b>Diệt Tận</b>: Trùm máu thấp nhận thêm +15%</td></tr>
+    <tr><td><img class="mi" src="img/r_hukhong.png" alt="">Hư Không Hạch</td><td><b>Vạn Tượng</b>: Chỉ cần trúng 3 quái để kích<br><b>Trường Tồn</b>: Hiệu lực 10 giây</td><td><b>Hư Vô</b>: ST kỹ năng khi kích +10%<br><b>Hỗn Độn</b>: +10% ST kỹ năng</td></tr>
+    <tr><td><img class="mi" src="img/r_thanhtam.png" alt="">Thánh Tâm Miện</td><td><b>Từ Bi</b>: Hồi máu nhận +40%<br><b>Hộ Pháp</b>: Hào quang chỉ cần trên 50% máu</td><td><b>Thánh Quang</b>: Hào quang cả đội +5%<br><b>Thánh Thể</b>: +10% máu</td></tr>
+    <tr><td><img class="mi" src="img/r_songnguyet.png" alt="">Song Nguyệt Kính</td><td><b>Nguyệt Lặp</b>: Tỉ lệ lặp +6%<br><b>Nguyệt Phá</b>: Đòn lặp gây x2.2</td><td><b>Nguyệt Nhãn</b>: +6% tỉ lệ chí mạng<br><b>Nhật Nguyệt</b>: +10% ST kỹ năng</td></tr>
+    <tr><td><img class="mi" src="img/r_phongan.png" alt="">Phong Ấn Lục</td><td><b>Ấn Tốc</b>: Chỉ cần 35 ấn<br><b>Ấn Bạo</b>: Cầu nổ thêm +15% máu tối đa</td><td><b>Thiên La</b>: Bán kính nổ 12 ô<br><b>Trấn Tinh</b>: +15% ST lên tinh anh</td></tr>
+    <tr><td><img class="mi" src="img/r_kimthiem.png" alt="">Kim Thiềm</td><td><b>Chiêu Tài</b>: Tỉ lệ nhả Túi Vàng +5%<br><b>Hoàng Kim</b>: Túi Vàng gấp 5 lần</td><td><b>Phú Quý</b>: +15% vàng<br><b>Bảo Tàng</b>: +5% tỉ lệ rơi đồ</td></tr>
+  </table></div>
+  <h2>Khắc Ấn &amp; Hiến Tế</h2>
+  <div class="tbl"><table>
+    <tr><th>Tính năng</th><th>Giá</th><th>Tác dụng</th></tr>
+    <tr><td><b>Khắc Ấn</b></td><td>1.600 Mảnh Thần</td><td>Chọn trước món Thần Khí sẽ nhận khi tích lũy đầy 110.</td></tr>
+    <tr><td><b>Hiến Tế</b></td><td>700 Mảnh Thần</td><td>+5 tích lũy. Tối đa 4 lần mỗi tuần.</td></tr>
+  </table></div>
+  <h2>Điện Thần Khí (Trại)</h2>
+  <ul>
+    <li>Đi qua cửa sau <b>Sân Bảo Rương</b> ở Trại. Điện có <b>12 bệ</b>: 11 Thần Khí và 1 bệ "???" đang bị phong ấn chờ Thần Khí tiếp theo.</li>
+    <li>Mỗi bệ ghi <b>người đầu tiên của server</b> sở hữu món đó và số người đang có. Món chưa ai có thì tắt sáng.</li>
+    <li>Giữa điện là <b>Bàn Thờ Hư Không</b> — chuột phải để mở menu Thần Khí (Ngộ Đạo, Khắc Ấn, Hiến Tế). Phía trên là bảng xếp hạng Liệt Giới tuần.</li>
+    <li>Thần Khí đang đeo bay quanh người khi ở hub — tắt / bật trong menu Thần Khí.</li>
+  </ul>
+  <div class="pn"><a href="#trangbi"><span class="dir">Trước</span>← Trang bị</a><a href="#gacha"><span class="dir">Tiếp theo</span>Gacha →</a></div>
 </article>
 
 <article class="page" id="hoatdong">
@@ -501,7 +571,7 @@ footer{max-width:1060px;margin:0 auto;padding:18px 0 26px;border-top:1px solid v
   <h2>Thú cưng, Linh Thú &amp; Bộ Sưu Tập</h2>
   <ul>
     <li><b>Nuôi thú</b> (<kbd>/nuoithu</kbd>): cho ăn tăng Thân Thiết 1–30 → <b>thiên phú</b> (chỉ số nhỏ) cho chủ. Đội hình 1 thú đi theo (hưởng 100%) + 1 thú hỗ trợ (50%); đúng cặp còn có <b>Duyên Thú</b>.</li>
-    <li>Món ăn nấu ở NPC bếp mỗi hub từ nguyên liệu nhặt quanh hub và cá câu được.</li>
+    <li>Món ăn nấu ở NPC bếp mỗi hub bằng <b>minigame nấu ăn</b> từ nguyên liệu thu thập và cá câu được — chi tiết ở <a href="#nuoithu">Nuôi Thú &amp; Nguyên Liệu</a>.</li>
     <li><b>Bộ Sưu Tập</b>: quay thú cưng theo mùa (Mùa I 240 SHP / Mùa II 200 SHP) — <b>không bao giờ ra trùng</b>, đủ bộ thì khóa nút quay. Thú gọi ra bằng <kbd>/thucung</kbd>, đi theo ở hub, vuốt ve được.</li>
   </ul>
   <h2>Khám phá &amp; Địa danh</h2>
@@ -518,7 +588,71 @@ footer{max-width:1060px;margin:0 auto;padding:18px 0 26px;border-top:1px solid v
     <li><b>Damage Skin</b> (<kbd>/dskin</kbd>): đổi kiểu số sát thương bay lên khi đánh — Hỏa Long, Băng Tinh… 149 SHP/kiểu, vài kiểu chỉ có từ quà Top.</li>
     <li><b>Bảng xếp hạng vàng</b>: <kbd>/baltop</kbd>.</li>
   </ul>
-  <div class="pn"><a href="#phuchu"><span class="dir">Trước</span>← Phù Chú</a><a href="#tudo"><span class="dir">Tiếp theo</span>Tủ Đồ →</a></div>
+  <div class="pn"><a href="#phuchu"><span class="dir">Trước</span>← Phù Chú</a><a href="#nuoithu"><span class="dir">Tiếp theo</span>Nuôi Thú &amp; Nguyên Liệu →</a></div>
+</article>
+<article class="page" id="nuoithu">
+  <div class="crumb">Wiki / Hoạt động</div>
+  <h1>Nuôi Thú &amp; Nguyên Liệu</h1>
+  <p class="lead">Đi khắp 4 hub thu thập nguyên liệu để nấu ăn cho thú cưng, chế Phù Chú cho cổng và sưu tập Sổ Thảo Mộc. Mở bằng <kbd>/nuoithu</kbd>.</p>
+  <h2>Thu thập</h2>
+  <ul>
+    <li>Cây, đá, bụi linh thảo có chữ nổi <b>✿</b> ở 4 hub và vùng khám phá quanh hub. Bấm chuột trái nhiều lần để thu, mỗi lần tốn <b>5 thể lực</b> (tối đa 100, hồi 1 mỗi phút).</li>
+    <li>Thú cưng đi theo càng thân thiết càng hay thu gấp đôi.</li>
+    <li>Ở hub được <b>nhảy cao ~3 ô và tự bước lên bậc</b> để leo lên các mỏm đồi khám phá (vào cổng thì tắt).</li>
+    <li>Mỗi NPC bếp có <b>Yêu Cầu Hôm Nay</b>: nộp nguyên liệu lấy món bậc III + thể lực.</li>
+  </ul>
+  <h2>Nguyên liệu của 4 hub</h2>
+  <p>Mỗi điểm thu ra <b>nguyên liệu chính</b>; có <b>30%</b> rơi thêm 1 <b>nguyên liệu phụ</b> của đúng hub đó (dùng chế Phù Chú).</p>
+  <div class="tbl"><table>
+    <tr><th>Hub</th><th>Chính (cây · đá · linh thảo)</th><th>Phụ (rơi thêm)</th></tr>
+    <tr><td><b>Torii Thiên Môn</b></td><td><img class="mi" src="img/m_govansam.png" alt="">Gỗ Vân Sam<br><img class="mi" src="img/m_dareu.png" alt="">Đá Rêu Phong<br><img class="mi" src="img/m_cophong.png" alt="">Cỏ Phong Diệp</td><td><img class="mi" src="img/m_nhua_phong.png" alt="">Nhựa Phong Đỏ<br><img class="mi" src="img/m_dong_reu.png" alt="">Quặng Đồng Rêu<br><img class="mi" src="img/m_nam_la.png" alt="">Nấm Lá Khô</td></tr>
+    <tr><td><b>Băng Nguyệt Sơn Môn</b></td><td><img class="mi" src="img/m_gonguyet.png" alt="">Gỗ Nguyệt Bạch<br><img class="mi" src="img/m_nguyetthach.png" alt="">Băng Nguyệt Thạch<br><img class="mi" src="img/m_thaotrang.png" alt="">Thảo Ánh Trăng</td><td><img class="mi" src="img/m_hat_nguyet.png" alt="">Hạt Nguyệt Bạch<br><img class="mi" src="img/m_thach_suong.png" alt="">Thạch Anh Sương<br><img class="mi" src="img/m_tuyet_lien.png" alt="">Tuyết Liên</td></tr>
+    <tr><td><b>Cổ Mộc Thủy Trấn</b></td><td><img class="mi" src="img/m_goreco.png" alt="">Gỗ Rễ Cổ<br><img class="mi" src="img/m_daphusa.png" alt="">Đá Phù Sa<br><img class="mi" src="img/m_landam.png" alt="">Lan Đầm Lầy</td><td><img class="mi" src="img/m_mam_duoc.png" alt="">Mầm Đước Thơm<br><img class="mi" src="img/m_set_phusa.png" alt="">Đất Sét Phù Sa<br><img class="mi" src="img/m_sen_dam.png" alt="">Lá Sen Đầm</td></tr>
+    <tr><td><b>Thiên Không Phế Thành</b></td><td><img class="mi" src="img/m_phalemay.png" alt="">Pha Lê Mây<br><img class="mi" src="img/m_huyenthach.png" alt="">Huyền Vũ Thạch<br><img class="mi" src="img/m_cotro.png" alt="">Cỏ Tàn Tro</td><td><img class="mi" src="img/m_bui_sao.png" alt="">Bụi Sao Trời<br><img class="mi" src="img/m_da_lua.png" alt="">Đá Lửa Phế Thành<br><img class="mi" src="img/m_long_may.png" alt="">Lông Vũ Mây</td></tr>
+  </table></div>
+  <ul>
+    <li><b>Hiếm</b> (6%, mọi hub): <img class="mi" src="img/m_linhmoc.png" alt="">Linh Mộc Tâm, <img class="mi" src="img/m_linhthach.png" alt="">Linh Thạch, <img class="mi" src="img/m_linhchi.png" alt="">Linh Chi.</li>
+    <li><b>Từ cá</b>: <img class="mi" src="img/m_catuoi.png" alt="">Thịt Cá Tươi, <img class="mi" src="img/m_ngocngu.png" alt="">Ngọc Ngư Lân — câu cá rồi nhờ Lão Ngư làm.</li>
+  </ul>
+  <h2>Nguyên liệu theo giờ</h2>
+  <p>Chỉ rơi trong đúng khung giờ (giờ Việt Nam), <b>15%</b> mỗi lần thu ở bất kỳ hub nào. Phù cao cấp cần những nguyên liệu này.</p>
+  <div class="tbl"><table>
+    <tr><th>Giờ</th><th>Nguyên liệu</th></tr>
+    <tr><td>17h – 18h</td><td><img class="mi" src="img/m_hoang_hon.png" alt="">Hoa Hoàng Hôn</td></tr>
+    <tr><td>18h – 19h</td><td><img class="mi" src="img/m_nang_trua.png" alt="">Tinh Hoa Ráng Chiều</td></tr>
+    <tr><td>19h – 20h</td><td><img class="mi" src="img/m_suong_mai.png" alt="">Sương Đêm Ngọc</td></tr>
+    <tr><td>20h – 21h</td><td><img class="mi" src="img/m_dom_dom.png" alt="">Đom Đóm Linh</td></tr>
+    <tr><td>21h – 23h</td><td><img class="mi" src="img/m_da_quang.png" alt="">Quả Dạ Quang</td></tr>
+  </table></div>
+  <h2>Sổ Thảo Mộc</h2>
+  <ul>
+    <li>Bộ sưu tập <b>34 loại</b> nguyên liệu — mở trong túi Nuôi Thú, ở NPC bếp, hoặc <kbd>/nuoithu so</kbd>.</li>
+    <li>Phát hiện loại mới: <b>+100 vàng</b>. Mốc 10 / 20 / 30 / đủ 34 loại: <b>1.000 / 2.000 / 3.000 / 5.000 vàng</b>.</li>
+    <li><b>Ánh Kim</b>: mỗi lần thu có 1% ra bản lấp lánh (+2 nguyên liệu đó). Ánh Kim mới <b>+300 vàng</b>, đủ 24 bản Ánh Kim <b>+5.000 vàng</b> và được báo cả server.</li>
+  </ul>
+  <h2>Bếp Linh Thú — minigame nấu ăn</h2>
+  <p>Ở NPC bếp (Dì Mận, Nguyệt Cô, Lão Rễ, Vân Sư, Bếp Cá Lão Ngư): <b>bấm trái</b> vào món để vào bếp, <b>bấm phải</b> nấu nhanh 1, <b>Shift</b> nấu nhanh 5 (nấu nhanh luôn ra món thường).</p>
+  <div class="tbl"><table>
+    <tr><th>Màn</th><th>Cách chơi</th></tr>
+    <tr><td><b>1. Chém nguyên liệu</b></td><td>Nguyên liệu bay vòng cung trước mặt, nhìn vào và <b>chuột trái</b> để chém. Né than củi, thịt thối, khoai độc (−20 điểm). Đủ nguyên liệu +100 điểm.</td></tr>
+    <tr><td><b>2. Canh lửa</b></td><td><b>Chuột phải liên tục</b> để quạt. Thanh trên cùng màn hình là nhiệt: xanh = nguội, vàng = sôi đẹp, đỏ = quá lửa. Giữ ở vùng vàng đủ số giây.</td></tr>
+    <tr><td><b>3. Đảo món</b></td><td>Món bật lên, vòng trắng thu nhỏ dần — bấm khi vòng trắng chạm vòng vàng. 2–3 lần.</td></tr>
+  </table></div>
+  <div class="tbl"><table>
+    <tr><th>Kết quả</th><th>Nhận được</th></tr>
+    <tr><td><b>Hoàn Hảo</b></td><td>Món ngon ★, 50% được 2 món, thú nhảy mừng.</td></tr>
+    <tr><td><b>Ngon</b></td><td>Món ngon ★.</td></tr>
+    <tr><td><b>Thường</b></td><td>Món bình thường.</td></tr>
+    <tr><td><b>Khét</b></td><td>Mất nguyên liệu, thú <b>giận dỗi 10 phút</b>: ăn chỉ được nửa điểm, không diễn trò. Dùng đồ chăm sóc (lược, chuông, bùa, vòng cổ) để làm lành.</td></tr>
+  </table></div>
+  <ul>
+    <li><b>Món ngon ★</b>: cho thú ăn được +30% thân thiết; tự ăn thì buff lâu hơn 30%.</li>
+    <li>Mỗi bếp có <b>Bảng Đầu Bếp hôm nay</b> (top 5 điểm cao nhất).</li>
+    <li>Bấm <kbd>F</kbd> 2 lần để bỏ nấu — trong 3 giây đầu được hoàn nguyên liệu.</li>
+  </ul>
+  <h2>Lò Phù</h2>
+  <p>Trong menu NPC bếp — chế <a href="#phuchu">Phù Chú</a> từ nguyên liệu phụ và nguyên liệu theo giờ. Bấm trái chế 1, Shift chế 5.</p>
+  <div class="pn"><a href="#hoatdong"><span class="dir">Trước</span>← Hoạt động tại hub</a><a href="#tudo"><span class="dir">Tiếp theo</span>Tủ Đồ →</a></div>
 </article>
 <article class="page" id="lenh">
   <div class="crumb">Wiki / Hướng dẫn</div>
@@ -530,6 +664,8 @@ footer{max-width:1060px;margin:0 auto;padding:18px 0 26px;border-top:1px solid v
     <tr><td><kbd>/trangbi</kbd></td><td>Trang bị của nhân vật</td></tr>
     <tr><td><kbd>/pvp</kbd></td><td>Đấu Trường Nguyệt Đài — solo 1v1 bằng 3 nhân vật cân bằng riêng</td></tr>
     <tr><td><kbd>/nuoithu</kbd></td><td>Nuôi thú cưng lấy thiên phú</td></tr>
+    <tr><td><kbd>/nuoithu tui</kbd></td><td>Túi nguyên liệu</td></tr>
+    <tr><td><kbd>/nuoithu so</kbd></td><td>Sổ Thảo Mộc (bộ sưu tập nguyên liệu)</td></tr>
     <tr><td><kbd>/samtruy</kbd></td><td>Bay lượn một chiều ngắm toàn server</td></tr>
     <tr><td><kbd>/daugia</kbd></td><td>Sàn đấu giá Kim Diệp</td></tr>
     <tr><td><kbd>/thucung</kbd></td><td>Gọi / cất thú cưng</td></tr>
@@ -561,6 +697,8 @@ footer{max-width:1060px;margin:0 auto;padding:18px 0 26px;border-top:1px solid v
     window.scrollTo(0, 0);
   }
   addEventListener('hashchange', show);
+  if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+  addEventListener('load', function(){ setTimeout(function(){ window.scrollTo(0, 0); }, 0); });
   show();
 })();
 </script>
