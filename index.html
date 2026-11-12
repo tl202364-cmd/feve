@@ -16,6 +16,12 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap">
 <style>
 article.page{scroll-margin-top:80px}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:10px;margin:12px 0 18px}
+.cd{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:12px 14px}
+.cd h4{margin:0;font-size:15px;line-height:1.35}
+.cd .r{font-size:12px;color:var(--mut)}
+.cd p{margin:6px 0 0;font-size:13.5px;line-height:1.5}
+.cd .ok{color:#7ee07a;font-weight:700}.cd .no{color:#ff7b7b;font-weight:700}
 .mi{width:20px;height:20px;image-rendering:pixelated;vertical-align:-4px;margin-right:5px}
 
 /* layout: docs 2 cot — sidebar 250px + noi dung 720px; gan don sac, 1 mau nhan */
@@ -650,6 +656,49 @@ footer{max-width:1060px;margin:0 auto;padding:18px 0 26px;border-top:1px solid v
     <li>Mỗi bếp có <b>Bảng Đầu Bếp hôm nay</b> (top 5 điểm cao nhất).</li>
     <li>Bấm <kbd>F</kbd> 2 lần để bỏ nấu — trong 3 giây đầu được hoàn nguyên liệu.</li>
   </ul>
+  <h2>Thú cưng: món thích &amp; món ghét</h2>
+  <p>Cho thú ăn <b>món thích</b> được <b>x1.5</b> điểm thân thiết (và phản ứng rất vui); <b>món ghét</b> chỉ được <b>nửa điểm</b> (thú phun ra, nhăn mặt). Bữa đầu tiên mỗi ngày của mỗi thú được x2. Thiên phú ghi mức ở cấp thân thiết tối đa.</p>
+  <div class="cards">
+    <div class="cd"><h4>Rái Cá · Mõm Bông</h4><div class="r">Hiếm · thiên phú +2% Máu</div><p><span class="ok">Thích:</span> Cháo Đầm Lầy <span class="r">(Lão Rễ · Cổ Mộc)</span><br><span class="no">Ghét:</span> Kẹo Pha Lê <span class="r">(Vân Sư · Thiên Không)</span></p></div>
+    <div class="cd"><h4>Mèo Ảo Thuật · Miu Miu</h4><div class="r">Hiếm · thiên phú +3% Giảm hồi chiêu</div><p><span class="ok">Thích:</span> Kẹo Pha Lê <span class="r">(Vân Sư · Thiên Không)</span><br><span class="no">Ghét:</span> Cháo Đầm Lầy <span class="r">(Lão Rễ · Cổ Mộc)</span></p></div>
+    <div class="cd"><h4>Cú Nhỏ Ninja · Hạt Dẻ</h4><div class="r">Sử Thi · thiên phú +3.5% Tỉ lệ chí mạng</div><p><span class="ok">Thích:</span> Bánh Lá Phong <span class="r">(Dì Mận · Torii)</span><br><span class="no">Ghét:</span> Lẩu Rễ Cổ Ngàn Năm <span class="r">(Lão Rễ · Cổ Mộc)</span></p></div>
+    <div class="cd"><h4>Phù Thủy Băng · Tuyết Nhi</h4><div class="r">Sử Thi · thiên phú +3.5% ST Tuyệt kỹ</div><p><span class="ok">Thích:</span> Trà Ánh Trăng <span class="r">(Nguyệt Cô · Băng Nguyệt)</span><br><span class="no">Ghét:</span> Tiệc Nướng Trại <span class="r">(Dì Mận · Torii)</span></p></div>
+    <div class="cd"><h4>Hộ Lâm · Mộc Mộc</h4><div class="r">Sử Thi · thiên phú +3.5% Máu</div><p><span class="ok">Thích:</span> Canh Rễ Ngọt <span class="r">(Lão Rễ · Cổ Mộc)</span><br><span class="no">Ghét:</span> Bánh Mây Tro <span class="r">(Vân Sư · Thiên Không)</span></p></div>
+    <div class="cd"><h4>Cú Ninja · Ảnh Vũ</h4><div class="r">Huyền Thoại · thiên phú +6% ST chí mạng</div><p><span class="ok">Thích:</span> Tiệc Nướng Trại <span class="r">(Dì Mận · Torii)</span><br><span class="no">Ghét:</span> Bánh Trăng Non <span class="r">(Nguyệt Cô · Băng Nguyệt)</span></p></div>
+    <div class="cd"><h4>Gấu Ước Nguyện · Bông Sao</h4><div class="r">Huyền Thoại · thiên phú +4% Sát thương</div><p><span class="ok">Thích:</span> Yến Tiệc Nguyệt Thần <span class="r">(Nguyệt Cô · Băng Nguyệt)</span><br><span class="no">Ghét:</span> Canh Rễ Ngọt <span class="r">(Lão Rễ · Cổ Mộc)</span></p></div>
+    <div class="cd"><h4>Xác Sống · Lờ Đờ</h4><div class="r">Hiếm · thiên phú +2.5% Máu</div><p><span class="ok">Thích:</span> Bánh Mây Tro <span class="r">(Vân Sư · Thiên Không)</span><br><span class="no">Ghét:</span> Kẹo Pha Lê <span class="r">(Vân Sư · Thiên Không)</span></p></div>
+    <div class="cd"><h4>Bé Nổ · Xì Xì</h4><div class="r">Hiếm · thiên phú +2.5% Tỉ lệ chí mạng</div><p><span class="ok">Thích:</span> Chè Hạt Dẻ Rừng <span class="r">(Dì Mận · Torii)</span><br><span class="no">Ghét:</span> Cá Nướng Lá Phong <span class="r">(Lão Ngư · Bếp Cá)</span></p></div>
+    <div class="cd"><h4>Phù Thủy Đầm Lầy · Bong Bóng</h4><div class="r">Hiếm · thiên phú +3% ST Kỹ năng</div><p><span class="ok">Thích:</span> Gỏi Cá Ánh Trăng <span class="r">(Lão Ngư · Bếp Cá)</span><br><span class="no">Ghét:</span> Trà Ánh Trăng <span class="r">(Nguyệt Cô · Băng Nguyệt)</span></p></div>
+    <div class="cd"><h4>Lữ Khách Hư Không · Mắt Tím</h4><div class="r">Sử Thi · thiên phú +3% Giảm hồi chiêu</div><p><span class="ok">Thích:</span> Bánh Trăng Non <span class="r">(Nguyệt Cô · Băng Nguyệt)</span><br><span class="no">Ghét:</span> Canh Rễ Ngọt <span class="r">(Lão Rễ · Cổ Mộc)</span></p></div>
+    <div class="cd"><h4>Mộc Quỷ · Kẽo Kẹt</h4><div class="r">Sử Thi · thiên phú +4% ST lên quái</div><p><span class="ok">Thích:</span> Lẩu Rễ Cổ Ngàn Năm <span class="r">(Lão Rễ · Cổ Mộc)</span><br><span class="no">Ghét:</span> Tiệc Nướng Trại <span class="r">(Dì Mận · Torii)</span></p></div>
+    <div class="cd"><h4>Vệ Thần Vực Sâu · Thính Tai</h4><div class="r">Sử Thi · thiên phú +3.5% ST lên Trùm</div><p><span class="ok">Thích:</span> Lẩu Cá Đại Hội <span class="r">(Lão Ngư · Bếp Cá)</span><br><span class="no">Ghét:</span> Bánh Lá Phong <span class="r">(Dì Mận · Torii)</span></p></div>
+    <div class="cd"><h4>Rồng Hư Không · Tử Long</h4><div class="r">Huyền Thoại · thiên phú +6% ST chí mạng</div><p><span class="ok">Thích:</span> Thiên Yến Vân Đỉnh <span class="r">(Vân Sư · Thiên Không)</span><br><span class="no">Ghét:</span> Cháo Đầm Lầy <span class="r">(Lão Rễ · Cổ Mộc)</span></p></div>
+    <div class="cd"><h4>Ma Vương Ba Đầu · Tam Tam</h4><div class="r">Huyền Thoại · thiên phú +4% Xuyên giáp</div><p><span class="ok">Thích:</span> Cá Nướng Lá Phong <span class="r">(Lão Ngư · Bếp Cá)</span><br><span class="no">Ghét:</span> Chè Hạt Dẻ Rừng <span class="r">(Dì Mận · Torii)</span></p></div>
+  </div>
+  <h2>Danh sách món ăn</h2>
+  <p>Đồ chăm sóc không lên nhiều thân thiết nhưng làm thú <b>Vui Vẻ</b> (thiên phú +25% trong 60 phút) và là cách <b>làm lành</b> khi thú giận dỗi.</p>
+  <div class="cards">
+    <div class="cd"><h4>Bánh Lá Phong</h4><div class="r">Bậc I · Dì Mận · Torii</div><p>3 Cỏ Phong Diệp, 2 Gỗ Vân Sam</p></div>
+    <div class="cd"><h4>Chè Hạt Dẻ Rừng</h4><div class="r">Bậc II · Dì Mận · Torii</div><p>4 Cỏ Phong Diệp, 3 Đá Rêu Phong, 3 Lan Đầm Lầy</p></div>
+    <div class="cd"><h4>Tiệc Nướng Trại</h4><div class="r">Bậc III · Dì Mận · Torii</div><p>5 Gỗ Vân Sam, 2 Linh Mộc Tâm, 4 Thảo Ánh Trăng</p></div>
+    <div class="cd"><h4>Lược Chải Lông Vân Sam</h4><div class="r">Đồ chăm sóc · Dì Mận · Torii</div><p>6 Gỗ Vân Sam, 2 Đá Rêu Phong</p></div>
+    <div class="cd"><h4>Bánh Trăng Non</h4><div class="r">Bậc I · Nguyệt Cô · Băng Nguyệt</div><p>3 Thảo Ánh Trăng, 2 Băng Nguyệt Thạch</p></div>
+    <div class="cd"><h4>Trà Ánh Trăng</h4><div class="r">Bậc II · Nguyệt Cô · Băng Nguyệt</div><p>4 Thảo Ánh Trăng, 3 Gỗ Nguyệt Bạch, 3 Cỏ Tàn Tro</p></div>
+    <div class="cd"><h4>Yến Tiệc Nguyệt Thần</h4><div class="r">Bậc III · Nguyệt Cô · Băng Nguyệt</div><p>5 Gỗ Nguyệt Bạch, 2 Linh Chi, 4 Cỏ Phong Diệp</p></div>
+    <div class="cd"><h4>Chuông Gió Nguyệt Bạch</h4><div class="r">Đồ chăm sóc · Nguyệt Cô · Băng Nguyệt</div><p>6 Gỗ Nguyệt Bạch, 2 Băng Nguyệt Thạch</p></div>
+    <div class="cd"><h4>Canh Rễ Ngọt</h4><div class="r">Bậc I · Lão Rễ · Cổ Mộc</div><p>3 Lan Đầm Lầy, 2 Gỗ Rễ Cổ</p></div>
+    <div class="cd"><h4>Cháo Đầm Lầy</h4><div class="r">Bậc II · Lão Rễ · Cổ Mộc</div><p>4 Lan Đầm Lầy, 3 Đá Phù Sa, 3 Đá Rêu Phong</p></div>
+    <div class="cd"><h4>Lẩu Rễ Cổ Ngàn Năm</h4><div class="r">Bậc III · Lão Rễ · Cổ Mộc</div><p>5 Gỗ Rễ Cổ, 2 Linh Thạch, 4 Huyền Vũ Thạch</p></div>
+    <div class="cd"><h4>Bùa Thơm Lan Đầm</h4><div class="r">Đồ chăm sóc · Lão Rễ · Cổ Mộc</div><p>6 Lan Đầm Lầy, 2 Gỗ Rễ Cổ</p></div>
+    <div class="cd"><h4>Kẹo Pha Lê</h4><div class="r">Bậc I · Vân Sư · Thiên Không</div><p>3 Pha Lê Mây, 2 Cỏ Tàn Tro</p></div>
+    <div class="cd"><h4>Bánh Mây Tro</h4><div class="r">Bậc II · Vân Sư · Thiên Không</div><p>4 Pha Lê Mây, 3 Huyền Vũ Thạch, 3 Gỗ Rễ Cổ</p></div>
+    <div class="cd"><h4>Thiên Yến Vân Đỉnh</h4><div class="r">Bậc III · Vân Sư · Thiên Không</div><p>5 Huyền Vũ Thạch, 1 Linh Mộc Tâm, 1 Linh Thạch, 1 Linh Chi</p></div>
+    <div class="cd"><h4>Vòng Cổ Pha Lê</h4><div class="r">Đồ chăm sóc · Vân Sư · Thiên Không</div><p>6 Pha Lê Mây, 2 Huyền Vũ Thạch</p></div>
+    <div class="cd"><h4>Cá Nướng Lá Phong</h4><div class="r">Bậc I · Lão Ngư · Bếp Cá</div><p>3 Thịt Cá Tươi, 1 Cỏ Phong Diệp</p></div>
+    <div class="cd"><h4>Gỏi Cá Ánh Trăng</h4><div class="r">Bậc II · Lão Ngư · Bếp Cá</div><p>4 Thịt Cá Tươi, 2 Thảo Ánh Trăng, 2 Lan Đầm Lầy</p></div>
+    <div class="cd"><h4>Lẩu Cá Đại Hội</h4><div class="r">Bậc III · Lão Ngư · Bếp Cá</div><p>6 Thịt Cá Tươi, 2 Ngọc Ngư Lân, 1 Linh Chi, 2 Huyền Vũ Thạch</p></div>
+    <div class="cd"><h4>Bánh Cá Mèo Mê</h4><div class="r">Đồ chăm sóc · Lão Ngư · Bếp Cá</div><p>3 Thịt Cá Tươi, 1 Pha Lê Mây</p></div>
+  </div>
   <h2>Lò Phù</h2>
   <p>Trong menu NPC bếp — chế <a href="#phuchu">Phù Chú</a> từ nguyên liệu phụ và nguyên liệu theo giờ. Bấm trái chế 1, Shift chế 5.</p>
   <div class="pn"><a href="#hoatdong"><span class="dir">Trước</span>← Hoạt động tại hub</a><a href="#tudo"><span class="dir">Tiếp theo</span>Tủ Đồ →</a></div>
