@@ -4,7 +4,7 @@
 import re, json, time, os, sys
 root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 ver = time.strftime('%Y%m%d%H%M%S')
-PAGES = ['index.html', 'bando.html']
+PAGES = ['index.html', 'bando.html', 'smp.html']
 SNIP = ("<script>/*wiki-ver*/(function(){var V='%s';function chk(){fetch('version.json?t='+Date.now(),{cache:'no-store'})"
         ".then(function(r){return r.json()}).then(function(j){if(!j||!j.v||j.v===V)return;var k='wikiReload_'+j.v;"
         "try{if(sessionStorage.getItem(k))return;sessionStorage.setItem(k,'1')}catch(e){}"

@@ -1,0 +1,950 @@
+<!doctype html>
+<html lang="vi" data-theme="dark">
+<head>
+<script>/*wiki-ver*/(function(){var V='20261113155706';function chk(){fetch('version.json?t='+Date.now(),{cache:'no-store'}).then(function(r){return r.json()}).then(function(j){if(!j||!j.v||j.v===V)return;var k='wikiReload_'+j.v;try{if(sessionStorage.getItem(k))return;sessionStorage.setItem(k,'1')}catch(e){}var u=new URL(location.href);u.searchParams.set('v',j.v);location.replace(u.toString())}).catch(function(){})}chk();document.addEventListener('visibilitychange',function(){if(!document.hidden)chk()});setInterval(chk,300000)})();</script>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>SkyHunt SMP Wiki — Hướng dẫn Server Minecraft Sinh Tồn Việt Nam</title>
+<meta name="description" content="Wiki server Minecraft sinh tồn SkyHunt SMP: giữ đồ khi chết, claim đất, 3 nghề kiếm tiền (câu cá 134 loài, nông dân, thợ mỏ), chợ đấu giá, hầm ngục, thiên thạch, điểm danh 30 ngày. IP: skyhunt.online">
+<meta name="keywords" content="server minecraft sinh tồn, server smp việt nam, server survival việt nam, minecraft smp, server minecraft kinh tế, claim đất minecraft, skyhunt smp">
+<link rel="canonical" href="https://wiki.skyhunt.online/smp.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="SkyHunt SMP Wiki — Server Minecraft Sinh Tồn Việt Nam">
+<meta property="og:description" content="Hướng dẫn đầy đủ SkyHunt SMP: claim đất, nghề nghiệp, chợ, hầm ngục, thiên thạch, quà hằng ngày. IP: skyhunt.online">
+<meta property="og:url" content="https://wiki.skyhunt.online/smp.html">
+<meta property="og:image" content="https://www.skyhunt.online/og.jpg">
+<meta property="og:locale" content="vi_VN">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebSite","name":"SkyHunt SMP Wiki","url":"https://wiki.skyhunt.online/smp.html","inLanguage":"vi",
+ "description":"Wiki server Minecraft sinh tồn Việt Nam SkyHunt SMP."}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+ {"@type":"Question","name":"Chơi SkyHunt SMP chết có mất đồ không?","acceptedAnswer":{"@type":"Answer","text":"Không. SkyHunt SMP giữ đồ và giữ level khi chết. Có giường thì hồi sinh ở giường."}},
+ {"@type":"Question","name":"Làm sao bảo vệ nhà trong SkyHunt SMP?","acceptedAnswer":{"@type":"Answer","text":"Cầm xẻng vàng chuột phải để claim cả ô đất 16x16. Mọi người có sẵn 20 ô, rank và VIP được thêm, có thể mua thêm bằng tiền trong game."}},
+ {"@type":"Question","name":"Kiếm tiền trong SkyHunt SMP bằng cách nào?","acceptedAnswer":{"@type":"Answer","text":"Làm nghề Ngư Dân, Nông Dân, Thợ Mỏ; bán đồ ở shop hoặc chợ đấu giá; làm nhiệm vụ hằng ngày, hợp đồng server, hầm ngục và sự kiện thiên thạch."}},
+ {"@type":"Question","name":"IP server SkyHunt SMP là gì?","acceptedAnswer":{"@type":"Answer","text":"IP là skyhunt.online, chơi bằng Minecraft Java, không cần tài khoản bản quyền."}}
+]}
+</script>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap">
+<style>
+article.page{scroll-margin-top:80px}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:10px;margin:12px 0 18px}
+.cd{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:12px 14px}
+.cd h4{margin:0;font-size:15px;line-height:1.35}
+.cd .r{font-size:12px;color:var(--mut)}
+.cd p{margin:6px 0 0;font-size:13.5px;line-height:1.5}
+.cd .ok{color:#7ee07a;font-weight:700}.cd .no{color:#ff7b7b;font-weight:700}
+.mi{width:20px;height:20px;image-rendering:pixelated;vertical-align:-4px;margin-right:5px}
+
+/* layout: docs 2 cot — sidebar 250px + noi dung 720px; gan don sac, 1 mau nhan */
+:root{
+  --bg:#fafaf9; --panel:#ffffff; --fg:#1c1b1f; --mut:#6e6b76; --line:#e7e5ec;
+  --accent:#9a6b00; --accent-bg:#f6efdd; --code:#f3f2f6;
+}
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){
+  --bg:#141318; --panel:#1b1a21; --fg:#eceaf2; --mut:#97939f; --line:#2a2833;
+  --accent:#e3b84e; --accent-bg:#2a2414; --code:#232129; color-scheme:dark } }
+:root[data-theme="dark"]{
+  --bg:#141318; --panel:#1b1a21; --fg:#eceaf2; --mut:#97939f; --line:#2a2833;
+  --accent:#e3b84e; --accent-bg:#2a2414; --code:#232129; color-scheme:dark }
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:400 15.5px/1.7 'Be Vietnam Pro',system-ui,sans-serif;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:0}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+h1,h2,h3{line-height:1.3;text-wrap:balance;font-weight:700}
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:8;display:flex;align-items:center;gap:12px;
+  max-width:1060px;margin:0 auto;padding:13px 0;background:var(--bg);border-bottom:1px solid var(--line)}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--bg)}
+.brand{font-weight:800;font-size:17px;letter-spacing:.01em;color:var(--fg)}
+.brand:hover{text-decoration:none}
+.chip{font-size:11px;font-weight:700;letter-spacing:.12em;color:var(--mut);border:1px solid var(--line);border-radius:5px;padding:2px 8px}
+.ip{margin-left:auto;font-weight:600;font-size:13.5px;color:var(--mut)}
+.ip b{color:var(--fg);font-weight:700}
+.sw{font-size:12px;font-weight:800;letter-spacing:.08em;border-radius:7px;padding:4px 10px;border:1px solid #3d8f4a;color:#8ef59a;background:rgba(60,160,80,.10);white-space:nowrap}
+.sw:hover{text-decoration:none;background:rgba(60,160,80,.22)}
+.sw.rpg{border-color:#3d6bbf;color:#a9cbff;background:rgba(80,130,230,.10)}
+.sw.rpg:hover{background:rgba(80,130,230,.22)}
+.shell{display:grid;grid-template-columns:230px minmax(0,1fr);gap:48px;max-width:1060px;margin:0 auto;padding-block:28px 70px}
+/* ---- sidebar ---- */
+.side{position:sticky;top:calc(env(safe-area-inset-top,0px) + 76px);align-self:start;font-size:14px}
+.side .grp{margin:0 0 22px}
+.side .lbl{font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--mut);margin-bottom:8px}
+.side a{display:block;color:var(--fg);padding:5px 10px;margin-left:-10px;border-radius:7px;border-left:2px solid transparent}
+.side a:hover{background:var(--code);text-decoration:none}
+.side a.on{color:var(--accent);background:var(--accent-bg);font-weight:600}
+/* ---- noi dung ---- */
+main{min-width:0;max-width:720px}
+.crumb{font-size:13px;color:var(--mut);margin-bottom:6px}
+main h1{font-size:30px;margin:0 0 6px;font-weight:800}
+.lead{color:var(--mut);margin:0 0 26px;font-size:16px}
+main h2{font-size:20px;margin:34px 0 10px;padding-top:18px;border-top:1px solid var(--line)}
+main h3{font-size:16.5px;margin:22px 0 6px}
+p{margin:10px 0}
+ul{margin:10px 0;padding-left:22px}
+li{margin:5px 0}
+li::marker{color:var(--mut)}
+.tbl{overflow-x:auto;margin:14px 0;border:1px solid var(--line);border-radius:10px;background:var(--panel)}
+table{border-collapse:collapse;width:100%;min-width:540px;font-size:14px}
+th{font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--mut);text-align:left;padding:10px 14px;border-bottom:1px solid var(--line)}
+td{padding:9px 14px;border-top:1px solid var(--line);vertical-align:top}
+tr:first-child td{border-top:0}
+td:first-child{font-weight:600;white-space:nowrap}
+.dim{color:var(--mut);font-variant-numeric:tabular-nums;white-space:nowrap}
+kbd{font-family:inherit;font-size:13px;font-weight:600;background:var(--code);border:1px solid var(--line);border-radius:6px;padding:1px 8px;white-space:nowrap}
+.callout{background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--accent);border-radius:8px;padding:12px 16px;margin:14px 0}
+.rk{display:inline-block;min-width:34px;text-align:center;font-size:11px;font-weight:800;border:1px solid var(--line);border-radius:5px;padding:1px 6px;color:var(--mut)}
+.rk.sss{color:var(--accent);border-color:var(--accent)}
+.pn{display:flex;justify-content:space-between;gap:12px;margin-top:44px;padding-top:16px;border-top:1px solid var(--line);font-size:14px}
+.pn a{font-weight:600}
+.pn .dir{display:block;font-size:12px;color:var(--mut);font-weight:400}
+footer{max-width:1060px;margin:0 auto;padding:18px 0 26px;border-top:1px solid var(--line);color:var(--mut);font-size:13px;display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}
+.mi{width:22px;height:22px;image-rendering:pixelated;vertical-align:-5px;margin-right:9px;border-radius:4px}
+/* ---- band thuong hieu dau trang ---- */
+.hero{background:linear-gradient(135deg,#0b1c3a 0%,#122a56 55%,#0d2142 100%);border:1px solid #1d3a6e;border-radius:14px;
+  padding:30px 26px;margin:2px 0 26px;color:#fff;position:relative;overflow:hidden}
+.hero::after{content:"";position:absolute;inset:0;background:radial-gradient(420px 180px at 85% 0%,rgba(110,170,255,.25),transparent 70%)}
+.wordmark{font-weight:800;font-style:italic;letter-spacing:.04em;line-height:1;
+  background:linear-gradient(180deg,#ffffff 30%,#9cc7ff 90%);-webkit-background-clip:text;background-clip:text;color:transparent;
+  filter:drop-shadow(0 2px 0 #0a1830) drop-shadow(0 0 18px rgba(80,140,255,.35))}
+.hero .wordmark{font-size:clamp(34px,6vw,52px)}
+.hero .sub{position:relative;font-size:12px;font-weight:700;letter-spacing:.42em;color:#9cc7ff;margin:6px 0 16px}
+.pills{position:relative;display:flex;gap:8px;flex-wrap:wrap}
+.pills span{font-size:12px;font-weight:700;letter-spacing:.12em;border:1px solid #2c4d8f;border-radius:7px;padding:4px 12px;color:#cfe0ff;background:#12264c}
+.hero .hip{position:relative;display:inline-flex;align-items:center;gap:8px;margin-top:18px;font-weight:800;font-size:16px;color:#d9f7c9;
+  background:rgba(70,160,80,.18);border:1px solid rgba(120,220,120,.4);border-radius:999px;padding:8px 18px}
+.hero .hip i{width:8px;height:8px;border-radius:50%;background:#6fe26f;box-shadow:0 0 8px #6fe26f}
+.tm{font-weight:800;font-style:italic;font-size:19px;letter-spacing:.03em;
+  background:linear-gradient(180deg,#3a3f52 20%,#7f93c4 95%);-webkit-background-clip:text;background-clip:text;color:transparent}
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]) .tm{background:linear-gradient(180deg,#fff 30%,#9cc7ff 90%);-webkit-background-clip:text;background-clip:text} }
+:root[data-theme="dark"] .tm{background:linear-gradient(180deg,#fff 30%,#9cc7ff 90%);-webkit-background-clip:text;background-clip:text}
+/* ---- gallery tu do ---- */
+.gal{display:grid;grid-template-columns:repeat(auto-fill,minmax(205px,1fr));gap:12px;margin:16px 0}
+.fig{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:10px 10px 12px;text-align:center}
+.fig img{width:100%;height:auto;border-radius:6px;background:
+  linear-gradient(180deg,#171522,#211e30)}
+.fig b{display:block;margin-top:7px;font-size:13.5px}
+.fig .pr{font-size:12px;color:var(--mut)}
+.page{display:none}
+.page.on{display:block}
+/* ---- mobile ---- */
+@media (max-width:860px){
+  .shell{grid-template-columns:1fr;gap:0;padding-block:16px 50px}
+  .side{position:static;display:flex;gap:4px;overflow-x:auto;padding-bottom:12px;margin-bottom:18px;border-bottom:1px solid var(--line)}
+  .side .grp{display:flex;gap:4px;margin:0;flex:none}
+  .side .lbl{display:none}
+  .side a{flex:none;border:1px solid var(--line);border-left-width:1px;border-radius:999px;padding:5px 13px;margin:0;font-size:13px}
+  .ip span{display:none}
+  .ip{font-size:12.5px}
+}
+@media (max-width:420px){ .top .chip{display:none} }
+</style>
+
+</head>
+<body>
+<div class="top">
+  <a class="brand tm" href="#trangchu">SKYHUNT</a><span class="chip">SMP WIKI</span>
+  <div class="ip"><span>Máy chủ: </span><b>skyhunt.online</b></div>
+  <a class="sw rpg" href="index.html">RPG WIKI →</a>
+</div>
+
+<div class="shell">
+<aside class="side" id="side">
+  <div class="grp"><div class="lbl">Hướng dẫn</div>
+    <a href="#trangchu">Trang chủ</a>
+    <a href="#batdau">Bắt đầu chơi</a>
+    <a href="#luat">Luật server</a>
+    <a href="#lenh">Lệnh</a>
+  </div>
+  <div class="grp"><div class="lbl">Kiếm tiền</div>
+    <a href="#kinhte">Tiền &amp; mua bán</a>
+    <a href="#shard">Shard</a>
+    <a href="#nghe">Nghề nghiệp</a>
+    <a href="#cauca">Ngư Dân (câu cá)</a>
+    <a href="#nongdan">Nông Dân</a>
+    <a href="#thomo">Thợ Mỏ</a>
+  </div>
+  <div class="grp"><div class="lbl">Hằng ngày</div>
+    <a href="#quatang">Điểm danh &amp; quà</a>
+    <a href="#nhiemvu">Nhiệm vụ &amp; Hợp đồng</a>
+    <a href="#sukien">Sự kiện &amp; Giờ Vàng</a>
+  </div>
+  <div class="grp"><div class="lbl">Phiêu lưu</div>
+    <a href="#hamnguc">Hầm ngục</a>
+    <a href="#pvp">Đấu trường PvP</a>
+    <a href="#phuphep">Phù phép riêng</a>
+    <a href="#ruong">Rương &amp; Spawner</a>
+  </div>
+  <div class="grp"><div class="lbl">Cuộc sống</div>
+    <a href="#dat">Đất đai &amp; Warp</a>
+    <a href="#pet">Pet</a>
+    <a href="#danhhieu">Danh hiệu &amp; Xếp hạng</a>
+    <a href="#rank">Rank &amp; VIP</a>
+  </div>
+</aside>
+
+<main id="main">
+
+<article class="page" id="trangchu">
+  <div class="hero">
+    <div class="wordmark">SKYHUNT</div>
+    <div class="sub">SURVIVAL MULTIPLAYER</div>
+    <div class="pills"><span>SINH TỒN</span><span>KINH TẾ</span><span>NGHỀ</span></div>
+    <div class="hip"><i></i> skyhunt.online</div>
+  </div>
+  <h1>SkyHunt SMP — Wiki sinh tồn</h1>
+  <p class="lead">Server Minecraft sinh tồn Việt Nam miễn phí: dựng nhà, claim đất, làm nghề kiếm tiền, buôn bán ở chợ, đi hầm ngục và săn thiên thạch cùng cả server. Chết không mất đồ.</p>
+  <div class="callout"><b>Vào chơi:</b> Minecraft Java → Multiplayer → địa chỉ <kbd>skyhunt.online</kbd> → chọn chế độ <b>SMP</b>. Lần đầu vào bạn được đưa thẳng tới một vùng đất trống để bắt đầu.</div>
+  <h2>Điểm nổi bật</h2>
+  <ul>
+    <li><b>Giữ đồ khi chết</b> — không mất đồ, không mất level. Chơi thoải mái, không sợ mất công.</li>
+    <li><b>3 nghề kiếm tiền</b> — Ngư Dân (134 loài cá + minigame kéo cá), Nông Dân, Thợ Mỏ, mỗi nghề lên tới cấp 60.</li>
+    <li><b>Kinh tế người chơi</b> — chợ đấu giá, bảng đơn hàng, trao đổi trực tiếp, giá thị trường lên xuống theo cả server.</li>
+    <li><b>Claim đất 1 cú bấm</b> — cầm xẻng vàng bấm chuột phải là xong cả ô 16x16.</li>
+    <li><b>Hầm ngục 3 tầng, thiên thạch 4 lần/ngày, Thuỷ Quái, Vua Lòng Đất</b> — luôn có việc để làm cùng nhau.</li>
+    <li><b>Quà mỗi ngày</b> — điểm danh 30 ngày, quà online, 8 nhiệm vụ hằng ngày, hợp đồng chung cả server.</li>
+  </ul>
+  <h2>Mục lục nhanh</h2>
+  <ul>
+    <li><a href="#batdau">Bắt đầu chơi</a> — 13 bước tân thủ, tổng thưởng 284.000$.</li>
+    <li><a href="#kinhte">Tiền &amp; mua bán</a> — shop, chợ, đơn hàng, giá thị trường.</li>
+    <li><a href="#nghe">Nghề nghiệp</a> — cách lên cấp và kiếm tiền từng nghề.</li>
+    <li><a href="#quatang">Điểm danh &amp; quà</a> — nhận gì mỗi ngày.</li>
+    <li><a href="#dat">Đất đai</a> — claim, cho bạn bè vào nhà, đặt warp.</li>
+    <li><a href="#lenh">Lệnh</a> — toàn bộ lệnh người chơi.</li>
+  </ul>
+  <h2>Thông tin</h2>
+  <div class="tbl"><table>
+    <tr><td>Địa chỉ</td><td><kbd>skyhunt.online</kbd></td></tr>
+    <tr><td>Phiên bản</td><td>Minecraft Java bản mới, không cần mod, không cần tài khoản bản quyền</td></tr>
+    <tr><td>Kiểu chơi</td><td>Sinh tồn có kinh tế, giữ đồ khi chết, claim đất bảo vệ nhà</td></tr>
+    <tr><td>Discord</td><td><a href="https://discord.gg/pe7eCvb5jb" rel="noopener">discord.gg/pe7eCvb5jb</a> — giftcode cuối tuần đăng ở đây</td></tr>
+    <tr><td>Wiki RPG</td><td>Chế độ RPG gacha có wiki riêng: <a href="index.html">RPG Wiki</a></td></tr>
+  </table></div>
+</article>
+
+<article class="page" id="batdau">
+  <div class="crumb">SMP Wiki / Hướng dẫn</div>
+  <h1>Bắt đầu chơi</h1>
+  <p class="lead">Từ lúc vào server tới khi có nhà, có đất, có nghề.</p>
+  <h2>Lần đầu vào server</h2>
+  <ul>
+    <li>Bạn được <b>dịch chuyển tới một vùng đất trống</b> ngay lập tức. Muốn tìm chỗ khác thì gõ <kbd>/rtp</kbd>.</li>
+    <li>Nhận ngay <b>bộ đồ khởi đầu</b>: cuốc, rìu, kiếm sắt, 32 bánh mì, 16 đuốc.</li>
+    <li>Nhận thêm <b>quà chào mừng</b>: bộ giáp sắt mặc sẵn + 1 Totem Bất Tử (dùng được trong 3 ngày).</li>
+    <li>Nhận <b>Xẻng Claim Đất</b> (xẻng vàng) — dùng để bảo vệ nhà. Giữ cẩn thận, chỉ phát một lần.</li>
+    <li>5 phút đầu quanh bạn <b>không sinh quái</b>, đủ thời gian dựng chỗ trú.</li>
+  </ul>
+  <div class="callout"><b>Chết không mất đồ, không mất level.</b> Có giường thì hồi sinh ở giường, không có thì được đưa tới vùng đất mới. Thoát game ở đâu, vào lại đứng đúng chỗ đó.</div>
+  <h2>13 bước tân thủ</h2>
+  <p>Làm xong bước này mới hiện bước sau. Đi hết chuỗi được tổng cộng <b>284.000$</b> cùng chìa rương.</p>
+  <div class="tbl"><table>
+    <tr><th>#</th><th>Việc cần làm</th><th>Thưởng</th></tr>
+    <tr><td>1</td><td>Tìm đất dựng nhà — <kbd>/rtp</kbd> 1 lần</td><td>10.000$</td></tr>
+    <tr><td>2</td><td>Chọn một nghề trong <kbd>/job</kbd></td><td>10.000$</td></tr>
+    <tr><td>3</td><td>Đào 100 khối đá</td><td>12.000$ + 32 đuốc</td></tr>
+    <tr><td>4</td><td>Đặt 50 khối dựng nhà</td><td>12.000$ + 16 bánh mì</td></tr>
+    <tr><td>5</td><td>Claim một ô đất</td><td>14.000$</td></tr>
+    <tr><td>6</td><td>Hạ 20 quái vật</td><td>16.000$</td></tr>
+    <tr><td>7</td><td>Lên 1 cấp nghề</td><td>24.000$</td></tr>
+    <tr><td>8</td><td>Điểm danh lần đầu <kbd>/daily</kbd></td><td>16.000$ + chìa Common</td></tr>
+    <tr><td>9</td><td>Mở một rương ở khu spawn</td><td>20.000$</td></tr>
+    <tr><td>10</td><td>Xong 1 nhiệm vụ hằng ngày <kbd>/quest</kbd></td><td>30.000$</td></tr>
+    <tr><td>11</td><td>Mua 1 món ở <kbd>/shop</kbd></td><td>20.000$</td></tr>
+    <tr><td>12</td><td>Đăng bán 1 món ở chợ <kbd>/ah ban &lt;giá&gt;</kbd></td><td>20.000$</td></tr>
+    <tr><td>13</td><td>Hạ thêm 100 quái vật</td><td>80.000$ + chìa Rare</td></tr>
+  </table></div>
+  <h2>Ba lệnh nên nhớ</h2>
+  <ul>
+    <li><kbd>/menu</kbd> — bảng điều khiển: điểm danh, quà, nhiệm vụ, nghề, shop, rank, VIP… tất cả trong một chỗ.</li>
+    <li><kbd>/huongdan</kbd> — hướng dẫn theo chủ đề: kiếm tiền, đi lại, đất đai, chợ, đội nhóm.</li>
+    <li><kbd>/settings</kbd> — tự chỉnh trải nghiệm của mình (xem bên dưới).</li>
+  </ul>
+  <h2>Tuỳ chỉnh riêng (/settings)</h2>
+  <div class="tbl"><table>
+    <tr><th>Mục</th><th>Tác dụng</th></tr>
+    <tr><td>Bảng điểm / thanh thông tin</td><td>Bật tắt bảng bên phải và dòng thông tin dưới màn hình</td></tr>
+    <tr><td>Quái sinh quanh mình</td><td>Tắt quái tự nhiên sinh quanh bạn — xây nhà ban đêm thoải mái</td></tr>
+    <tr><td>Phantom</td><td>Không còn bị con dơi đen làm phiền khi lâu ngày không ngủ</td></tr>
+    <tr><td>Tầm nhìn đêm</td><td>Nhìn rõ trong tối vĩnh viễn</td></tr>
+    <tr><td>Hiện người chơi khác</td><td>Ẩn mọi người cho đỡ giật máy</td></tr>
+    <tr><td>Lời mời / dịch chuyển</td><td>Chặn hoặc tự đồng ý lời mời <kbd>/tpa</kbd></td></tr>
+    <tr><td>Chat / tin nhắn riêng</td><td>Tắt chat chung, chặn tin nhắn riêng</td></tr>
+    <tr><td>Thông báo toàn server</td><td>Tắt tin mở đồ hiếm, lên VIP…</td></tr>
+    <tr><td>Hiệu ứng totem / crystal</td><td>Ẩn hoạt cảnh nổ cho đỡ chói mắt</td></tr>
+  </table></div>
+  <h2>Mẹo nhỏ</h2>
+  <ul>
+    <li>Bấm chuột phải vào bậc thang khi hai tay trống để <b>ngồi</b>, Shift để đứng dậy.</li>
+    <li><kbd>/sethome</kbd> lưu nhà, <kbd>/home</kbd> mở bảng nhà. Có rank/VIP thì được lưu nhiều nhà hơn.</li>
+    <li>Lập đội tối đa 6 người: <kbd>/party tao &lt;tên&gt;</kbd>, mời bạn bằng <kbd>/party moi &lt;tên&gt;</kbd>, chat đội bằng <kbd>/pc</kbd>. Đồng đội mặc định không đánh trúng nhau.</li>
+  </ul>
+  <div class="pn"><span></span><a href="#luat"><span class="dir">Tiếp</span>Luật server →</a></div>
+</article>
+
+<article class="page" id="luat">
+  <div class="crumb">SMP Wiki / Hướng dẫn</div>
+  <h1>Luật server</h1>
+  <p class="lead">Mười điều để ai cũng chơi vui. Xem lại trong game bằng <kbd>/rules</kbd>.</p>
+  <div class="tbl"><table>
+    <tr><th>Điều</th><th>Không được</th><th>Xử lý</th></tr>
+    <tr><td>1. Tôn trọng người khác</td><td>Chửi bới, xúc phạm, phân biệt vùng miền, đụng tới gia đình hay đời tư</td><td>Cảnh cáo → mute → ban</td></tr>
+    <tr><td>2. Không hack / cheat</td><td>X-ray, fly, killaura, autoclick, reach, macro, freecam, baritone</td><td>Ban ngay lần đầu</td></tr>
+    <tr><td>3. Không lợi dụng lỗi</td><td>Dupe đồ, lỗi shop, lỗi giá, giấu bug để farm riêng</td><td>Ban + xoá tài sản có từ bug</td></tr>
+    <tr><td>4. Không lừa đảo</td><td>Giả danh staff/shop, hứa trả rồi bỏ trốn</td><td>Ban + trả đồ cho người bị lừa</td></tr>
+    <tr><td>5. Một người một tài khoản</td><td>Dùng acc phụ nhận thưởng, giftcode, sự kiện nhiều lần</td><td>Xoá thưởng, ban acc phụ</td></tr>
+    <tr><td>6. Không spam / quảng cáo</td><td>Spam chat, quảng cáo server khác, rao bán tài khoản</td><td>Mute → ban</td></tr>
+    <tr><td>7. Không phá hiệu năng</td><td>Redstone chạy liên tục không công tắc, cối quái khổng lồ, chunk loader</td><td>Xoá công trình</td></tr>
+    <tr><td>8. Không AFK bằng công cụ</td><td>Macro, kẹp chuột, đè phím bằng vật</td><td>Xoá đồ farm, cảnh cáo → ban</td></tr>
+    <tr><td>9. Không giao dịch tiền thật</td><td>Mua bán đồ, tiền, đất, tài khoản bằng tiền thật</td><td>Ban cả người mua lẫn người bán</td></tr>
+    <tr><td>10. Không mod đặt khối</td><td>EasyRedstone, Easy Place, Litematica Printer, auto-build</td><td>Ban, xoá công trình</td></tr>
+  </table></div>
+  <h2>Được phép</h2>
+  <ul>
+    <li>OptiFine, Sodium, Iris, shader, minimap (không hiện quái/người), toggle sprint, zoom, hiện FPS.</li>
+    <li>Treo máy đứng yên bình thường. Acc phụ chỉ để giữ đất, giữ kho của chính bạn.</li>
+    <li>Báo bug cho staff — <b>được thưởng</b>.</li>
+  </ul>
+  <div class="callout"><b>Thấy sai thì báo, đừng tự xử.</b> Nhắn staff đang online hoặc gửi ảnh/video lên Discord.</div>
+  <div class="pn"><a href="#batdau"><span class="dir">Trước</span>← Bắt đầu chơi</a><a href="#kinhte"><span class="dir">Tiếp</span>Tiền &amp; mua bán →</a></div>
+</article>
+
+<article class="page" id="kinhte">
+  <div class="crumb">SMP Wiki / Kiếm tiền</div>
+  <h1>Tiền &amp; mua bán</h1>
+  <p class="lead">Ba loại tiền, năm cách mua bán. Tiền không tự nhiên sinh ra — bạn kiếm bằng tay nghề.</p>
+  <h2>Ba loại tiền</h2>
+  <div class="tbl"><table>
+    <tr><th>Tiền</th><th>Kiếm bằng</th><th>Dùng để</th></tr>
+    <tr><td><b>Tiền $</b></td><td>Bán đồ, làm nghề, nhiệm vụ, sự kiện</td><td>Mua shop, rank, đất, chợ. Xem bằng <kbd>/balance</kbd></td></tr>
+    <tr><td><b>Shard</b></td><td>Thời gian chơi và công sức (xem <a href="#shard">Shard</a>)</td><td>Đồ hiếm, spawner, lưới cá, phù phép</td></tr>
+    <tr><td><b>SHP</b></td><td>Ủng hộ server</td><td>VIP, chìa rương, booster — không bắt buộc</td></tr>
+  </table></div>
+  <h2>Cửa hàng — /shop và /sell</h2>
+  <ul>
+    <li><kbd>/shop</kbd> bán đủ thứ: khối xây, gỗ, quặng, thức ăn, đồ Nether/End, redstone, trang trí, trứng thú cưng…</li>
+    <li>Shop chỉ <b>thu mua nguyên liệu thô</b> (quặng, nông sản, đồ rơi của quái…). Đồ chế tạo thì chỉ bán ra.</li>
+    <li><kbd>/sell</kbd> mở bảng bán nhanh: bỏ đồ vào, đóng lại là bán hết. Món không thu mua sẽ được trả lại.</li>
+    <li>Tìm hàng gõ không dấu cũng được, ví dụ "vang" ra vàng.</li>
+  </ul>
+  <h2>Giá thị trường — /gia</h2>
+  <p>Giá thu mua <b>lên xuống theo cả server</b>. Món nào nhiều người bán quá thì giá tụt (thấp nhất còn 1/3), không ai bán thì giá tự hồi lại dần. Giá không bao giờ vượt giá gốc.</p>
+  <div class="callout"><b>Mẹo:</b> trước khi bán số lượng lớn, gõ <kbd>/gia</kbd> xem món nào đang được giá. Đồ farm treo máy (gỗ, đá, đồ rơi cối quái…) tụt giá nhanh hơn; kim cương thì không.</div>
+  <h2>Chợ đấu giá — /ah</h2>
+  <ul>
+    <li><kbd>/ah</kbd> xem chợ, <kbd>/ah ban &lt;giá&gt;</kbd> rao món đang cầm, <kbd>/ah tim &lt;tên&gt;</kbd> tìm hàng.</li>
+    <li>Hàng treo <b>10 ngày</b>; hết hạn không mất mà vào hòm chờ <kbd>/ah hom</kbd>.</li>
+    <li>Phí sàn <b>5%</b> trừ vào tiền người bán. Rao được tối đa 24 món cùng lúc (rank/VIP được thêm).</li>
+    <li>Món từ 500.000$ trở lên được loa toàn server.</li>
+  </ul>
+  <h2>Bảng đơn hàng — /order</h2>
+  <p>Cần nhiều hàng? Đặt đơn để người khác giao tới: <kbd>/order tao &lt;số lượng&gt; &lt;giá mỗi cái&gt;</kbd>. Tiền được giữ sẵn khi tạo đơn, huỷ thì hoàn phần chưa giao. Ai có hàng thì mở <kbd>/order</kbd>, Shift + bấm vào đơn để giao hết. Đơn treo 7 ngày; người đặt nhận hàng bằng <kbd>/order nhan</kbd>.</p>
+  <h2>Trao đổi trực tiếp — /trade</h2>
+  <p><kbd>/trade &lt;tên&gt;</kbd> mở bàn đổi 9 ô mỗi bên, kèm tiền. Ai đổi gì trên bàn thì cả hai phải bấm xác nhận lại — không lo bị tráo đồ. Đóng bảng hay thoát game giữa chừng thì đồ tự trả về.</p>
+  <div class="pn"><a href="#luat"><span class="dir">Trước</span>← Luật server</a><a href="#shard"><span class="dir">Tiếp</span>Shard →</a></div>
+</article>
+
+<article class="page" id="shard">
+  <div class="crumb">SMP Wiki / Kiếm tiền</div>
+  <h1>Shard</h1>
+  <p class="lead">Đồng tiền của người chăm chỉ — chỉ có được bằng thời gian chơi và công sức, không mua bằng tiền game.</p>
+  <h2>Cách kiếm</h2>
+  <div class="tbl"><table>
+    <tr><th>Nguồn</th><th>Lượng</th></tr>
+    <tr><td>Online</td><td>1 Shard mỗi giờ chơi, tối đa 12 Shard/ngày. Đứng yên quá 10 phút thì ngừng tính</td></tr>
+    <tr><td>Hạ quái</td><td>5.000 con = 1 Shard</td></tr>
+    <tr><td>Đào khối</td><td>15.000 khối = 1 Shard (không tính đất, cát, sỏi, cuội, netherrack, cây trồng)</td></tr>
+    <tr><td>Quà online, điểm danh, nhiệm vụ, hợp đồng</td><td>Xem <a href="#quatang">Điểm danh &amp; quà</a> và <a href="#nhiemvu">Nhiệm vụ</a></td></tr>
+    <tr><td>Hầm ngục Điện Đá Sâu</td><td>1–2 Shard khi đạt hạng A trở lên</td></tr>
+  </table></div>
+  <p>Ví Shard: <kbd>/shards</kbd>. Bảng xếp hạng: <kbd>/shards top</kbd>.</p>
+  <h2>Cửa hàng Shard — /shardshop</h2>
+  <div class="tbl"><table>
+    <tr><th>Gian</th><th>Có gì (giá Shard)</th></tr>
+    <tr><td>Vật phẩm hiếm</td><td>Bọt biển 4 · Tim Biển Cả 6 · Táo vàng phù phép 12 · Rương Shulker 15 · Sách Mending 22 · Đinh ba 30 · Totem 35 · Thỏi Netherite 45 · Đèn hiệu 55 · Ngôi sao Nether 90</td></tr>
+    <tr><td>Spawner thú</td><td>Gà 150 · Heo 200 · Cừu 260 · Bò 340 … Kỳ Giông 1.000</td></tr>
+    <tr><td>Spawner quái</td><td>Zombie 1.200 · Skeleton 1.400 · Nhện 1.550 · Creeper 1.900 … Blaze 4.800 · Wither Skeleton 6.000 — chỉ bán ở đây</td></tr>
+    <tr><td>Tiện ích</td><td>Saddle of Flight (bay 20 phút) 20 · Vein Sight 10 · Tide Charm 12 · Hearthstone 8 · Chìa Common 12 · Chìa Rare 40</td></tr>
+    <tr><td>Trang bị</td><td>Cuốc Chấn Địa (đào 3x3) 40 · Xẻng San Nền 40 · Rìu Đốn Hạ (chặt cả cây) 9 · Rìu Thương Nhân (đấm rương là bán sạch) 40 · Mace 40 · Cung Chiến 300</td></tr>
+  </table></div>
+  <div class="callout"><b>Lưu ý:</b> đồ mua bằng Shard (trừ spawner) có hạn sử dụng ghi ngay trên món đồ. Spawner đặt xuống là của bạn vĩnh viễn.</div>
+  <div class="pn"><a href="#kinhte"><span class="dir">Trước</span>← Tiền &amp; mua bán</a><a href="#nghe"><span class="dir">Tiếp</span>Nghề nghiệp →</a></div>
+</article>
+
+<article class="page" id="nghe">
+  <div class="crumb">SMP Wiki / Kiếm tiền</div>
+  <h1>Nghề nghiệp</h1>
+  <p class="lead">Ba nghề, mỗi nghề một lối chơi riêng. Mở <kbd>/job</kbd> để xem cấp và tiến độ.</p>
+  <div class="tbl"><table>
+    <tr><th>Nghề</th><th>Làm gì</th><th>Lệnh</th></tr>
+    <tr><td><a href="#cauca"><b>Ngư Dân</b></a></td><td>Câu cá bằng minigame kéo cá, sưu tầm 134 loài, đặt lưới thu cá tự động</td><td><kbd>/ca</kbd></td></tr>
+    <tr><td><a href="#nongdan"><b>Nông Dân</b></a></td><td>Thu hoạch cây chín ra nông sản có phẩm chất, cây tự trồng lại</td><td><kbd>/farm</kbd></td></tr>
+    <tr><td><a href="#thomo"><b>Thợ Mỏ</b></a></td><td>Đào quặng tự nhiên ra "mẫu quặng" bán được giá, gặp Golem và Vua Lòng Đất</td><td><kbd>/mine</kbd></td></tr>
+  </table></div>
+  <h2>Lên cấp được gì</h2>
+  <ul>
+    <li>Cấp tối đa <b>60</b>. Lên cấp N nhận ngay <b>N × 200$</b>.</li>
+    <li>Mỗi cấp <b>+0,5% giá bán</b> sản phẩm của nghề — cấp 60 bán đắt hơn khoảng 30%.</li>
+    <li>Nông Dân và Thợ Mỏ: mỗi cấp <b>+2% may mắn</b> ra hàng phẩm chất cao.</li>
+    <li>Mở <a href="#danhhieu">danh hiệu nghề</a> ở cấp 1, 5, 10, 20, 30, 45 và 60.</li>
+    <li>Rank và VIP nhân thêm thu nhập nghề.</li>
+  </ul>
+  <h2>Phẩm chất sản phẩm</h2>
+  <div class="tbl"><table>
+    <tr><th>Phẩm chất</th><th>Tỉ lệ gốc</th><th>Giá bán</th></tr>
+    <tr><td>Thường</td><td>70%</td><td>x1</td></tr>
+    <tr><td>Tốt</td><td>20%</td><td>x1,3</td></tr>
+    <tr><td>Hiếm</td><td>7%</td><td>x1,8</td></tr>
+    <tr><td>Sử Thi</td><td>2,5%</td><td>x3 (phát sáng)</td></tr>
+    <tr><td>Huyền Thoại</td><td>0,5%</td><td>x6 (phát sáng)</td></tr>
+  </table></div>
+  <div class="pn"><a href="#shard"><span class="dir">Trước</span>← Shard</a><a href="#cauca"><span class="dir">Tiếp</span>Ngư Dân →</a></div>
+</article>
+
+<article class="page" id="cauca">
+  <div class="crumb">SMP Wiki / Nghề nghiệp</div>
+  <h1>Ngư Dân — câu cá</h1>
+  <p class="lead">Không phải câu cá treo máy: mỗi con cá là một trận kéo co và một trận chém. <kbd>/ca</kbd> mở kho cá, bộ sưu tập, lưới và chợ cá.</p>
+  <h2>Cách câu</h2>
+  <ol>
+    <li>Quăng câu, chờ cá cắn.</li>
+    <li><b>Kéo cá:</b> có hai thanh Tiến độ và Độ căng. Kéo thì cả hai cùng tăng — độ căng đầy là <b>đứt dây mất cá</b>. Buông tay thì độ căng tụt nhưng tiến độ cũng tụt.</li>
+    <li>Khi cá <b>vùng vẫy</b> thì phải buông ra ngay, kéo lúc đó gần như chắc chắn đứt.</li>
+    <li>Kéo lên rồi, một <b>con canh cá</b> nhảy lên bờ — <b>chém chết nó mới nhận được cá</b>. Bỏ quá 3 phút thì mất.</li>
+  </ol>
+  <p>Hụt cá không mất mồi. Cá càng hiếm thì con canh càng trâu.</p>
+  <h2>Bậc cá</h2>
+  <div class="tbl"><table>
+    <tr><th>Bậc</th><th>Giá gốc</th><th>Số loài</th></tr>
+    <tr><td>Thường</td><td>1.000$</td><td>41</td></tr>
+    <tr><td>Hiếm</td><td>2.500$</td><td>36</td></tr>
+    <tr><td>Quý</td><td>6.000$</td><td>28</td></tr>
+    <tr><td>Sử Thi</td><td>15.000$</td><td>20</td></tr>
+    <tr><td>Huyền Thoại</td><td>40.000$</td><td>9</td></tr>
+  </table></div>
+  <p>Cá to bán đắt hơn (tới x3 giá gốc). Con nào thuộc loại dài nhất của loài được giữ làm <b>cúp kỷ lục</b>. Cá từ 50.000$ hoặc dài từ 800cm được loa toàn server.</p>
+  <h2>Cần, mồi, thuyền</h2>
+  <div class="tbl"><table>
+    <tr><th>Cần câu</th><th>Giá</th><th>Đặc điểm</th></tr>
+    <tr><td>Cần thường</td><td>—</td><td>Chỉ ra cá Thường</td></tr>
+    <tr><td>Cần Trúc</td><td>10.000.000$</td><td>Bắt đầu ra cá Hiếm, Quý</td></tr>
+    <tr><td>Cần Bạc</td><td>50.000.000$</td><td>Có cá Sử Thi</td></tr>
+    <tr><td>Cần Hắc Ngọc</td><td>100.000.000$</td><td>Có cá Huyền Thoại, cắn nhanh</td></tr>
+    <tr><td>Cần Long Vương</td><td>500 SHP, cả server chỉ 6 cây</td><td>Cắn rất nhanh, kéo khoẻ, x2 vật phẩm đặc biệt</td></tr>
+    <tr><td>Cần Vực Thẳm</td><td>1.500 SHP, cả server chỉ 2 cây</td><td>Mạnh nhất, 15% ra Huyền Thoại</td></tr>
+  </table></div>
+  <ul>
+    <li><b>Mồi</b> (Giun, Tép, Mực, Huyết Long) đẩy tỉ lệ lên bậc cao và ra cá to hơn.</li>
+    <li><b>Thuyền</b> (Gỗ, Buồm, Rồng) nhân sản lượng thêm 15–50%.</li>
+  </ul>
+  <h2>Lưới cá — thu nhập khi đi vắng</h2>
+  <p>Mua bằng Shard, đặt xuống nước (ít nhất 3 mặt là nước). Lưới tự thu cá khi có người chơi ở gần, đầy sau 18 giờ. Tối đa 3 lưới (VIP được thêm).</p>
+  <div class="tbl"><table>
+    <tr><th>Lưới</th><th>Giá</th><th>Cá/giờ</th></tr>
+    <tr><td>Lưới Gai</td><td>150 Shard</td><td>12</td></tr>
+    <tr><td>Lưới Lụa</td><td>600 Shard</td><td>20</td></tr>
+    <tr><td>Lưới Ngọc</td><td>1.800 Shard</td><td>28</td></tr>
+    <tr><td>Lưới Long Vương</td><td>4.500 Shard</td><td>36</td></tr>
+  </table></div>
+  <h2>Vật phẩm đặc biệt câu được</h2>
+  <ul>
+    <li><b>Móc Câu Hoàng Kim</b> — con tiếp theo chắc chắn Huyền Thoại.</li>
+    <li><b>Mắt Bão</b> — 5 phút mọi con đều từ bậc Quý trở lên.</li>
+    <li><b>Bình Thuỷ Triều</b> — 10 phút cá cắn nhanh gấp đôi.</li>
+    <li><b>Mẻ Lưới Trời</b> — 10 con canh cá rơi từ trời xuống.</li>
+    <li><b>Tù Và Gọi Thuỷ Quái</b> — gọi boss biển ngay tại chỗ.</li>
+    <li><b>Ngọc Trai Đen</b> — đổi ra Xu Biển.</li>
+  </ul>
+  <h2>Thuỷ Quái — boss biển</h2>
+  <p>Cả server câu đủ <b>1.000 con cá trong một vùng</b> thì Thuỷ Quái nổi lên. Đánh bằng móc cần hoặc chuột trái. Ai gây sát thương đều được chia <b>10–100 Xu Biển</b> theo phần đóng góp. 15 phút không hạ được thì nó lặn mất.</p>
+  <p><b>Xu Biển</b> là tiền riêng của nghề câu: bán cá được xu, cũng đổi được bằng xương, dây, thuốc súng, slime, ngọc ender, blaze rod.</p>
+  <div class="pn"><a href="#nghe"><span class="dir">Trước</span>← Nghề nghiệp</a><a href="#nongdan"><span class="dir">Tiếp</span>Nông Dân →</a></div>
+</article>
+
+<article class="page" id="nongdan">
+  <div class="crumb">SMP Wiki / Nghề nghiệp</div>
+  <h1>Nông Dân</h1>
+  <p class="lead">Đập cây chín là thu hoạch, cây tự trồng lại. Mỗi lần thu có cơ hội ra nông sản phẩm chất cao bán gấp 6 lần.</p>
+  <h2>Cây trồng</h2>
+  <p>Lúa, cà rốt, khoai tây, củ dền, mụn cóc Nether, ca cao, dâu ngọt, dâu phát sáng, dưa hấu, bí ngô, mía, xương rồng, tre.</p>
+  <p>Nông sản vào kho <kbd>/farm</kbd>; bán bằng <kbd>/farm sell</kbd>.</p>
+  <h2>Nâng cấp (tối đa cấp 10)</h2>
+  <div class="tbl"><table>
+    <tr><th>Nâng cấp</th><th>Mỗi cấp</th></tr>
+    <tr><td>May Mắn</td><td>+15% cơ hội ra phẩm chất cao</td></tr>
+    <tr><td>Bội Thu</td><td>+4% cơ hội thu gấp đôi</td></tr>
+    <tr><td>Thương Lái</td><td>+4% giá bán</td></tr>
+    <tr><td>Học Việc</td><td>+8% kinh nghiệm nghề</td></tr>
+  </table></div>
+  <h2>Mốc thu hoạch</h2>
+  <p>Mỗi loại cây có mốc thưởng riêng: 100 lần → 2.000$ · 1.000 → 15.000$ · 10.000 → 120.000$ · 50.000 → 500.000$.</p>
+  <div class="callout"><b>Lưu ý:</b> máy farm redstone và cây lớn chỉ chạy khi có người chơi đứng gần (trong khoảng 48 khối).</div>
+  <div class="pn"><a href="#cauca"><span class="dir">Trước</span>← Ngư Dân</a><a href="#thomo"><span class="dir">Tiếp</span>Thợ Mỏ →</a></div>
+</article>
+
+<article class="page" id="thomo">
+  <div class="crumb">SMP Wiki / Nghề nghiệp</div>
+  <h1>Thợ Mỏ</h1>
+  <p class="lead">Đào quặng tự nhiên vẫn rơi quặng như thường, và được thêm một "mẫu quặng" có phẩm chất vào kho <kbd>/mine</kbd> để bán.</p>
+  <h2>Giá mẫu quặng (phẩm chất Thường)</h2>
+  <div class="tbl"><table>
+    <tr><th>Quặng</th><th>Giá</th></tr>
+    <tr><td>Than, Thạch Anh</td><td>65$</td></tr>
+    <tr><td>Đồng, Vàng Nether</td><td>100$</td></tr>
+    <tr><td>Sắt</td><td>145$</td></tr>
+    <tr><td>Đá Đỏ, Lưu Ly</td><td>175$</td></tr>
+    <tr><td>Vàng</td><td>245$</td></tr>
+    <tr><td>Kim Cương</td><td>900$</td></tr>
+    <tr><td>Ngọc Lục Bảo</td><td>1.050$</td></tr>
+    <tr><td>Mảnh Cổ Đại</td><td>3.900$</td></tr>
+  </table></div>
+  <p>Phẩm chất cao nhân giá lên tới x6. Bán bằng <kbd>/mine sell</kbd>.</p>
+  <h2>Mạch Quặng</h2>
+  <p>Mỗi quặng có cơ hội bùng mạch: <b>20 giây mẫu x2</b>, may mắn tăng mạnh, quặng xung quanh phát sáng. Hết mạch được thưởng thêm theo số quặng đã đào.</p>
+  <h2>Golem Quặng</h2>
+  <p>Mẫu Sử Thi hoặc Huyền Thoại đôi khi hoá thành Golem. Hạ được trong 60 giây: <b>+3 mẫu cùng phẩm chất</b> và x3 kinh nghiệm.</p>
+  <h2>Vua Lòng Đất</h2>
+  <p>Một vùng bị đào đủ <b>600 quặng</b> thì boss trồi lên. Có động đất và gọi tay sai. Hạ trong 5 phút để chia <b>300.000$</b> theo phần sát thương; ai góp từ 5% trở lên nhận thêm <b>3 mẫu Huyền Thoại</b>.</p>
+  <h2>Cuốc đặc biệt</h2>
+  <ul>
+    <li><b>Deepcore Excavator</b> — đào 3x3 và <b>X-Ray</b> quét quặng quanh bạn. Cả server chỉ 6 cây.</li>
+    <li><b>Hollow Lantern Seeker</b> — cúp sự kiện, có X-Ray, đổi bằng Shard và Bí Ngô Ma Ám.</li>
+  </ul>
+  <div class="pn"><a href="#nongdan"><span class="dir">Trước</span>← Nông Dân</a><a href="#quatang"><span class="dir">Tiếp</span>Điểm danh &amp; quà →</a></div>
+</article>
+
+<article class="page" id="quatang">
+  <div class="crumb">SMP Wiki / Hằng ngày</div>
+  <h1>Điểm danh &amp; quà</h1>
+  <p class="lead">Vào game mỗi ngày là có quà. Bốn nguồn: điểm danh, quà online, bộ đồ, giftcode.</p>
+  <h2>Điểm danh — /daily</h2>
+  <p>Chu kỳ <b>30 ngày</b>. Nghỉ một hôm không sao — lần sau bấm tiếp đúng ô đang dở, không bị reset. Mỗi ngày có tiền (1–3 triệu $), cộng thêm quà:</p>
+  <div class="tbl"><table>
+    <tr><th>Ngày</th><th>Quà nổi bật</th></tr>
+    <tr><td>1, 8</td><td>Bộ giáp netherite "Chiến Binh" + kiếm (dùng 1 ngày)</td></tr>
+    <tr><td>2–4, 9–11…</td><td>Rìu Đốn Hạ / Xẻng San Nền / Cuốc Chấn Địa (dùng 1 ngày)</td></tr>
+    <tr><td>5, 6, 12, 13…</td><td>20–30 Shard</td></tr>
+    <tr><td>7</td><td>Kiếm "Nightwarden Edge" (dùng 7 ngày)</td></tr>
+    <tr><td>14</td><td>Elytra "Highpeak Wings" + 128 pháo hoa</td></tr>
+    <tr><td>15, 20, 25, 30</td><td>Spawner: Enderman, Người Sắt, Phù Thuỷ — giữ vĩnh viễn</td></tr>
+    <tr><td>23, 26, 28</td><td>Mace, Cung Chiến, Rìu Thương Nhân</td></tr>
+  </table></div>
+  <p>Cả chu kỳ: khoảng <b>47 triệu $, 235 Shard và 6 spawner</b>. VIP được nhân quà.</p>
+  <h2>Quà online — /online</h2>
+  <div class="tbl"><table>
+    <tr><th>Online trong ngày</th><th>Thưởng</th></tr>
+    <tr><td>15 phút</td><td>10.000$</td></tr>
+    <tr><td>45 phút</td><td>20.000$</td></tr>
+    <tr><td>2 giờ</td><td>40.000$ + 1 Shard</td></tr>
+    <tr><td>4 giờ</td><td>70.000$ + 1 Shard</td></tr>
+    <tr><td>6 giờ</td><td>95.000$ + 1 Shard</td></tr>
+    <tr><td>8 giờ</td><td>120.000$ + 1 Shard</td></tr>
+    <tr><td>10 giờ</td><td>160.000$ + 1 Shard</td></tr>
+    <tr><td>12 giờ</td><td>200.000$ + 1 Shard + chìa Common</td></tr>
+  </table></div>
+  <h2>Bộ đồ — /kit</h2>
+  <ul>
+    <li><b>Bộ Thành Viên</b> (mọi người, 12 giờ một lần): kiếm, cuốc, rìu sắt, 32 bò nướng, 32 đuốc, 1 táo vàng.</li>
+    <li>VIP có thêm các bộ riêng theo bậc: Ember, Frost, Verdant, Aurum, Azure, Cherry, Crimson, Radiant, Celestial, Seraph.</li>
+    <li>Đồ trong bộ đồ <b>tự huỷ sau 20 giờ</b> — dùng thì dùng ngay.</li>
+  </ul>
+  <h2>Giftcode — /giftcode &lt;mã&gt;</h2>
+  <p>Mã quà cuối tuần đăng trên <a href="https://discord.gg/pe7eCvb5jb" rel="noopener">Discord</a>. Mỗi người nhập một lần mỗi mã.</p>
+  <div class="pn"><a href="#thomo"><span class="dir">Trước</span>← Thợ Mỏ</a><a href="#nhiemvu"><span class="dir">Tiếp</span>Nhiệm vụ &amp; Hợp đồng →</a></div>
+</article>
+
+<article class="page" id="nhiemvu">
+  <div class="crumb">SMP Wiki / Hằng ngày</div>
+  <h1>Nhiệm vụ &amp; Hợp đồng</h1>
+  <p class="lead">Nhiệm vụ là việc của riêng bạn, hợp đồng là việc của cả server.</p>
+  <h2>Nhiệm vụ hằng ngày — /quest</h2>
+  <ul>
+    <li>Mỗi ngày một <b>chuỗi 8 nhiệm vụ</b>, dễ trước khó sau. Nhận thưởng nhiệm vụ này mới mở nhiệm vụ tiếp.</li>
+    <li>Cả chuỗi: <b>1.500.000$ + 8 Shard</b>.</li>
+    <li>Đi hết chuỗi được <b>quay rương</b>: chìa Common (84%), Saddle of Flight (10%), chìa Legendary (3%), chìa Cosmetic (3%).</li>
+  </ul>
+  <p>Ví dụ nhiệm vụ: hạ 15 quái, đào 250 đá, câu 10 cá, thu 256 nông sản, hạ 15 creeper, giao 2 đơn hàng, bán 2 món ở chợ, tham gia thiên thạch, đào 16 quặng kim cương, hạ 25 enderman…</p>
+  <h2>Hợp đồng server — /hopdong</h2>
+  <p>Một mục tiêu chung cho <b>cả server</b>, ví dụ "Đường Hầm Lớn: đào 400.000 khối đá" hay "Mùa Cá: câu 4.000 con". Đủ chỉ tiêu thì <b>mọi người có góp sức đều được thưởng</b>, kể cả đang offline. Mỗi ngày tối đa 3 hợp đồng.</p>
+  <div class="tbl"><table>
+    <tr><th>Hạng đóng góp</th><th>Thưởng</th></tr>
+    <tr><td>Top 1–3</td><td>500.000$ + 3 Shard + 2 chìa Common</td></tr>
+    <tr><td>Top 4–10</td><td>300.000$ + 2 Shard + 2 chìa Common</td></tr>
+    <tr><td>Những người còn lại</td><td>150.000$ + 1 Shard + 1 chìa Common</td></tr>
+  </table></div>
+  <p>Chỉ cần góp từ 0,5% chỉ tiêu là có thưởng. Các loại hợp đồng: đào đá, đào quặng, hạ quái, săn quái mạnh, câu cá, thu hoạch, mở rương, làm nhiệm vụ, phá hầm ngục.</p>
+  <div class="pn"><a href="#quatang"><span class="dir">Trước</span>← Điểm danh &amp; quà</a><a href="#sukien"><span class="dir">Tiếp</span>Sự kiện →</a></div>
+</article>
+
+<article class="page" id="sukien">
+  <div class="crumb">SMP Wiki / Hằng ngày</div>
+  <h1>Sự kiện &amp; Giờ Vàng</h1>
+  <p class="lead"><kbd>/sukien</kbd> xem mọi sự kiện đang diễn ra, <kbd>/sukien tp</kbd> để tới.</p>
+  <h2>Thiên Thạch — 17h, 18h, 19h, 20h mỗi ngày</h2>
+  <ol>
+    <li>Server báo trước 5 phút. Tới giờ có <b>60 giây</b> để gõ <kbd>/rtp sukien</kbd> ghi tên.</li>
+    <li>Mọi người được chia khu (tối đa 12 người/khu), đứng trên bệ 10 giây để chọn chỗ.</li>
+    <li>Bệ tan — <b>đào thiên thạch trong 130 giây</b>. Khối vỏ 1 điểm, khối quặng 3 điểm. Quặng đào được là của bạn.</li>
+  </ol>
+  <div class="tbl"><table>
+    <tr><th>Hạng trong khu</th><th>Thưởng</th></tr>
+    <tr><td>1</td><td>2 chìa Common + 40.000$</td></tr>
+    <tr><td>2</td><td>1 chìa Common + 25.000$</td></tr>
+    <tr><td>3</td><td>1 chìa Common + 15.000$</td></tr>
+    <tr><td>Tham gia (từ 10 điểm)</td><td>8.000$</td></tr>
+  </table></div>
+  <p>Có 5 loại thiên thạch, hiếm nhất là <b>Vết Sẹo Của Trời</b> chứa kim cương, ngọc lục bảo và mảnh cổ đại. Trong khu thiên thạch không PvP, không bay, không nổ.</p>
+  <h2>Giờ Vàng — tự động mỗi ngày</h2>
+  <div class="tbl"><table>
+    <tr><th>Khung</th><th>Giờ</th><th>Hiệu ứng</th></tr>
+    <tr><td>Giờ Vàng Trưa</td><td>11:30 – 13:30</td><td>Đồ rơi x4, XP x2, câu cá x2, đào x2</td></tr>
+    <tr><td>Giờ Vàng Tối</td><td>18:00 – 22:00</td><td>Đồ rơi x4, XP x2, câu cá x2, đào x2</td></tr>
+  </table></div>
+  <h2>Boss theo hoạt động</h2>
+  <ul>
+    <li><a href="#cauca"><b>Thuỷ Quái</b></a> — nổi lên khi cả server câu đủ 1.000 con trong một vùng.</li>
+    <li><a href="#thomo"><b>Vua Lòng Đất</b></a> — trồi lên khi một vùng bị đào đủ 600 quặng.</li>
+  </ul>
+  <p>Ngoài ra còn các sự kiện theo mùa (Halloween, Giáng Sinh…) với danh hiệu giới hạn — theo dõi thông báo trong game và Discord.</p>
+  <div class="pn"><a href="#nhiemvu"><span class="dir">Trước</span>← Nhiệm vụ</a><a href="#hamnguc"><span class="dir">Tiếp</span>Hầm ngục →</a></div>
+</article>
+
+<article class="page" id="hamnguc">
+  <div class="crumb">SMP Wiki / Phiêu lưu</div>
+  <h1>Hầm ngục</h1>
+  <p class="lead">Lập đội, đánh qua từng đợt quái rồi hạ trùm. Vào miễn phí, <b>chết không mất đồ</b>. Mở bằng <kbd>/hamnguc</kbd>.</p>
+  <div class="tbl"><table>
+    <tr><th>Tầng</th><th>Người</th><th>Hồi lượt</th><th>Trùm</th><th>Thưởng hạng S</th></tr>
+    <tr><td>Hầm Mộ Cũ</td><td>1–2</td><td>6 giờ</td><td>Kẻ Đội Vương Miện Gỉ</td><td>60.000$ + chìa Common + 3 táo vàng</td></tr>
+    <tr><td>Tổ Nhện Đen</td><td>2–4</td><td>12 giờ</td><td>Nhện Mẹ</td><td>130.000$ + 2 chìa Common + táo phù phép</td></tr>
+    <tr><td>Điện Đá Sâu</td><td>3–6</td><td>24 giờ</td><td>Kẻ Vỡ Giáp</td><td>320.000$ + 2 Shard + chìa Rare + 2 chìa Common + 2 táo phù phép</td></tr>
+  </table></div>
+  <ul>
+    <li>Chấm hạng <b>S / A / B / C</b>. Hạng S: xong nhanh và không ai chết. Hạng thấp vẫn có thưởng.</li>
+    <li>Mỗi lượt có một <b>lời nguyền ngẫu nhiên</b>: quái độc, quái mạnh, quái nhanh, đông quái hơn, bạn mất máu nhiều hơn — hoặc điềm lành như chạy nhanh hơn, +30% tiền thưởng.</li>
+    <li>Lập đội bằng <kbd>/party</kbd> trước khi vào. Bỏ cuộc trong 60 giây đầu được hoàn lượt.</li>
+    <li>Trong hầm không đào/đặt khối được, ra khỏi phòng 3 lần là bị loại. Rời bằng <kbd>/leave</kbd>.</li>
+  </ul>
+  <div class="pn"><a href="#sukien"><span class="dir">Trước</span>← Sự kiện</a><a href="#pvp"><span class="dir">Tiếp</span>Đấu trường PvP →</a></div>
+</article>
+
+<article class="page" id="pvp">
+  <div class="crumb">SMP Wiki / Phiêu lưu</div>
+  <h1>Đấu trường PvP</h1>
+  <p class="lead">Đấu công bằng: hai bên nhận cùng một bộ đồ, không ai mang đồ riêng vào. <kbd>/pvp</kbd> để vào hàng chờ.</p>
+  <h2>Cách đấu</h2>
+  <ul>
+    <li>Chế độ <b>solo</b> hoặc <b>duo</b> (mời một đồng đội). Ghép với người cùng trình.</li>
+    <li>Mỗi trận quay ngẫu nhiên 1 trong 3 bộ đồ: <b>Phá Giáp</b> (rìu), <b>Cung Thủ</b>, <b>Sát Thủ</b> (kiếm + thuốc tăng tốc). Đồ không mang ra khỏi sàn.</li>
+    <li>Trận tối đa 15 phút; hết giờ bên còn nhiều máu hơn thắng.</li>
+    <li>Thắng +12 đến +18 điểm (thắng càng đẹp càng nhiều), thua −10. Xem bảng <kbd>/pvp top</kbd>.</li>
+    <li>Cuối mùa đánh từ 3 trận trở lên là có rương thưởng — nhận bằng <kbd>/nhanthuong</kbd>.</li>
+  </ul>
+  <h2>PvP ngoài thế giới</h2>
+  <ul>
+    <li><b>Khu spawn:</b> không PvP.</li>
+    <li><b>Trong đất đã claim:</b> không ai đánh được ai, trừ khi chủ đất bật PvP.</li>
+    <li><b>Ngoài hoang dã:</b> PvP tự do — nhưng chết vẫn không mất đồ.</li>
+    <li><b>Đồng đội trong /party</b> không đánh trúng nhau.</li>
+  </ul>
+  <div class="pn"><a href="#hamnguc"><span class="dir">Trước</span>← Hầm ngục</a><a href="#phuphep"><span class="dir">Tiếp</span>Phù phép riêng →</a></div>
+</article>
+
+<article class="page" id="phuphep">
+  <div class="crumb">SMP Wiki / Phiêu lưu</div>
+  <h1>Phù phép riêng</h1>
+  <p class="lead">Ngoài phù phép thường, server có hơn 40 dòng phù phép riêng: đào 3x3, chặt cả cây, hút máu, tên đuổi quái…</p>
+  <h2>Cách lấy</h2>
+  <ol>
+    <li>Tới <b>Bàn Quay Phù Phép</b> ở khu spawn, chuột phải.</li>
+    <li>Trả <b>50 level</b> hoặc <b>12 Shard</b> để quay ra một cuốn sách. Trả Shard có tỉ lệ ra bậc S cao gấp đôi.</li>
+    <li>Nhấc sách bằng chuột rồi bấm vào món đồ để gắn.</li>
+  </ol>
+  <ul>
+    <li>Bậc sách: C, B, A, S. Gắn bậc C/B luôn thành công, A 80%, S 60%. <b>Hỏng chỉ mất sách, không mất đồ.</b></li>
+    <li>Mỗi món tối đa 3 dòng, trong đó tối đa 1 dòng S.</li>
+    <li>Gỡ hết dòng phù phép riêng: 5 Shard (không đụng phù phép thường).</li>
+  </ul>
+  <h2>Một số dòng nổi bật</h2>
+  <div class="tbl"><table>
+    <tr><th>Món</th><th>Dòng hay</th></tr>
+    <tr><td>Cuốc</td><td>Lò Bỏ Túi (quặng ra thỏi luôn) · Đào Mạch (vỡ cả mạch quặng) · Chấn Địa (3x3) · <b>Long Mạch</b> (S: đào 27 khối)</td></tr>
+    <tr><td>Xẻng</td><td>Sàng Cát (cát sỏi ra đồ quý) · San Nền (3x3) · Cào Kho Báu</td></tr>
+    <tr><td>Rìu</td><td>Thương Nhân (đấm rương là bán sạch) · Bổ Giáp · <b>Tiều Phu</b> (S: chặt cả cây, tự trồng lại)</td></tr>
+    <tr><td>Kiếm</td><td>Hút Máu · Săn Đầu (+đồ rơi) · Chém Lan · Trảm Yếu · <b>Hoả Kiếm</b></td></tr>
+    <tr><td>Mace</td><td>Đáp Êm · Chấn Sóng · Trọng Kích · <b>Địa Chấn</b></td></tr>
+    <tr><td>Cung / Nỏ</td><td>Nhặt Tên · Xuyên Gió · Ba Chạc (bắn 3 mũi) · <b>Dẫn Đường</b> (tên đuổi quái)</td></tr>
+    <tr><td>Giáp</td><td>Thợ Lặn · Phản Đòn · Bước Nhanh · Da Thép · <b>Hồi Sinh</b> (S: sống sót một đòn chí mạng)</td></tr>
+  </table></div>
+  <p>Các dòng chiến đấu chủ yếu có tác dụng với quái, không ảnh hưởng PvP.</p>
+  <div class="pn"><a href="#pvp"><span class="dir">Trước</span>← Đấu trường PvP</a><a href="#ruong"><span class="dir">Tiếp</span>Rương &amp; Spawner →</a></div>
+</article>
+
+<article class="page" id="ruong">
+  <div class="crumb">SMP Wiki / Phiêu lưu</div>
+  <h1>Rương &amp; Spawner</h1>
+  <h2>Rương ở khu spawn</h2>
+  <p>Chuột trái vào rương để xem tỉ lệ, chuột phải để mở bằng chìa.</p>
+  <div class="tbl"><table>
+    <tr><th>Rương</th><th>Có gì</th><th>Lấy chìa ở đâu</th></tr>
+    <tr><td>Common</td><td>Tiền, kim cương, spawner Zombie/Skeleton, cuốc Tireless Pick</td><td>Quà online, nhiệm vụ, hợp đồng, thiên thạch, hầm ngục</td></tr>
+    <tr><td>Rare</td><td>32 kim cương, spawner thú, vật phẩm đặc biệt, kiếm Nightwarden, giáp Survivor, cung Meteor</td><td>Hầm ngục Điện Đá Sâu, tân thủ, shop Shard</td></tr>
+    <tr><td>Legendary</td><td>Spawner Blaze/Slime/Witch/Magma…, Highpeak Wings, đinh ba Reaver, rìu Last Smith</td><td>Nhiệm vụ (3%), thành tựu</td></tr>
+    <tr><td>Cosmetic</td><td>Trang phục thời trang</td><td>Nhiệm vụ (3%)</td></tr>
+  </table></div>
+  <h2>Vật phẩm đặc biệt</h2>
+  <div class="tbl"><table>
+    <tr><th>Món</th><th>Tác dụng</th></tr>
+    <tr><td>Saddle of Flight</td><td>Bay 20 phút</td></tr>
+    <tr><td>Vein Sight</td><td>Nhìn đêm + đào nhanh 20 phút</td></tr>
+    <tr><td>Tide Charm</td><td>Thở dưới nước, bơi nhanh 30 phút</td></tr>
+    <tr><td>Ember Core</td><td>Kháng lửa 20 phút</td></tr>
+    <tr><td>Titan's Draught</td><td>Sức mạnh II, kháng sát thương, hồi máu 15 phút</td></tr>
+    <tr><td>Windstep Charm</td><td>Chạy nhanh, nhảy cao, rơi chậm 30 phút</td></tr>
+    <tr><td>Fortune's Favor</td><td>May mắn II 30 phút</td></tr>
+    <tr><td>Hearthstone</td><td>Về spawn ngay</td></tr>
+  </table></div>
+  <h2>Spawner — máy làm đồ</h2>
+  <ul>
+    <li>Spawner trên server <b>không thả quái ra</b> mà sản xuất <b>thẳng đồ vào kho</b>. Chuột phải để mở kho, có nút <b>Bán tất cả</b>.</li>
+    <li><b>Chồng spawner:</b> chuột phải spawner cùng loại lên cái đã đặt để nhân sản lượng (x2, x3…).</li>
+    <li>Spawner chỉ chạy khi có người chơi ở gần; kho chứa tối đa 24 giờ sản lượng.</li>
+    <li>Lấy spawner từ: shop tiền (gà, heo, cừu, bò), shop Shard, rương, điểm danh.</li>
+    <li>Muốn dời spawner của mình: đập bằng cuốc Silk Touch.</li>
+  </ul>
+  <div class="pn"><a href="#phuphep"><span class="dir">Trước</span>← Phù phép riêng</a><a href="#dat"><span class="dir">Tiếp</span>Đất đai &amp; Warp →</a></div>
+</article>
+
+<article class="page" id="dat">
+  <div class="crumb">SMP Wiki / Cuộc sống</div>
+  <h1>Đất đai &amp; Warp</h1>
+  <p class="lead">Claim đất để không ai phá được nhà bạn. Một cú bấm là xong cả một ô 16x16, từ đáy thế giới lên tới trời.</p>
+  <h2>Cách claim</h2>
+  <ol>
+    <li>Cầm <b>xẻng vàng</b> (bất kỳ cái nào), chuột phải vào chỗ muốn giữ. Hoặc gõ <kbd>/dat claim</kbd>.</li>
+    <li>Bấm <b>F3 + G</b> để thấy lưới ô đất.</li>
+    <li>Cầm <b>gậy</b> chuột phải để xem đất đó của ai.</li>
+  </ol>
+  <h2>Được bao nhiêu ô</h2>
+  <div class="tbl"><table>
+    <tr><th>Nguồn</th><th>Số ô</th></tr>
+    <tr><td>Mọi người</td><td>20 ô</td></tr>
+    <tr><td>Rank (Novice → Paragon)</td><td>+7 đến +35 ô</td></tr>
+    <tr><td>VIP (Verdant → Seraph)</td><td>+20 đến +60 ô</td></tr>
+    <tr><td>Mua thêm <kbd>/dat mua</kbd></td><td>Ô đầu 400.000$, mỗi lần mua sau đắt hơn chút</td></tr>
+  </table></div>
+  <h2>Đất được bảo vệ khỏi</h2>
+  <p>Phá/đặt khối, mở rương, cửa, giường, giết thú nuôi, creeper và TNT nổ, lửa lan, nước/dung nham chảy vào, piston từ ngoài, enderman bê khối. PvP trong đất mặc định tắt.</p>
+  <h2>Cho bạn bè vào nhà — /trust</h2>
+  <div class="tbl"><table>
+    <tr><th>Mức</th><th>Được làm</th></tr>
+    <tr><td><kbd>ravao</kbd></td><td>Mở cửa, bấm nút, ngủ giường</td></tr>
+    <tr><td><kbd>ruong</kbd></td><td>+ Mở rương, chạm thú nuôi</td></tr>
+    <tr><td><kbd>xay</kbd> (mặc định)</td><td>+ Đặt và phá khối</td></tr>
+    <tr><td><kbd>quanly</kbd></td><td>+ Mời thêm người, đổi thiết lập đất</td></tr>
+  </table></div>
+  <p>Ví dụ: <kbd>/trust Nam ruong</kbd>. Gỡ quyền: <kbd>/untrust Nam</kbd>. Không ưa ai thì <kbd>/dat ban &lt;tên&gt;</kbd> để cấm họ bước vào đất.</p>
+  <h2>Lệnh đất</h2>
+  <p><kbd>/dat</kbd> mở bảng · <kbd>/dat bo</kbd> bỏ ô đang đứng · <kbd>/dat danhsach</kbd> xem đất của mình · <kbd>/dat tudong</kbd> tự claim khi đi bộ.</p>
+  <h2>Warp người chơi</h2>
+  <ul>
+    <li>Có shop, farm hay công trình đẹp? Đặt warp để cả server ghé thăm: <b>5.000.000$</b>, giữ vĩnh viễn. Phải đứng trên đất của mình.</li>
+    <li><kbd>/warps</kbd> xem danh sách — warp được xếp theo <b>số sao</b> người khác chấm.</li>
+    <li>Ghé warp ai thấy hay thì <kbd>/rate &lt;tên&gt;</kbd> chấm sao cho họ.</li>
+  </ul>
+  <h2>Đi lại</h2>
+  <ul>
+    <li><kbd>/rtp</kbd> tới vùng đất ngẫu nhiên (cách đất người khác đủ xa). <kbd>/rtp nether</kbd>, <kbd>/rtp end</kbd> cho Nether và End.</li>
+    <li><kbd>/spawn</kbd> về khu xuất phát. <kbd>/back</kbd> quay lại chỗ vừa đứng hoặc chỗ vừa chết.</li>
+    <li><kbd>/tpa &lt;tên&gt;</kbd> xin dịch chuyển tới bạn bè.</li>
+  </ul>
+  <div class="pn"><a href="#ruong"><span class="dir">Trước</span>← Rương &amp; Spawner</a><a href="#pet"><span class="dir">Tiếp</span>Pet →</a></div>
+</article>
+
+<article class="page" id="pet">
+  <div class="crumb">SMP Wiki / Cuộc sống</div>
+  <h1>Pet</h1>
+  <p class="lead">Trợ thủ nhỏ bay theo bạn, nhặt đồ và đánh phụ. Mở bằng <kbd>/pet</kbd>.</p>
+  <h2>Pet làm được gì</h2>
+  <ul>
+    <li><b>Hút đồ</b> khi bạn đào khối và giết quái — đồ vào kho riêng của pet (tối đa 20.000 món).</li>
+    <li><b>Đánh phụ</b> con quái bạn vừa đánh.</li>
+    <li><b>Bắn con canh cá</b> giúp bạn khi câu cá.</li>
+    <li>Đi mỏ cùng pet: mỗi cấp pet +1% may mắn ra mẫu quặng xịn, pet còn tự đánh Golem Quặng.</li>
+  </ul>
+  <h2>Thuê pet</h2>
+  <ul>
+    <li><b>30 SHP/ngày</b>, mua dồn tối đa 30 ngày.</li>
+    <li>Hết hạn thì pet biến mất nhưng <b>kho đồ vẫn còn nguyên</b>.</li>
+    <li>Pet lên tới cấp 10, càng cao đánh càng đau.</li>
+    <li>Chọn ngoại hình: Allay, Vex, Ong, Vẹt, Ghast Mini.</li>
+  </ul>
+  <div class="pn"><a href="#dat"><span class="dir">Trước</span>← Đất đai</a><a href="#danhhieu"><span class="dir">Tiếp</span>Danh hiệu &amp; Xếp hạng →</a></div>
+</article>
+
+<article class="page" id="danhhieu">
+  <div class="crumb">SMP Wiki / Cuộc sống</div>
+  <h1>Danh hiệu &amp; Xếp hạng</h1>
+  <p class="lead">Hơn 185 danh hiệu để khoe trước tên trong chat. Chọn bằng <kbd>/danhhieu</kbd>. Danh hiệu chỉ để khoe, không cộng sức mạnh.</p>
+  <h2>Danh hiệu nghề</h2>
+  <div class="tbl"><table>
+    <tr><th>Nghề</th><th>Cấp 1 → 60</th></tr>
+    <tr><td>Nông Dân</td><td>Lục Mầm · Điền Sĩ · Thiết Cuốc · Điền Chủ · Kim Điền · Thần Nông · <b>Điền Đế</b></td></tr>
+    <tr><td>Ngư Dân</td><td>Câu Khách · Ngư Ảnh · Ngư Phủ · Lãng Khách · Hải Tặc · Long Vương · <b>Hải Thần</b></td></tr>
+    <tr><td>Thợ Mỏ</td><td>Phá Thạch · Thiết Trảo · Mạch Sư · Kim Cương Nhãn · Hắc Uyên · Địa Linh · <b>Thạch Đế</b></td></tr>
+  </table></div>
+  <h2>Danh hiệu theo thành tích</h2>
+  <div class="tbl"><table>
+    <tr><th>Làm gì</th><th>Danh hiệu (từ thấp tới cao)</th></tr>
+    <tr><td>Hạ quái</td><td>Thợ Săn · Đồ Tể · Huyết Kiếm · Bách Chiến · Sát Thần · <b>Diệt Thế</b> (1 triệu con)</td></tr>
+    <tr><td>Hạ người (PvP)</td><td>Kiếm Khách · Đấu Sĩ · Chiến Cuồng · Võ Thánh · Bá Vương · <b>Chiến Thần</b></td></tr>
+    <tr><td>Đào khối</td><td>Phu Đá · Thợ Đục · Xuyên Sơn · Đoạn Sơn · Liệt Địa · <b>Phá Thiên</b></td></tr>
+    <tr><td>Đặt khối</td><td>Thợ Xây · Tạo Tác · Kiến Thành · Dựng Quốc · <b>Sáng Thế</b></td></tr>
+    <tr><td>Hầm ngục</td><td>Thám Ngục · Phá Ngục · Ngục Chủ · Hắc Vương · <b>Chủ Vực Thẳm</b></td></tr>
+    <tr><td>Câu cá</td><td>Ngư Ông · Ngư Bá · Lưới Trời · Thủy Vương · Hải Long · <b>Thần Biển</b></td></tr>
+    <tr><td>Đủ 134 loài cá</td><td><b>Hải Vương</b></td></tr>
+    <tr><td>Điểm danh</td><td>Chăm Chỉ · Bền Bỉ · Trường Kỳ · Tròn Năm · <b>Bất Tận</b> (730 ngày)</td></tr>
+    <tr><td>Giờ chơi</td><td>Cư Dân · Lão Làng · Trụ Cột · Nguyên Lão · Bất Hủ · <b>Vĩnh Cửu</b> (5.000 giờ)</td></tr>
+  </table></div>
+  <p>Còn nhiều chuỗi khác: đi bộ, bay elytra, buôn bán ở chợ, giao đơn, mở rương, quay phù phép, thu hoạch, săn thiên thạch, danh hiệu sự kiện theo mùa…</p>
+  <h2>Thành tựu</h2>
+  <p>Nhiều mốc thành tích còn <b>thưởng tiền</b>: đủ 134 loài cá được 2.000.000$, hạ 50 Thuỷ Quái 1.500.000$, câu 10 cá Huyền Thoại 600.000$, mở 500 rương 400.000$ + chìa Legendary…</p>
+  <h2>Bảng xếp hạng</h2>
+  <ul>
+    <li><kbd>/leaderboard</kbd> — xếp theo tổng tài sản.</li>
+    <li><kbd>/leaderboard mua</kbd> — <b>đua mùa giải</b>: xếp theo tiền kiếm được từ bán hàng trong mùa. Người đứng đầu nhận <b>danh hiệu mùa</b> riêng.</li>
+    <li>Bảng riêng: <kbd>/shards top</kbd>, <kbd>/pvp top</kbd>.</li>
+  </ul>
+  <div class="pn"><a href="#pet"><span class="dir">Trước</span>← Pet</a><a href="#rank"><span class="dir">Tiếp</span>Rank &amp; VIP →</a></div>
+</article>
+
+<article class="page" id="rank">
+  <div class="crumb">SMP Wiki / Cuộc sống</div>
+  <h1>Rank &amp; VIP</h1>
+  <p class="lead">Rank mua bằng tiền kiếm trong game. VIP là cách ủng hộ server — không bắt buộc, không khoá nội dung.</p>
+  <h2>Rank — /rank</h2>
+  <p>Lên lần lượt từng bậc. Mỗi bậc giữ quyền của bậc trước.</p>
+  <div class="tbl"><table>
+    <tr><th>Rank</th><th>Giá</th><th>Thu nhập nghề</th><th>Mở thêm</th></tr>
+    <tr><td>Novice</td><td>14 triệu $</td><td>+5%</td><td><kbd>/fix</kbd>, <kbd>/heal</kbd>, 3 nhà</td></tr>
+    <tr><td>Adept</td><td>84 triệu $</td><td>+12%</td><td><kbd>/feed</kbd>, <kbd>/workbench</kbd></td></tr>
+    <tr><td>Ranger</td><td>245 triệu $</td><td>+20%</td><td><kbd>/ec</kbd> (rương ender mang theo), <kbd>/rtp</kbd> hồi nhanh gấp đôi</td></tr>
+    <tr><td>Vanguard</td><td>595 triệu $</td><td>+28%</td><td><kbd>/hat</kbd>, <kbd>/near</kbd></td></tr>
+    <tr><td>Paragon</td><td>1,19 tỷ $</td><td>+35%</td><td><kbd>/anvil</kbd>, <kbd>/back</kbd> không giới hạn</td></tr>
+  </table></div>
+  <p>Mỗi bậc rank còn được thêm ô đất, thêm chỗ rao chợ và thêm đơn hàng.</p>
+  <h2>VIP — /vip</h2>
+  <div class="tbl"><table>
+    <tr><th>Bậc</th><th>Đặc quyền chính</th></tr>
+    <tr><td>VIP 1 · Verdant</td><td>Tiền làm nghề x1,25, bán shop x1,2; <kbd>/fix</kbd>, <kbd>/heal</kbd>, <kbd>/feed</kbd>, <kbd>/ec</kbd>; +20 ô đất; 7 nhà; bộ đồ VIP 1</td></tr>
+    <tr><td>VIP 2 · Cherry</td><td>Tiền làm nghề x2, bán shop x1,4; <b>bay tự do</b>; <kbd>/nick</kbd>; +40 ô đất; 11 nhà; bộ đồ VIP 2</td></tr>
+    <tr><td>VIP 3 · Seraph</td><td>Tiền làm nghề x5, bán shop x1,7; x2 Shard từ quà và nhiệm vụ; 2 lượt quay rương nhiệm vụ; bay tự do; +60 ô đất; 15 nhà; bộ đồ VIP 3</td></tr>
+  </table></div>
+  <p>Có thể <b>mua đứt</b> (vĩnh viễn) hoặc <b>thuê theo ngày</b> từ 5 SHP/ngày. Giá chi tiết xem trong <kbd>/vip</kbd>.</p>
+  <h2>Ủng hộ server</h2>
+  <ul>
+    <li>Nạp bằng thẻ cào hoặc chuyển khoản trong <kbd>/menu</kbd> → Nạp SHP, cộng tự động. Chỉ nạp qua kênh chính thức trong game.</li>
+    <li><kbd>/mocnap</kbd>: tổng ủng hộ chạm mốc 500k / 1 triệu / 2 triệu / 5 triệu / 10 triệu được quà thêm (tiền, Shard, spawner, chìa rương). Tích luỹ vĩnh viễn.</li>
+  </ul>
+  <div class="pn"><a href="#danhhieu"><span class="dir">Trước</span>← Danh hiệu</a><a href="#lenh"><span class="dir">Tiếp</span>Lệnh →</a></div>
+</article>
+
+<article class="page" id="lenh">
+  <div class="crumb">SMP Wiki / Hướng dẫn</div>
+  <h1>Lệnh</h1>
+  <p class="lead">Lệnh hay dùng nhất. Quên thì gõ <kbd>/menu</kbd> — hầu hết đều có nút bấm.</p>
+  <h2>Cơ bản</h2>
+  <div class="tbl"><table>
+    <tr><td><kbd>/menu</kbd></td><td>Bảng điều khiển chính</td></tr>
+    <tr><td><kbd>/huongdan</kbd></td><td>Hướng dẫn theo chủ đề</td></tr>
+    <tr><td><kbd>/settings</kbd></td><td>Tuỳ chỉnh riêng</td></tr>
+    <tr><td><kbd>/rules</kbd></td><td>Luật server</td></tr>
+    <tr><td><kbd>/discord</kbd></td><td>Link Discord</td></tr>
+  </table></div>
+  <h2>Đi lại &amp; nhà</h2>
+  <div class="tbl"><table>
+    <tr><td><kbd>/rtp</kbd> · <kbd>/rtp nether</kbd> · <kbd>/rtp end</kbd></td><td>Tới vùng đất ngẫu nhiên</td></tr>
+    <tr><td><kbd>/spawn</kbd></td><td>Về khu xuất phát</td></tr>
+    <tr><td><kbd>/home</kbd> · <kbd>/sethome</kbd></td><td>Nhà của bạn</td></tr>
+    <tr><td><kbd>/back</kbd></td><td>Quay lại chỗ cũ / chỗ vừa chết</td></tr>
+    <tr><td><kbd>/tpa &lt;tên&gt;</kbd></td><td>Xin dịch chuyển tới bạn bè</td></tr>
+    <tr><td><kbd>/warps</kbd> · <kbd>/warp &lt;tên&gt;</kbd></td><td>Danh sách warp</td></tr>
+    <tr><td><kbd>/rate &lt;tên&gt;</kbd></td><td>Chấm sao warp của người khác</td></tr>
+    <tr><td><kbd>/tatbay</kbd></td><td>Bật/tắt bay</td></tr>
+  </table></div>
+  <h2>Đất</h2>
+  <div class="tbl"><table>
+    <tr><td><kbd>/dat</kbd></td><td>Bảng đất đai</td></tr>
+    <tr><td><kbd>/dat claim</kbd> · <kbd>/dat bo</kbd></td><td>Giữ / bỏ ô đang đứng</td></tr>
+    <tr><td><kbd>/dat mua</kbd></td><td>Mua thêm ô đất</td></tr>
+    <tr><td><kbd>/trust &lt;tên&gt; [mức]</kbd> · <kbd>/untrust &lt;tên&gt;</kbd></td><td>Cho / gỡ quyền vào đất</td></tr>
+  </table></div>
+  <h2>Kiếm tiền &amp; mua bán</h2>
+  <div class="tbl"><table>
+    <tr><td><kbd>/shop</kbd> · <kbd>/sell</kbd></td><td>Cửa hàng / bán nhanh</td></tr>
+    <tr><td><kbd>/gia</kbd></td><td>Giá thị trường hiện tại</td></tr>
+    <tr><td><kbd>/ah</kbd> · <kbd>/ah ban &lt;giá&gt;</kbd></td><td>Chợ đấu giá</td></tr>
+    <tr><td><kbd>/order</kbd></td><td>Bảng đơn hàng</td></tr>
+    <tr><td><kbd>/trade &lt;tên&gt;</kbd></td><td>Trao đổi trực tiếp</td></tr>
+    <tr><td><kbd>/shards</kbd> · <kbd>/shardshop</kbd></td><td>Ví và cửa hàng Shard</td></tr>
+    <tr><td><kbd>/balance</kbd></td><td>Xem số tiền</td></tr>
+    <tr><td><kbd>/job</kbd></td><td>Nghề nghiệp</td></tr>
+    <tr><td><kbd>/ca</kbd> · <kbd>/farm</kbd> · <kbd>/mine</kbd></td><td>Kho của Ngư Dân / Nông Dân / Thợ Mỏ</td></tr>
+  </table></div>
+  <h2>Hằng ngày &amp; hoạt động</h2>
+  <div class="tbl"><table>
+    <tr><td><kbd>/daily</kbd></td><td>Điểm danh</td></tr>
+    <tr><td><kbd>/online</kbd></td><td>Quà online</td></tr>
+    <tr><td><kbd>/kit</kbd></td><td>Bộ đồ</td></tr>
+    <tr><td><kbd>/quest</kbd></td><td>Nhiệm vụ hằng ngày</td></tr>
+    <tr><td><kbd>/hopdong</kbd></td><td>Hợp đồng server</td></tr>
+    <tr><td><kbd>/sukien</kbd></td><td>Sự kiện đang diễn ra</td></tr>
+    <tr><td><kbd>/hamnguc</kbd></td><td>Hầm ngục</td></tr>
+    <tr><td><kbd>/pvp</kbd> · <kbd>/leave</kbd></td><td>Đấu trường / rời trận</td></tr>
+    <tr><td><kbd>/party</kbd> · <kbd>/pc</kbd></td><td>Lập đội / chat đội</td></tr>
+    <tr><td><kbd>/giftcode &lt;mã&gt;</kbd></td><td>Nhập mã quà</td></tr>
+  </table></div>
+  <h2>Khác</h2>
+  <div class="tbl"><table>
+    <tr><td><kbd>/pet</kbd></td><td>Pet</td></tr>
+    <tr><td><kbd>/danhhieu</kbd></td><td>Chọn danh hiệu</td></tr>
+    <tr><td><kbd>/leaderboard</kbd></td><td>Bảng xếp hạng</td></tr>
+    <tr><td><kbd>/rank</kbd> · <kbd>/vip</kbd></td><td>Rank và VIP</td></tr>
+    <tr><td><kbd>/mocnap</kbd></td><td>Mốc ủng hộ</td></tr>
+    <tr><td><kbd>/msg &lt;tên&gt;</kbd> · <kbd>/r</kbd></td><td>Nhắn tin riêng / trả lời</td></tr>
+  </table></div>
+  <div class="pn"><a href="#rank"><span class="dir">Trước</span>← Rank &amp; VIP</a><span></span></div>
+</article>
+
+</main>
+
+</div>
+
+<footer>
+  <span>© SkyHunt SMP — wiki sinh tồn</span>
+  <span><b>skyhunt.online</b></span>
+</footer>
+
+<script>
+(function(){
+  var pages = document.querySelectorAll('.page');
+  var links = document.querySelectorAll('.side a');
+  function show(){
+    var h = (location.hash || '#trangchu').slice(1);
+    var ok = document.getElementById(h) && document.getElementById(h).classList.contains('page') ? h : 'trangchu';
+    pages.forEach(function(p){ p.classList.toggle('on', p.id === ok); });
+    links.forEach(function(a){ a.classList.toggle('on', a.getAttribute('href') === '#' + ok); });
+    window.scrollTo(0, 0);
+  }
+  addEventListener('hashchange', show);
+  if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+  addEventListener('load', function(){ setTimeout(function(){ window.scrollTo(0, 0); }, 0); });
+  show();
+})();
+</script>
+
+</body>
+</html>
