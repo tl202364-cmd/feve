@@ -51,6 +51,10 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 .chip{font-size:11px;font-weight:700;letter-spacing:.12em;color:var(--mut);border:1px solid var(--line);border-radius:5px;padding:2px 8px}
 .ip{margin-left:auto;font-weight:600;font-size:13.5px;color:var(--mut)}
 .ip b{color:var(--fg);font-weight:700}
+.sw{font-size:12px;font-weight:800;letter-spacing:.08em;border-radius:7px;padding:4px 10px;border:1px solid #3d8f4a;color:#8ef59a;background:rgba(60,160,80,.10);white-space:nowrap}
+.sw:hover{text-decoration:none;background:rgba(60,160,80,.22)}
+.sw.rpg{border-color:#3d6bbf;color:#a9cbff;background:rgba(80,130,230,.10)}
+.sw.rpg:hover{background:rgba(80,130,230,.22)}
 .shell{display:grid;grid-template-columns:230px minmax(0,1fr);gap:48px;max-width:1060px;margin:0 auto;padding-block:28px 70px}
 /* ---- sidebar ---- */
 .side{position:sticky;top:calc(env(safe-area-inset-top,0px) + 76px);align-self:start;font-size:14px}
@@ -121,7 +125,9 @@ footer{max-width:1060px;margin:0 auto;padding:18px 0 26px;border-top:1px solid v
   .side .lbl{display:none}
   .side a{flex:none;border:1px solid var(--line);border-left-width:1px;border-radius:999px;padding:5px 13px;margin:0;font-size:13px}
   .ip span{display:none}
+  .ip{font-size:12.5px}
 }
+@media (max-width:420px){ .top .chip{display:none} }
 </style>
 
 </head>
@@ -129,6 +135,7 @@ footer{max-width:1060px;margin:0 auto;padding:18px 0 26px;border-top:1px solid v
 <div class="top">
   <a class="brand tm" href="#trangchu">SKYHUNT</a><span class="chip">RPG WIKI</span>
   <div class="ip"><span>Máy chủ: </span><b>skyhunt.online</b></div>
+  <a class="sw" href="smp.html">SMP WIKI →</a>
 </div>
 
 <div class="shell">
