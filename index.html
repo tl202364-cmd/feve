@@ -1,7 +1,8 @@
 <!doctype html>
 <html lang="vi" data-theme="dark">
 <head>
-<script>/*wiki-ver*/(function(){var V='20261113155706';function chk(){fetch('version.json?t='+Date.now(),{cache:'no-store'}).then(function(r){return r.json()}).then(function(j){if(!j||!j.v||j.v===V)return;var k='wikiReload_'+j.v;try{if(sessionStorage.getItem(k))return;sessionStorage.setItem(k,'1')}catch(e){}var u=new URL(location.href);u.searchParams.set('v',j.v);location.replace(u.toString())}).catch(function(){})}chk();document.addEventListener('visibilitychange',function(){if(!document.hidden)chk()});setInterval(chk,300000)})();</script>
+<script>/*wiki-ver*/(function(){var V='20261118033259';function chk(){fetch('version.json?t='+Date.now(),{cache:'no-store'}).then(function(r){return r.json()}).then(function(j){if(!j||!j.v||j.v===V)return;var k='wikiReload_'+j.v;try{if(sessionStorage.getItem(k))return;sessionStorage.setItem(k,'1')}catch(e){}var u=new URL(location.href);u.searchParams.set('v',j.v);location.replace(u.toString())}).catch(function(){})}chk();document.addEventListener('visibilitychange',function(){if(!document.hidden)chk()});setInterval(chk,300000)})();</script>
+
 
 
 <meta charset="utf-8">
@@ -157,6 +158,11 @@ footer{max-width:1060px;margin:0 auto;padding:18px 0 26px;border-top:1px solid v
     <a href="#lietgioi">Liệt Giới Hư Không</a>
     <a href="#phuchu">Phù Chú Map</a>
   </div>
+  <div class="grp"><div class="lbl">Sau Lv 125</div>
+    <a href="#chuyenchuc">Chuyển Chức &amp; Lv 250</a>
+    <a href="#thientinh">Thiên Tinh (đập đồ)</a>
+    <a href="#trangsuc">Trang Sức &amp; Tiềm Năng</a>
+  </div>
   <div class="grp"><div class="lbl">Hoạt động</div>
     <a href="#hoatdong">Hoạt động tại hub</a>
     <a href="#nuoithu">Nuôi Thú &amp; Nguyên Liệu</a>
@@ -188,7 +194,10 @@ footer{max-width:1060px;margin:0 auto;padding:18px 0 26px;border-top:1px solid v
     <li><a href="#cong">Cổng &amp; Trùm</a> — phụ bản theo cấp, đền thử thách, trùm thế giới.</li>
     <li><a href="#lietgioi">Liệt Giới Hư Không</a> — chế độ rút lui hay tham lam (Lv 70+).</li>
     <li><a href="#nguyento">Nguyên Tố</a> — 4 hệ, khắc chế, Nguyên Lực tài khoản.</li>
-    <li><a href="#trangbi">Trang bị</a> — rune, luyện khí, trang sức.</li>
+    <li><a href="#trangbi">Trang bị</a> — rune, luyện khí, Khối Huyền, cách đọc chỉ số.</li>
+    <li><a href="#chuyenchuc">Chuyển Chức</a> — mở cấp tới Lv 250 cho nhân vật SS/SSS, thử thách Tâm Ma, Ấn Nghề.</li>
+    <li><a href="#thientinh">Thiên Tinh</a> — đập đồ +1 → +20, tụt sao, vỡ đồ, Bùa Hộ Tinh.</li>
+    <li><a href="#trangsuc">Trang Sức</a> — 9 ô mới sau Lv 125, tiềm năng 3 dòng, Xưởng ghép.</li>
     <li><a href="#thankhi">Thần Khí</a> — 11 bảo vật, thức tỉnh M0–M5, Ngộ Đạo, Khắc Ấn, Hiến Tế.</li>
     <li><a href="#hoatdong">Hoạt động tại hub</a> — câu cá, đấu giá, linh thú, địa danh, PvP.</li>
     <li><a href="#nuoithu">Nuôi Thú &amp; Nguyên Liệu</a> — thu thập, nguyên liệu theo giờ, Sổ Thảo Mộc, minigame nấu ăn, Lò Phù.</li>
@@ -299,7 +308,17 @@ footer{max-width:1060px;margin:0 auto;padding:18px 0 26px;border-top:1px solid v
     <tr><td><img class="mi" alt="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABqUlEQVR4nM2Sv0sbYRzGP+8RczkypIeiU6DRkNKhYHs4+GORtPgPZIlWXAV3KS5ZQgf3tBSEWKy4uDlJhEzBKRDoZLBYdFJSj2iOy4n6dkjv5cwh4tZnuvd5v8/3nu/zfeG/wPnnigyenaYtAVqlqmyVqhLA3qlLe6euvv3aCMDI2gfhk1FrFL3dxWna0q00GFqZFcHmuYmsNPOW4rR+N26lgZeIoZ38IZ5OKt7MW+Lu8op+N1rQkl8wnZ0KjZmbyMrlzSLft3cf8BF3/1jNM7n68cGlMZcW48nX8nBjD4D71CB6uwvWKPGMKVQGAOOL7zF0g4NPX5QYwBcDxDOmcJq2XFrIKU4z5tLiqn7SK4hGmP+6pi6nx95IAOf4TLlZWsixVfyG71yl+Wr4pQQwdAOA4cQL1chxO7SurwFobB0A0L1sY+YtIQCCOfij+HA7Dgxo1Arl0Erh3xb8ee9Tgz2R5+J6LtX1HxzZp6JWKPfrFFRHp2lLvd3FS8R4N/MWQzeIRyPUfv0M/TXkAHoJe4mYWg+Ac3OrsnnSQT+CwqOL34/WhZ7yc/EX7YCkPdFNi6AAAAAASUVORK5CYII=">Đền Lá Phong</td><td class="dim">10</td><td>Diệp Cơ</td></tr>
     <tr><td><img class="mi" alt="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAA10lEQVR4nLWTTQrCMBBGX8UfLF00XQqCCuK24JncC55DUPAEXsgjKAS6s7qxkBRaF6K0tkntwtmEzOR78zFM4N+xDFe5rd41FXbTSR70O+yB42KWxzpjfb443+86JvHcHxIKj/h+IhQec3/IbjqpuKkFAIwHPQAO4lG6/wxwRVASSpUilf4dkNxiXBHgigCpUq6JauegCDKJrQCp0tLZGvDu3hRWQFN3I6Bu2rHO2jkoDs4kBssqv0Tm6VsdbKPIkUqXOkul2UZR5S9UEsXYjEaf3a8TAzwBkntVPgMZoK0AAAAASUVORK5CYII=">Cầu Huyết Nguyệt</td><td class="dim">50</td><td>Xích Nguyệt</td></tr>
     <tr><td><img class="mi" alt="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABhklEQVR4nH2Sv0sCYRzGP0rNctDN0SBEOAUOSu2lIYR/gIv9hJYg6B9oigZriKKlpoYIFKmlQVAIUZpCBCHRaJALDociqvNtuN63u+v0gYP3x/f5vM993zfAEBWymnDOU2dmwK9ubJgxmUsBYHUMe517MQqkzL28Lqy3jOjldRFPX4l4+kr08rr4bCREL68LbzJfszTW64h6HTUfCSlkNZdZCFzf4npTQXamgwoQlOZkLsXr3Q0AIT3imzKkRzBbNfauF5CQoLNg+eJYjRMbTd+xs8YFkN126vvjlsF7hr7x6JsIPNe4q62wWhj/ox8sYnUMnsqbau009QXE3IBypU8yp7OwHeP5aMs2Dy6xOgZmq8ZLO6FSmq2af4L2eZGpzBJW+8gudhTJ5gJo4SjdUtUN2G8OAhyaYg0b4tcTLRwFoFuqcnJo2h5vDxoPA6AIoEATkwmsjkG3VP3dd8v1rnemg2J+LsTM7N/tek3lSl+d/g8gIQASJAHlSh/1u8MS+IGkvEapH6tU4fVRxgc3AAAAAElFTkSuQmCC">Tháp Đồng Hồ</td><td class="dim">75</td><td>Thời Linh — trùm tua ngược thời gian</td></tr>
+    <tr><td>Lõi Sao Băng</td><td class="dim">100</td><td>Viêm Trảo — thú lửa từ lõi sao băng</td></tr>
   </table></div>
+  <h2>Viêm Trảo — Lõi Sao Băng (Lv 100)</h2>
+  <p>Trùm mạnh nhất của Đền thử thách, đánh trên một đấu trường tròn giữa vũ trụ lửa. Học thuộc 3 khoảnh khắc nguy hiểm:</p>
+  <ul>
+    <li><b>66% máu — Thức Tỉnh:</b> mặt sàn nứt phun lửa, trùm thêm chiêu Xích Dung Nham.</li>
+    <li><b>50% máu — Sao Băng Diệt Thế:</b> trùm bay lên trời, mưa sao băng cả sân rồi lao xuống người bị nhắm (vòng tròn lớn). Có sóng nhiệt quét cả sân — <b>đứng lên các Đầu Sao</b> để sống.</li>
+    <li><b>15% máu — Siêu Tân Tinh:</b> nổ vòng ngoài (chạy <b>vào</b> sát trùm) → sụp lõi (chạy <b>ra</b> mép) → 3 sóng lửa (nhảy qua). Xong chuỗi này trùm <b>kiệt sức 5 giây</b>, nhận thêm 50% sát thương.</li>
+  </ul>
+  <p>Thưởng: <b>Lõi Sao</b> 1 / 2 / 3 (Thường / Khó / Ác Mộng) — nguyên liệu <a href="#chuyenchuc">Chuyển Chức</a> II và III, cùng <b>Mảnh Trang Sức</b> 3 / 5 / 8.</p>
+  <div class="callout">Sau Lv 125, quái trong Đền thử thách, Liệt Giới và Cự Thần lớn dần theo cấp đội (tới Lv 250) — thưởng cũng theo đó. Người Lv 125+ thắng Đền / Cự Thần nhận thêm 1 / 2 / 3 Mảnh Trang Sức.</div>
   <h2>Trùm thế giới</h2>
   <p>Xuất hiện theo lịch, cả server cùng đánh: <img class="mi" alt="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABFUlEQVR4nIVTu27DMAy8BFwoJ13i1ZuBFjC8+f8/pUDrpUblJYnEMR0SKhTTtLfoAZ7IO1KbcRwvACAiAABmxl9nf0dt214POSOuK4ZhAACczoL9jmFxOgtyOiI0L8jpiBgjSHIGAKTbqoGW4LF+f5X91pMtNJsHh1D25Mk+q83mISIgaw4AfH68VwFAbRozV4bSNE0l837HRb9KmOcZjSm5CaGcU84gJWjZuqq5mj05s/WRrZK0Nc9gM+tDIoJN3/cXr9EbZe+8Z8TM1csigte3oQyRHyjbJcn52oUmhIdZWJal7L00O3xkjfmPYKEc8rqYGTHGB/3PPhe1h0M1mhYxxuKPyhQRdF1398CSfyvVl+xjfwAmGd0xvmeEdwAAAABJRU5ErkJggg=="><b>Cự Thần Chiến</b> (Nham Hoàng), <img class="mi" alt="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABtElEQVR4nG2SP2/TUBTFf7USOXqkRQjLxFvTpUwdO3SrGnVkqFj5Ckx8Cb4MOxIrgTEqIDUSkAxITqwbodjOlaMMZbDfy3Ppm96797xzzv1z8Pbjh/vTOOGxM81Sov4Rz82TVnylG6TMuZuM6ZzGCZ/nv4iMaYFElfR2zOtXb5hmqYtZnKgC0HmoakGRMVSDtrNQFWnukTGklRJYdvs5VKUQcQor3bj8tiEGKKSmCiybqPIyHnAYRWyNIVTl72JP7uPs6fYMgd9AKfOWGsDk+5dWzZZoeHxSO1jpppW0taa3Yy5HNy0XFleIOLFAypywSVjAulxyObpBypzk7IJvXz85TOiRAARR/8jZAvgz/8HV+cgpRMaQnF0w/zlxn7fGcBhFNYG/JFU24+p8xDRLEVXnyJKsyyXD45PWzgR2TH4f/IWxb6tuBQsRdpXuFylUpaKeux2XvzjrcukICxE3pUDK3D2sgq8YNvdePPxvL7o9s3ewNQbK2kHoleOTPxskrHTjYrtK6YgqVTbjaf8F6SLlLl5As4m2sYDLz/q/CZuSuj3DwfX7d/eWzdp6+N5V+mgc4B8VOQjXkGLmmgAAAABJRU5ErkJggg=="><b>Hải Vương Cửu Uyên</b> (Hải Vương), <img class="mi" alt="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABpklEQVR4nG2Tu8rcMBCFvxXyDYQLI3ARF24DeZi8Rp54qwQV2ywsLoT/+LLCTuGdWS9kmgGNNHPmnKPLz18/9v77BYBw3fFVQVlv2CYxhhzXr//Nj2kBwPKKMeR07QZszNFQYnH9Shre+TEtOC6U9UZXZwAYXxWk4egzR8Pt/uQxLdgmkQb7kQHSYJmjYY7mQOD69YAQD1iyjlx0DYrIVwbYKOsNgNv9iRlDTrju+jgNljHkADymRaEDuH7FNkmn+6rAuH6lazN8VRCuO7ZJuH7VS7f7E18VzNEwhlw5maM5yBZGuzaj7y8KXcJXxcdqY8iVYOXAcQHeZJW8SAuFwh9DTllvKmPJMchKQVgWNR73HVhOvli1kUx3zUkFmS4Nmd7wPQXEXIlMg1VurMr1KgDYJuHjMdlz5POdORq6NsM2K1YKZ+nEbbZJEHPlRUJQlViMaC2rdG2mcso6YziayHnXZuoJ07WZalzWm+4Wrrs2PX80WSFcd9JgMQBlvX0oIVaVcP2qapz98fvPX+zt/tQD1xzZNis+FsCq/0GIFF8sX0++ecc/VL4l3bJg608AAAAASUVORK5CYII="><b>Mẫu Thụ Cổ Nhân</b> (Mộc Yêu), <img class="mi" alt="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABTUlEQVR4nH2SQW7CMBBFXxGpIW0CYQGV2MD9eopekAMgVUgVKkKIOAnYMV60i2CThMAsbT/Pnz//5efr849rFSYlEgmFSQGIREK7CpOSG8tFK7bpiT7ANt8DcNGKAxmvw/D6vPkhwEFmAEhtKVRJz13M4ylSWw/HIuiEl7MFUlt/1nOdV5s1u2N2B+fGNjrX3yljqhEAppMR08mIWASNWevwNj0B8DEZMR4GNwV12a4cfNHKw4UqARgPAz+G98DJfgZH4YB58n7vQdfMj+D6yEDlQRcsteVcmjtYauthr6ALdvWocywCQiEqBV3wuTS8DYR3u22288ub2O5ch58FzAdpOVv4zkADrsuORMJqsyY3FmVM9YHU1ifMdZba3sFwS6LbUt91LVTpE+ZGacPuzKkLhaBfmNSvanfM2FFlPBSC7989s+S2MpdEdw/wD2ObCEA53wPdAAAAAElFTkSuQmCC"><b>Thiết Chung Vạn Cổ</b> (Thiết Chung).</p>
   <p>Muốn thử kỹ năng thoải mái không mất gì: vào <b>Đấu Trường Phong Diệp</b>.</p>
@@ -354,12 +373,12 @@ footer{max-width:1060px;margin:0 auto;padding:18px 0 26px;border-top:1px solid v
   <div class="callout">Phù <b>không rơi từ trùm</b> nữa — tự chế ở <b>Lò Phù</b> trong menu NPC Bếp Linh Thú (cả 4 hub) bằng nguyên liệu thu thập. Xem <a href="#nuoithu">Nuôi Thú &amp; Nguyên Liệu</a>.</div>
   <div class="tbl"><table>
     <tr><th>Phù</th><th>Hiệu ứng</th><th>Thưởng</th><th>Công thức (Lò Phù)</th></tr>
-    <tr><td><img class="mi" src="img/p_trau.png?v=20261113155706" alt=""><b>Cường Thể</b></td><td>Quái +30% máu</td><td class="dim">+12%</td><td><img class="mi" src="img/m_dong_reu.png?v=20261113155706" alt="">3 Quặng Đồng Rêu, <img class="mi" src="img/m_thach_suong.png?v=20261113155706" alt="">2 Thạch Anh Sương, <img class="mi" src="img/m_dareu.png?v=20261113155706" alt="">4 Đá Rêu Phong</td></tr>
-    <tr><td><img class="mi" src="img/p_hung.png?v=20261113155706" alt=""><b>Sát Ý</b></td><td>Quái +20% sát thương</td><td class="dim">+12%</td><td><img class="mi" src="img/m_nhua_phong.png?v=20261113155706" alt="">3 Nhựa Phong Đỏ, <img class="mi" src="img/m_da_lua.png?v=20261113155706" alt="">2 Đá Lửa Phế Thành, <img class="mi" src="img/m_cophong.png?v=20261113155706" alt="">4 Cỏ Phong Diệp</td></tr>
-    <tr><td><img class="mi" src="img/p_nhanh.png?v=20261113155706" alt=""><b>Tật Phong</b></td><td>Quái nhanh hơn 25%</td><td class="dim">+15%</td><td><img class="mi" src="img/m_long_may.png?v=20261113155706" alt="">3 Lông Vũ Mây, <img class="mi" src="img/m_hat_nguyet.png?v=20261113155706" alt="">2 Hạt Nguyệt Bạch, <img class="mi" src="img/m_sen_dam.png?v=20261113155706" alt="">2 Lá Sen Đầm, <img class="mi" src="img/m_nang_trua.png?v=20261113155706" alt="">1 Tinh Hoa Ráng Chiều</td></tr>
-    <tr><td><img class="mi" src="img/p_no.png?v=20261113155706" alt=""><b>Bạo Liệt</b></td><td>Quái chết phát nổ sau 1 giây</td><td class="dim">+18%</td><td><img class="mi" src="img/m_set_phusa.png?v=20261113155706" alt="">3 Đất Sét Phù Sa, <img class="mi" src="img/m_bui_sao.png?v=20261113155706" alt="">3 Bụi Sao Trời, <img class="mi" src="img/m_nam_la.png?v=20261113155706" alt="">2 Nấm Lá Khô, <img class="mi" src="img/m_hoang_hon.png?v=20261113155706" alt="">1 Hoa Hoàng Hôn</td></tr>
-    <tr><td><img class="mi" src="img/p_set.png?v=20261113155706" alt=""><b>Thiên Lôi</b></td><td>Sét truy đuổi người chơi</td><td class="dim">+18%</td><td><img class="mi" src="img/m_bui_sao.png?v=20261113155706" alt="">2 Bụi Sao Trời, <img class="mi" src="img/m_tuyet_lien.png?v=20261113155706" alt="">3 Tuyết Liên, <img class="mi" src="img/m_mam_duoc.png?v=20261113155706" alt="">2 Mầm Đước Thơm, <img class="mi" src="img/m_suong_mai.png?v=20261113155706" alt="">1 Sương Đêm Ngọc</td></tr>
-    <tr><td><img class="mi" src="img/p_tu.png?v=20261113155706" alt=""><b>Tử Ước</b></td><td>Cả đội bớt 1 mạng</td><td class="dim">+25%</td><td><img class="mi" src="img/m_da_quang.png?v=20261113155706" alt="">1 Quả Dạ Quang, <img class="mi" src="img/m_dom_dom.png?v=20261113155706" alt="">1 Đom Đóm Linh, <img class="mi" src="img/m_linhchi.png?v=20261113155706" alt="">1 Linh Chi, <img class="mi" src="img/m_huyenthach.png?v=20261113155706" alt="">4 Huyền Vũ Thạch</td></tr>
+    <tr><td><img class="mi" src="img/p_trau.png?v=20261118033259" alt=""><b>Cường Thể</b></td><td>Quái +30% máu</td><td class="dim">+12%</td><td><img class="mi" src="img/m_dong_reu.png?v=20261118033259" alt="">3 Quặng Đồng Rêu, <img class="mi" src="img/m_thach_suong.png?v=20261118033259" alt="">2 Thạch Anh Sương, <img class="mi" src="img/m_dareu.png?v=20261118033259" alt="">4 Đá Rêu Phong</td></tr>
+    <tr><td><img class="mi" src="img/p_hung.png?v=20261118033259" alt=""><b>Sát Ý</b></td><td>Quái +20% sát thương</td><td class="dim">+12%</td><td><img class="mi" src="img/m_nhua_phong.png?v=20261118033259" alt="">3 Nhựa Phong Đỏ, <img class="mi" src="img/m_da_lua.png?v=20261118033259" alt="">2 Đá Lửa Phế Thành, <img class="mi" src="img/m_cophong.png?v=20261118033259" alt="">4 Cỏ Phong Diệp</td></tr>
+    <tr><td><img class="mi" src="img/p_nhanh.png?v=20261118033259" alt=""><b>Tật Phong</b></td><td>Quái nhanh hơn 25%</td><td class="dim">+15%</td><td><img class="mi" src="img/m_long_may.png?v=20261118033259" alt="">3 Lông Vũ Mây, <img class="mi" src="img/m_hat_nguyet.png?v=20261118033259" alt="">2 Hạt Nguyệt Bạch, <img class="mi" src="img/m_sen_dam.png?v=20261118033259" alt="">2 Lá Sen Đầm, <img class="mi" src="img/m_nang_trua.png?v=20261118033259" alt="">1 Tinh Hoa Ráng Chiều</td></tr>
+    <tr><td><img class="mi" src="img/p_no.png?v=20261118033259" alt=""><b>Bạo Liệt</b></td><td>Quái chết phát nổ sau 1 giây</td><td class="dim">+18%</td><td><img class="mi" src="img/m_set_phusa.png?v=20261118033259" alt="">3 Đất Sét Phù Sa, <img class="mi" src="img/m_bui_sao.png?v=20261118033259" alt="">3 Bụi Sao Trời, <img class="mi" src="img/m_nam_la.png?v=20261118033259" alt="">2 Nấm Lá Khô, <img class="mi" src="img/m_hoang_hon.png?v=20261118033259" alt="">1 Hoa Hoàng Hôn</td></tr>
+    <tr><td><img class="mi" src="img/p_set.png?v=20261118033259" alt=""><b>Thiên Lôi</b></td><td>Sét truy đuổi người chơi</td><td class="dim">+18%</td><td><img class="mi" src="img/m_bui_sao.png?v=20261118033259" alt="">2 Bụi Sao Trời, <img class="mi" src="img/m_tuyet_lien.png?v=20261118033259" alt="">3 Tuyết Liên, <img class="mi" src="img/m_mam_duoc.png?v=20261118033259" alt="">2 Mầm Đước Thơm, <img class="mi" src="img/m_suong_mai.png?v=20261118033259" alt="">1 Sương Đêm Ngọc</td></tr>
+    <tr><td><img class="mi" src="img/p_tu.png?v=20261118033259" alt=""><b>Tử Ước</b></td><td>Cả đội bớt 1 mạng</td><td class="dim">+25%</td><td><img class="mi" src="img/m_da_quang.png?v=20261118033259" alt="">1 Quả Dạ Quang, <img class="mi" src="img/m_dom_dom.png?v=20261118033259" alt="">1 Đom Đóm Linh, <img class="mi" src="img/m_linhchi.png?v=20261118033259" alt="">1 Linh Chi, <img class="mi" src="img/m_huyenthach.png?v=20261118033259" alt="">4 Huyền Vũ Thạch</td></tr>
   </table></div>
   <ul>
     <li>Đội trưởng gắn phù ở menu cổng; phù bị trừ khi mở cổng, áp cho cả đội.</li>
@@ -409,6 +428,18 @@ footer{max-width:1060px;margin:0 auto;padding:18px 0 26px;border-top:1px solid v
   <p class="lead">Nạp qua web nhận SHP, tích Mốc Nạp tháng và tính điểm Top Nạp mùa.</p>
   <h2>Mốc Nạp tháng</h2>
   <p>Tổng nạp trong tháng đạt mốc nào nhận quà mốc đó (500K → 5M), lịch làm mới đầu tháng.</p>
+  <h2>Gói Trưởng Thành (<kbd>/gift</kbd>)</h2>
+  <p>Mỗi <b>nhân vật</b> có 11 gói riêng, mở theo cấp của chính nhân vật đó, mua bằng SHP, mỗi gói 1 lần. Gói sau nhiều quà hơn.</p>
+  <div class="tbl"><table>
+    <tr><th>Mốc</th><th>Giá</th><th>Quà chính</th></tr>
+    <tr><td>Lv 20 / 40 / 60 / 80 / 100</td><td class="dim">300 → 529 P</td><td>10–20 vé Premium, 150k–350k vàng, Khối Đỏ, Tinh Hoa Trùm</td></tr>
+    <tr><td>Lv 125</td><td class="dim">599 P</td><td>24 vé, 1 triệu vàng, 40 Khối Đỏ + 5 Khối Đen, Bùa EXP x1.5 3 ngày</td></tr>
+    <tr><td>Lv 150 / 175 / 200 / 225</td><td class="dim">699 → 999 P</td><td>28–41 vé, 1.5–5 triệu vàng, Khối Đỏ / Đen, Bùa EXP, Lõi Sao (Lv 175, 225)</td></tr>
+    <tr><td>Lv 250</td><td class="dim">1199 P</td><td>50 vé, 8 triệu vàng, 120 Khối Đỏ + 30 Khối Đen</td></tr>
+  </table></div>
+  <p class="dim">Gói Lv 150 trở lên chỉ nhân vật SS / SSS đã Chuyển Chức mới đạt tới.</p>
+  <h2>Bùa Hộ Tinh</h2>
+  <p>Giữ đồ <b>không vỡ</b> khi đập Thiên Tinh +15 / +16 / +17. <b>Chỉ mua bằng SHP</b> — bấm nút bùa trong Lò Thiên Tinh. Gói: 1 bùa 60P · 5 bùa 280P · 10 bùa 520P · 30 bùa 1450P. Xem <a href="#thientinh">Thiên Tinh</a>.</p>
   <h2>Top Nạp mùa</h2>
   <p>Mỗi mùa từ ngày 9 đến ngày 8 tháng sau. Hết mùa quà tự gửi qua hộp thư. Bảng xếp hạng hiển thị trực tiếp tại cả 4 hub.</p>
   <div class="tbl"><table>
@@ -460,6 +491,7 @@ footer{max-width:1060px;margin:0 auto;padding:18px 0 26px;border-top:1px solid v
   <h2>Đột Phá &amp; Thiên Phú</h2>
   <ul>
     <li><b>Đột Phá</b> mở giới hạn cấp theo mốc <span class="dim">20 → 40 → 50 → 60 → 70 → 80 → 90 → 100 → 110 → 125</span>, tốn vàng + tinh hoa. Mỗi bậc cộng thêm một chỉ số riêng theo nhân vật.</li>
+    <li>Nhân vật <b>SS / SSS</b> đi tiếp tới <b>Lv 250</b> bằng <a href="#chuyenchuc">Chuyển Chức</a>. Nhân vật B / S dừng ở Lv 125.</li>
     <li><b>3 Thiên Phú</b> (Đánh thường / Kỹ năng / Tuyệt kỹ) nâng cấp 1–10; trần thiên phú mở theo bậc Đột Phá.</li>
     <li><b>Sách EXP</b> ăn để lên cấp nhân vật ngay tại Trại — dùng chung với Luyện Khí.</li>
   </ul>
@@ -500,6 +532,17 @@ footer{max-width:1060px;margin:0 auto;padding:18px 0 26px;border-top:1px solid v
     <li>Mỗi vũ khí có 2–3 <b>dòng ngẫu nhiên</b>; mỗi lần đột phá thêm 1 dòng (tối đa 5), đủ 5 dòng thì cường hóa một dòng ngẫu nhiên.</li>
     <li><b>Đá Tẩy Luyện</b>: random lại một dòng tự chọn. Vũ khí 5 sao luyện đủ sẽ đạt danh hiệu <b>Viên Mãn</b>.</li>
   </ul>
+  <h2>Khối Huyền — quay dòng</h2>
+  <ul>
+    <li>Dùng ở <b>Luyện Khí</b> → nút <b>◆ Khối Huyền</b>. Mỗi lần quay đổi <b>mọi dòng</b> của món đồ; dòng mang bậc <b>Hiếm → Sử Thi → Độc Nhất → Huyền Thoại</b>, bậc càng cao giá trị càng lớn.</li>
+    <li><b>Khối Đỏ</b>: nhận kết quả ngay. <b>Khối Đen</b>: tỉ lệ lên bậc cao hơn và được <b>chọn giữ dòng cũ hay lấy dòng mới</b>.</li>
+    <li>Có <b>bảo hiểm</b>: quay đủ số lần mà chưa lên bậc thì lần sau chắc chắn lên. Ở bậc cao có tỉ lệ nhỏ tụt 1 bậc.</li>
+    <li>Mua khối ở <b>Huyền Cơ Lão</b> (vàng) hoặc gói P (SHP). Khối theo tài khoản, dùng cho mọi nhân vật.</li>
+  </ul>
+  <h2>Cách đọc chỉ số trên đồ</h2>
+  <p>Đồ hiển thị kiểu MapleStory: hàng <b>20 sao Thiên Tinh</b> trên cùng, rồi độ hiếm, cấp yêu cầu (đỏ = chưa đủ cấp). Mỗi chỉ số ghi tổng và phần cấu thành:</p>
+  <div class="callout"><b>Máu: +110 (59 <span style="color:#5f5">+0</span> <span style="color:#fd5">+51</span>)</b> — số trắng là <b>chỉ số gốc</b>, xanh lá là phần <b>Luyện Khí</b>, vàng là phần <b>Thiên Tinh</b>.</div>
+  <p>Khi chọn đồ trong kho, chỉ số tăng so với món đang mặc có <b style="color:#5f5">▲</b>, giảm có <b style="color:#f55">▼</b>, kèm dòng <b>Lực Chiến nếu mặc</b>. Icon món đồ đổi màu theo độ hiếm: bạc (Thường), xanh (Hiếm), tím (Sử Thi), vàng (Huyền Thoại), <b>đỏ</b> khi Huyền Thoại đạt Thiên Tinh +15.</p>
   <h2>Trang sức Huyền Thoại</h2>
   <ul>
     <li><b>Nhẫn &amp; Dây chuyền Huyền Thoại</b>: trang sức hiếm theo kho từng nhân vật — bán lại được ở Đấu Giá.</li>
@@ -523,17 +566,17 @@ footer{max-width:1060px;margin:0 auto;padding:18px 0 26px;border-top:1px solid v
   <p>Mỗi món: chỉ số chính lớn + một <b>Đại Nội Tại</b> (bị động có điều kiện, mạnh dần theo bậc M) + 2 dòng phụ có độ đẹp 0–100%.</p>
   <div class="tbl"><table>
     <tr><th>Thần Khí</th><th>Chỉ số chính</th><th>Đại Nội Tại</th></tr>
-    <tr><td><img class="mi" src="img/r_thiennhan.png?v=20261113155706" alt=""><b>Thiên Nhãn</b><br><span class="dim">Chí mạng</span></td><td>20% tỉ lệ chí mạng, 50% ST chí mạng</td><td>Chí mạng 3 lần liền: đòn chí mạng kế tiếp nhân thêm sát thương.</td></tr>
-    <tr><td><img class="mi" src="img/r_thoisa.png?v=20261113155706" alt=""><b>Thời Sa</b><br><span class="dim">Spam kỹ năng</span></td><td>20% giảm hồi chiêu, 15% năng lượng tuyệt kỹ</td><td>Dùng 1 kỹ năng: các kỹ năng khác hồi nhanh thêm vài giây.</td></tr>
-    <tr><td><img class="mi" src="img/r_lientram.png?v=20261113155706" alt=""><b>Liên Trảm Ấn</b><br><span class="dim">Đánh liên tục</span></td><td>25% sát thương</td><td>Mỗi đòn trúng +2% sát thương (có trần), ngừng đánh 2 giây thì mất hết.</td></tr>
-    <tr><td><img class="mi" src="img/r_cuonghuyet.png?v=20261113155706" alt=""><b>Cuồng Huyết Châu</b><br><span class="dim">Liều mạng</span></td><td>35% sát thương, 10% hút máu</td><td>Mất bao nhiêu % máu thì tăng bấy nhiêu % sát thương (có trần).</td></tr>
-    <tr><td><img class="mi" src="img/r_batdiet.png?v=20261113155706" alt=""><b>Bất Diệt Giáp</b><br><span class="dim">Đỡ đòn vẫn đánh đau</span></td><td>60% máu</td><td>Giáp +30%. Mỗi 50 máu tối đa: +1% sát thương (có trần).</td></tr>
-    <tr><td><img class="mi" src="img/r_dietvuong.png?v=20261113155706" alt=""><b>Diệt Vương Hạch</b><br><span class="dim">Săn trùm</span></td><td>40% ST lên trùm</td><td>Bỏ qua 30% giáp trùm. Trùm dưới 30% máu nhận thêm sát thương.</td></tr>
-    <tr><td><img class="mi" src="img/r_hukhong.png?v=20261113155706" alt=""><b>Hư Không Hạch</b><br><span class="dim">Dọn quái diện rộng</span></td><td>30% ST kỹ năng</td><td>Kỹ năng trúng 5 quái trong 1 giây: tăng ST kỹ năng trong 6 giây.</td></tr>
-    <tr><td><img class="mi" src="img/r_thanhtam.png?v=20261113155706" alt=""><b>Thánh Tâm Miện</b><br><span class="dim">Hỗ trợ</span></td><td>20% máu</td><td>Hồi máu nhận +25%. Còn trên 70% máu: cả đội tăng sát thương.</td></tr>
-    <tr><td><img class="mi" src="img/r_songnguyet.png?v=20261113155706" alt=""><b>Song Nguyệt Kính</b><br><span class="dim">Đòn lặp</span></td><td>20% sát thương, 6% tỉ lệ chí mạng</td><td>Một phần đòn đánh được gương lặp lại, đòn lặp gây x1.8 sát thương.</td></tr>
-    <tr><td><img class="mi" src="img/r_phongan.png?v=20261113155706" alt=""><b>Phong Ấn Lục</b><br><span class="dim">Dọn phòng</span></td><td>20% ST kỹ năng, 15% ST lên tinh anh</td><td>Hạ quái tích Ấn, đủ 50 ấn: nổ Cầu Phong Ấn, quái quanh 8 ô mất % máu tối đa (trùm miễn).</td></tr>
-    <tr><td><img class="mi" src="img/r_kimthiem.png?v=20261113155706" alt=""><b>Kim Thiềm</b><br><span class="dim">Làm giàu</span></td><td>30% vàng nhận thêm, 10% sát thương</td><td>Hạ quái có tỉ lệ Kim Thiềm nhả Túi Vàng (gấp 3 vàng con đó).</td></tr>
+    <tr><td><img class="mi" src="img/r_thiennhan.png?v=20261118033259" alt=""><b>Thiên Nhãn</b><br><span class="dim">Chí mạng</span></td><td>20% tỉ lệ chí mạng, 50% ST chí mạng</td><td>Chí mạng 3 lần liền: đòn chí mạng kế tiếp nhân thêm sát thương.</td></tr>
+    <tr><td><img class="mi" src="img/r_thoisa.png?v=20261118033259" alt=""><b>Thời Sa</b><br><span class="dim">Spam kỹ năng</span></td><td>20% giảm hồi chiêu, 15% năng lượng tuyệt kỹ</td><td>Dùng 1 kỹ năng: các kỹ năng khác hồi nhanh thêm vài giây.</td></tr>
+    <tr><td><img class="mi" src="img/r_lientram.png?v=20261118033259" alt=""><b>Liên Trảm Ấn</b><br><span class="dim">Đánh liên tục</span></td><td>25% sát thương</td><td>Mỗi đòn trúng +2% sát thương (có trần), ngừng đánh 2 giây thì mất hết.</td></tr>
+    <tr><td><img class="mi" src="img/r_cuonghuyet.png?v=20261118033259" alt=""><b>Cuồng Huyết Châu</b><br><span class="dim">Liều mạng</span></td><td>35% sát thương, 10% hút máu</td><td>Mất bao nhiêu % máu thì tăng bấy nhiêu % sát thương (có trần).</td></tr>
+    <tr><td><img class="mi" src="img/r_batdiet.png?v=20261118033259" alt=""><b>Bất Diệt Giáp</b><br><span class="dim">Đỡ đòn vẫn đánh đau</span></td><td>60% máu</td><td>Giáp +30%. Mỗi 50 máu tối đa: +1% sát thương (có trần).</td></tr>
+    <tr><td><img class="mi" src="img/r_dietvuong.png?v=20261118033259" alt=""><b>Diệt Vương Hạch</b><br><span class="dim">Săn trùm</span></td><td>40% ST lên trùm</td><td>Bỏ qua 30% giáp trùm. Trùm dưới 30% máu nhận thêm sát thương.</td></tr>
+    <tr><td><img class="mi" src="img/r_hukhong.png?v=20261118033259" alt=""><b>Hư Không Hạch</b><br><span class="dim">Dọn quái diện rộng</span></td><td>30% ST kỹ năng</td><td>Kỹ năng trúng 5 quái trong 1 giây: tăng ST kỹ năng trong 6 giây.</td></tr>
+    <tr><td><img class="mi" src="img/r_thanhtam.png?v=20261118033259" alt=""><b>Thánh Tâm Miện</b><br><span class="dim">Hỗ trợ</span></td><td>20% máu</td><td>Hồi máu nhận +25%. Còn trên 70% máu: cả đội tăng sát thương.</td></tr>
+    <tr><td><img class="mi" src="img/r_songnguyet.png?v=20261118033259" alt=""><b>Song Nguyệt Kính</b><br><span class="dim">Đòn lặp</span></td><td>20% sát thương, 6% tỉ lệ chí mạng</td><td>Một phần đòn đánh được gương lặp lại, đòn lặp gây x1.8 sát thương.</td></tr>
+    <tr><td><img class="mi" src="img/r_phongan.png?v=20261118033259" alt=""><b>Phong Ấn Lục</b><br><span class="dim">Dọn phòng</span></td><td>20% ST kỹ năng, 15% ST lên tinh anh</td><td>Hạ quái tích Ấn, đủ 50 ấn: nổ Cầu Phong Ấn, quái quanh 8 ô mất % máu tối đa (trùm miễn).</td></tr>
+    <tr><td><img class="mi" src="img/r_kimthiem.png?v=20261118033259" alt=""><b>Kim Thiềm</b><br><span class="dim">Làm giàu</span></td><td>30% vàng nhận thêm, 10% sát thương</td><td>Hạ quái có tỉ lệ Kim Thiềm nhả Túi Vàng (gấp 3 vàng con đó).</td></tr>
   </table></div>
   <h2>Ngộ Đạo — Thần Khí lên cấp</h2>
   <ul>
@@ -543,17 +586,17 @@ footer{max-width:1060px;margin:0 auto;padding:18px 0 26px;border-top:1px solid v
   </ul>
   <div class="tbl"><table>
     <tr><th>Thần Khí</th><th>Đạo Lv 10 (chọn 1)</th><th>Đạo Lv 20 (chọn 1)</th></tr>
-    <tr><td><img class="mi" src="img/r_thiennhan.png?v=20261113155706" alt="">Thiên Nhãn</td><td><b>Nhãn Tốc</b>: Chỉ cần 2 chí mạng liền để kích<br><b>Nhãn Hủy</b>: Đòn kích +0.8x nhưng cần 4 chí mạng liền</td><td><b>Song Đồng</b>: +6% tỉ lệ chí mạng<br><b>Tuyệt Nhãn</b>: Đòn kích thêm +0.4x</td></tr>
-    <tr><td><img class="mi" src="img/r_thoisa.png?v=20261113155706" alt="">Thời Sa</td><td><b>Lưu Sa</b>: Mỗi kỹ năng hồi thêm 0.6 giây cho kỹ năng khác<br><b>Nghịch Sa</b>: +10% tích năng lượng tuyệt kỹ</td><td><b>Tĩnh Sa</b>: +5% giảm hồi chiêu<br><b>Vĩnh Sa</b>: Hồi thêm 0.4 giây mỗi lần dùng kỹ năng</td></tr>
-    <tr><td><img class="mi" src="img/r_lientram.png?v=20261113155706" alt="">Liên Trảm Ấn</td><td><b>Bạo Phong</b>: Mỗi đòn +4% nhưng ngừng 1.5 giây là mất<br><b>Trường Lưu</b>: Ngừng 5 giây mới mất tầng</td><td><b>Thiên Trảm</b>: Trần cộng dồn +15%<br><b>Bất Đoạn</b>: Hết giờ chỉ mất một nửa số tầng</td></tr>
-    <tr><td><img class="mi" src="img/r_cuonghuyet.png?v=20261113155706" alt="">Cuồng Huyết Châu</td><td><b>Huyết Tế</b>: Trần sát thương +15%<br><b>Bất Khuất</b>: +5% hút máu</td><td><b>Cuồng Tâm</b>: Máu đã mất tính x1.25<br><b>Huyết Thể</b>: +10% máu</td></tr>
-    <tr><td><img class="mi" src="img/r_batdiet.png?v=20261113155706" alt="">Bất Diệt Giáp</td><td><b>Kim Cương</b>: Giáp +45%<br><b>Phản Chấn</b>: Mỗi 40 máu tối đa +1% sát thương</td><td><b>Bất Hoại</b>: Trần sát thương +15%<br><b>Thái Sơn</b>: +15% máu</td></tr>
-    <tr><td><img class="mi" src="img/r_dietvuong.png?v=20261113155706" alt="">Diệt Vương Hạch</td><td><b>Trảm Thủ</b>: Kích từ khi trùm dưới 45% máu<br><b>Phá Giáp</b>: Bỏ qua 45% giáp trùm</td><td><b>Đồ Vương</b>: +10% ST lên trùm<br><b>Diệt Tận</b>: Trùm máu thấp nhận thêm +15%</td></tr>
-    <tr><td><img class="mi" src="img/r_hukhong.png?v=20261113155706" alt="">Hư Không Hạch</td><td><b>Vạn Tượng</b>: Chỉ cần trúng 3 quái để kích<br><b>Trường Tồn</b>: Hiệu lực 10 giây</td><td><b>Hư Vô</b>: ST kỹ năng khi kích +10%<br><b>Hỗn Độn</b>: +10% ST kỹ năng</td></tr>
-    <tr><td><img class="mi" src="img/r_thanhtam.png?v=20261113155706" alt="">Thánh Tâm Miện</td><td><b>Từ Bi</b>: Hồi máu nhận +40%<br><b>Hộ Pháp</b>: Hào quang chỉ cần trên 50% máu</td><td><b>Thánh Quang</b>: Hào quang cả đội +5%<br><b>Thánh Thể</b>: +10% máu</td></tr>
-    <tr><td><img class="mi" src="img/r_songnguyet.png?v=20261113155706" alt="">Song Nguyệt Kính</td><td><b>Nguyệt Lặp</b>: Tỉ lệ lặp +6%<br><b>Nguyệt Phá</b>: Đòn lặp gây x2.2</td><td><b>Nguyệt Nhãn</b>: +6% tỉ lệ chí mạng<br><b>Nhật Nguyệt</b>: +10% ST kỹ năng</td></tr>
-    <tr><td><img class="mi" src="img/r_phongan.png?v=20261113155706" alt="">Phong Ấn Lục</td><td><b>Ấn Tốc</b>: Chỉ cần 35 ấn<br><b>Ấn Bạo</b>: Cầu nổ thêm +15% máu tối đa</td><td><b>Thiên La</b>: Bán kính nổ 12 ô<br><b>Trấn Tinh</b>: +15% ST lên tinh anh</td></tr>
-    <tr><td><img class="mi" src="img/r_kimthiem.png?v=20261113155706" alt="">Kim Thiềm</td><td><b>Chiêu Tài</b>: Tỉ lệ nhả Túi Vàng +5%<br><b>Hoàng Kim</b>: Túi Vàng gấp 5 lần</td><td><b>Phú Quý</b>: +15% vàng<br><b>Bảo Tàng</b>: +5% tỉ lệ rơi đồ</td></tr>
+    <tr><td><img class="mi" src="img/r_thiennhan.png?v=20261118033259" alt="">Thiên Nhãn</td><td><b>Nhãn Tốc</b>: Chỉ cần 2 chí mạng liền để kích<br><b>Nhãn Hủy</b>: Đòn kích +0.8x nhưng cần 4 chí mạng liền</td><td><b>Song Đồng</b>: +6% tỉ lệ chí mạng<br><b>Tuyệt Nhãn</b>: Đòn kích thêm +0.4x</td></tr>
+    <tr><td><img class="mi" src="img/r_thoisa.png?v=20261118033259" alt="">Thời Sa</td><td><b>Lưu Sa</b>: Mỗi kỹ năng hồi thêm 0.6 giây cho kỹ năng khác<br><b>Nghịch Sa</b>: +10% tích năng lượng tuyệt kỹ</td><td><b>Tĩnh Sa</b>: +5% giảm hồi chiêu<br><b>Vĩnh Sa</b>: Hồi thêm 0.4 giây mỗi lần dùng kỹ năng</td></tr>
+    <tr><td><img class="mi" src="img/r_lientram.png?v=20261118033259" alt="">Liên Trảm Ấn</td><td><b>Bạo Phong</b>: Mỗi đòn +4% nhưng ngừng 1.5 giây là mất<br><b>Trường Lưu</b>: Ngừng 5 giây mới mất tầng</td><td><b>Thiên Trảm</b>: Trần cộng dồn +15%<br><b>Bất Đoạn</b>: Hết giờ chỉ mất một nửa số tầng</td></tr>
+    <tr><td><img class="mi" src="img/r_cuonghuyet.png?v=20261118033259" alt="">Cuồng Huyết Châu</td><td><b>Huyết Tế</b>: Trần sát thương +15%<br><b>Bất Khuất</b>: +5% hút máu</td><td><b>Cuồng Tâm</b>: Máu đã mất tính x1.25<br><b>Huyết Thể</b>: +10% máu</td></tr>
+    <tr><td><img class="mi" src="img/r_batdiet.png?v=20261118033259" alt="">Bất Diệt Giáp</td><td><b>Kim Cương</b>: Giáp +45%<br><b>Phản Chấn</b>: Mỗi 40 máu tối đa +1% sát thương</td><td><b>Bất Hoại</b>: Trần sát thương +15%<br><b>Thái Sơn</b>: +15% máu</td></tr>
+    <tr><td><img class="mi" src="img/r_dietvuong.png?v=20261118033259" alt="">Diệt Vương Hạch</td><td><b>Trảm Thủ</b>: Kích từ khi trùm dưới 45% máu<br><b>Phá Giáp</b>: Bỏ qua 45% giáp trùm</td><td><b>Đồ Vương</b>: +10% ST lên trùm<br><b>Diệt Tận</b>: Trùm máu thấp nhận thêm +15%</td></tr>
+    <tr><td><img class="mi" src="img/r_hukhong.png?v=20261118033259" alt="">Hư Không Hạch</td><td><b>Vạn Tượng</b>: Chỉ cần trúng 3 quái để kích<br><b>Trường Tồn</b>: Hiệu lực 10 giây</td><td><b>Hư Vô</b>: ST kỹ năng khi kích +10%<br><b>Hỗn Độn</b>: +10% ST kỹ năng</td></tr>
+    <tr><td><img class="mi" src="img/r_thanhtam.png?v=20261118033259" alt="">Thánh Tâm Miện</td><td><b>Từ Bi</b>: Hồi máu nhận +40%<br><b>Hộ Pháp</b>: Hào quang chỉ cần trên 50% máu</td><td><b>Thánh Quang</b>: Hào quang cả đội +5%<br><b>Thánh Thể</b>: +10% máu</td></tr>
+    <tr><td><img class="mi" src="img/r_songnguyet.png?v=20261118033259" alt="">Song Nguyệt Kính</td><td><b>Nguyệt Lặp</b>: Tỉ lệ lặp +6%<br><b>Nguyệt Phá</b>: Đòn lặp gây x2.2</td><td><b>Nguyệt Nhãn</b>: +6% tỉ lệ chí mạng<br><b>Nhật Nguyệt</b>: +10% ST kỹ năng</td></tr>
+    <tr><td><img class="mi" src="img/r_phongan.png?v=20261118033259" alt="">Phong Ấn Lục</td><td><b>Ấn Tốc</b>: Chỉ cần 35 ấn<br><b>Ấn Bạo</b>: Cầu nổ thêm +15% máu tối đa</td><td><b>Thiên La</b>: Bán kính nổ 12 ô<br><b>Trấn Tinh</b>: +15% ST lên tinh anh</td></tr>
+    <tr><td><img class="mi" src="img/r_kimthiem.png?v=20261118033259" alt="">Kim Thiềm</td><td><b>Chiêu Tài</b>: Tỉ lệ nhả Túi Vàng +5%<br><b>Hoàng Kim</b>: Túi Vàng gấp 5 lần</td><td><b>Phú Quý</b>: +15% vàng<br><b>Bảo Tàng</b>: +5% tỉ lệ rơi đồ</td></tr>
   </table></div>
   <h2>Khắc Ấn &amp; Hiến Tế</h2>
   <div class="tbl"><table>
@@ -624,24 +667,24 @@ footer{max-width:1060px;margin:0 auto;padding:18px 0 26px;border-top:1px solid v
   <p>Mỗi điểm thu ra <b>nguyên liệu chính</b>; có <b>30%</b> rơi thêm 1 <b>nguyên liệu phụ</b> của đúng hub đó (dùng chế Phù Chú).</p>
   <div class="tbl"><table>
     <tr><th>Hub</th><th>Chính (cây · đá · linh thảo)</th><th>Phụ (rơi thêm)</th></tr>
-    <tr><td><b>Torii Thiên Môn</b></td><td><img class="mi" src="img/m_govansam.png?v=20261113155706" alt="">Gỗ Vân Sam<br><img class="mi" src="img/m_dareu.png?v=20261113155706" alt="">Đá Rêu Phong<br><img class="mi" src="img/m_cophong.png?v=20261113155706" alt="">Cỏ Phong Diệp</td><td><img class="mi" src="img/m_nhua_phong.png?v=20261113155706" alt="">Nhựa Phong Đỏ<br><img class="mi" src="img/m_dong_reu.png?v=20261113155706" alt="">Quặng Đồng Rêu<br><img class="mi" src="img/m_nam_la.png?v=20261113155706" alt="">Nấm Lá Khô</td></tr>
-    <tr><td><b>Băng Nguyệt Sơn Môn</b></td><td><img class="mi" src="img/m_gonguyet.png?v=20261113155706" alt="">Gỗ Nguyệt Bạch<br><img class="mi" src="img/m_nguyetthach.png?v=20261113155706" alt="">Băng Nguyệt Thạch<br><img class="mi" src="img/m_thaotrang.png?v=20261113155706" alt="">Thảo Ánh Trăng</td><td><img class="mi" src="img/m_hat_nguyet.png?v=20261113155706" alt="">Hạt Nguyệt Bạch<br><img class="mi" src="img/m_thach_suong.png?v=20261113155706" alt="">Thạch Anh Sương<br><img class="mi" src="img/m_tuyet_lien.png?v=20261113155706" alt="">Tuyết Liên</td></tr>
-    <tr><td><b>Cổ Mộc Thủy Trấn</b></td><td><img class="mi" src="img/m_goreco.png?v=20261113155706" alt="">Gỗ Rễ Cổ<br><img class="mi" src="img/m_daphusa.png?v=20261113155706" alt="">Đá Phù Sa<br><img class="mi" src="img/m_landam.png?v=20261113155706" alt="">Lan Đầm Lầy</td><td><img class="mi" src="img/m_mam_duoc.png?v=20261113155706" alt="">Mầm Đước Thơm<br><img class="mi" src="img/m_set_phusa.png?v=20261113155706" alt="">Đất Sét Phù Sa<br><img class="mi" src="img/m_sen_dam.png?v=20261113155706" alt="">Lá Sen Đầm</td></tr>
-    <tr><td><b>Thiên Không Phế Thành</b></td><td><img class="mi" src="img/m_phalemay.png?v=20261113155706" alt="">Pha Lê Mây<br><img class="mi" src="img/m_huyenthach.png?v=20261113155706" alt="">Huyền Vũ Thạch<br><img class="mi" src="img/m_cotro.png?v=20261113155706" alt="">Cỏ Tàn Tro</td><td><img class="mi" src="img/m_bui_sao.png?v=20261113155706" alt="">Bụi Sao Trời<br><img class="mi" src="img/m_da_lua.png?v=20261113155706" alt="">Đá Lửa Phế Thành<br><img class="mi" src="img/m_long_may.png?v=20261113155706" alt="">Lông Vũ Mây</td></tr>
+    <tr><td><b>Torii Thiên Môn</b></td><td><img class="mi" src="img/m_govansam.png?v=20261118033259" alt="">Gỗ Vân Sam<br><img class="mi" src="img/m_dareu.png?v=20261118033259" alt="">Đá Rêu Phong<br><img class="mi" src="img/m_cophong.png?v=20261118033259" alt="">Cỏ Phong Diệp</td><td><img class="mi" src="img/m_nhua_phong.png?v=20261118033259" alt="">Nhựa Phong Đỏ<br><img class="mi" src="img/m_dong_reu.png?v=20261118033259" alt="">Quặng Đồng Rêu<br><img class="mi" src="img/m_nam_la.png?v=20261118033259" alt="">Nấm Lá Khô</td></tr>
+    <tr><td><b>Băng Nguyệt Sơn Môn</b></td><td><img class="mi" src="img/m_gonguyet.png?v=20261118033259" alt="">Gỗ Nguyệt Bạch<br><img class="mi" src="img/m_nguyetthach.png?v=20261118033259" alt="">Băng Nguyệt Thạch<br><img class="mi" src="img/m_thaotrang.png?v=20261118033259" alt="">Thảo Ánh Trăng</td><td><img class="mi" src="img/m_hat_nguyet.png?v=20261118033259" alt="">Hạt Nguyệt Bạch<br><img class="mi" src="img/m_thach_suong.png?v=20261118033259" alt="">Thạch Anh Sương<br><img class="mi" src="img/m_tuyet_lien.png?v=20261118033259" alt="">Tuyết Liên</td></tr>
+    <tr><td><b>Cổ Mộc Thủy Trấn</b></td><td><img class="mi" src="img/m_goreco.png?v=20261118033259" alt="">Gỗ Rễ Cổ<br><img class="mi" src="img/m_daphusa.png?v=20261118033259" alt="">Đá Phù Sa<br><img class="mi" src="img/m_landam.png?v=20261118033259" alt="">Lan Đầm Lầy</td><td><img class="mi" src="img/m_mam_duoc.png?v=20261118033259" alt="">Mầm Đước Thơm<br><img class="mi" src="img/m_set_phusa.png?v=20261118033259" alt="">Đất Sét Phù Sa<br><img class="mi" src="img/m_sen_dam.png?v=20261118033259" alt="">Lá Sen Đầm</td></tr>
+    <tr><td><b>Thiên Không Phế Thành</b></td><td><img class="mi" src="img/m_phalemay.png?v=20261118033259" alt="">Pha Lê Mây<br><img class="mi" src="img/m_huyenthach.png?v=20261118033259" alt="">Huyền Vũ Thạch<br><img class="mi" src="img/m_cotro.png?v=20261118033259" alt="">Cỏ Tàn Tro</td><td><img class="mi" src="img/m_bui_sao.png?v=20261118033259" alt="">Bụi Sao Trời<br><img class="mi" src="img/m_da_lua.png?v=20261118033259" alt="">Đá Lửa Phế Thành<br><img class="mi" src="img/m_long_may.png?v=20261118033259" alt="">Lông Vũ Mây</td></tr>
   </table></div>
   <ul>
-    <li><b>Hiếm</b> (6%, mọi hub): <img class="mi" src="img/m_linhmoc.png?v=20261113155706" alt="">Linh Mộc Tâm, <img class="mi" src="img/m_linhthach.png?v=20261113155706" alt="">Linh Thạch, <img class="mi" src="img/m_linhchi.png?v=20261113155706" alt="">Linh Chi.</li>
-    <li><b>Từ cá</b>: <img class="mi" src="img/m_catuoi.png?v=20261113155706" alt="">Thịt Cá Tươi, <img class="mi" src="img/m_ngocngu.png?v=20261113155706" alt="">Ngọc Ngư Lân — câu cá rồi nhờ Lão Ngư làm.</li>
+    <li><b>Hiếm</b> (6%, mọi hub): <img class="mi" src="img/m_linhmoc.png?v=20261118033259" alt="">Linh Mộc Tâm, <img class="mi" src="img/m_linhthach.png?v=20261118033259" alt="">Linh Thạch, <img class="mi" src="img/m_linhchi.png?v=20261118033259" alt="">Linh Chi.</li>
+    <li><b>Từ cá</b>: <img class="mi" src="img/m_catuoi.png?v=20261118033259" alt="">Thịt Cá Tươi, <img class="mi" src="img/m_ngocngu.png?v=20261118033259" alt="">Ngọc Ngư Lân — câu cá rồi nhờ Lão Ngư làm.</li>
   </ul>
   <h2>Nguyên liệu theo giờ</h2>
   <p>Chỉ rơi trong đúng khung giờ (giờ Việt Nam), <b>15%</b> mỗi lần thu ở bất kỳ hub nào. Phù cao cấp cần những nguyên liệu này.</p>
   <div class="tbl"><table>
     <tr><th>Giờ</th><th>Nguyên liệu</th></tr>
-    <tr><td>17h – 18h</td><td><img class="mi" src="img/m_hoang_hon.png?v=20261113155706" alt="">Hoa Hoàng Hôn</td></tr>
-    <tr><td>18h – 19h</td><td><img class="mi" src="img/m_nang_trua.png?v=20261113155706" alt="">Tinh Hoa Ráng Chiều</td></tr>
-    <tr><td>19h – 20h</td><td><img class="mi" src="img/m_suong_mai.png?v=20261113155706" alt="">Sương Đêm Ngọc</td></tr>
-    <tr><td>20h – 21h</td><td><img class="mi" src="img/m_dom_dom.png?v=20261113155706" alt="">Đom Đóm Linh</td></tr>
-    <tr><td>21h – 23h</td><td><img class="mi" src="img/m_da_quang.png?v=20261113155706" alt="">Quả Dạ Quang</td></tr>
+    <tr><td>17h – 18h</td><td><img class="mi" src="img/m_hoang_hon.png?v=20261118033259" alt="">Hoa Hoàng Hôn</td></tr>
+    <tr><td>18h – 19h</td><td><img class="mi" src="img/m_nang_trua.png?v=20261118033259" alt="">Tinh Hoa Ráng Chiều</td></tr>
+    <tr><td>19h – 20h</td><td><img class="mi" src="img/m_suong_mai.png?v=20261118033259" alt="">Sương Đêm Ngọc</td></tr>
+    <tr><td>20h – 21h</td><td><img class="mi" src="img/m_dom_dom.png?v=20261118033259" alt="">Đom Đóm Linh</td></tr>
+    <tr><td>21h – 23h</td><td><img class="mi" src="img/m_da_quang.png?v=20261118033259" alt="">Quả Dạ Quang</td></tr>
   </table></div>
   <h2>Sổ Thảo Mộc</h2>
   <ul>
@@ -724,7 +767,10 @@ footer{max-width:1060px;margin:0 auto;padding:18px 0 26px;border-top:1px solid v
   <div class="tbl"><table>
     <tr><th>Lệnh</th><th>Công dụng</th></tr>
     <tr><td><kbd>/cos</kbd></td><td>Tủ đồ trang phục và thú cưng</td></tr>
-    <tr><td><kbd>/trangbi</kbd></td><td>Trang bị của nhân vật</td></tr>
+    <tr><td><kbd>/trangbi</kbd></td><td>Trang bị của nhân vật (nút <b>Trang Sức</b> mở 9 ô sau Lv 125)</td></tr>
+    <tr><td><kbd>/thientinh</kbd></td><td>Lò Thiên Tinh — đập đồ +1 → +20 (ở Trại)</td></tr>
+    <tr><td><kbd>/chuyenchuc</kbd></td><td>Chuyển Chức, chọn Ấn Nghề cho kỹ năng (ở Trại)</td></tr>
+    <tr><td><kbd>/gift</kbd></td><td>Gói Trưởng Thành theo cấp nhân vật</td></tr>
     <tr><td><kbd>/pvp</kbd></td><td>Đấu Trường Nguyệt Đài — solo 1v1 bằng 3 nhân vật cân bằng riêng</td></tr>
     <tr><td><kbd>/nuoithu</kbd></td><td>Nuôi thú cưng lấy thiên phú</td></tr>
     <tr><td><kbd>/nuoithu tui</kbd></td><td>Túi nguyên liệu</td></tr>
@@ -737,7 +783,115 @@ footer{max-width:1060px;margin:0 auto;padding:18px 0 26px;border-top:1px solid v
     <tr><td><kbd>/baltop</kbd></td><td>Bảng xếp hạng vàng</td></tr>
     <tr><td><kbd>/store</kbd></td><td>Nạp SHP</td></tr>
   </table></div>
-  <div class="pn"><a href="#nap"><span class="dir">Trước</span>← Nạp &amp; Top Nạp</a><span></span></div>
+  <div class="pn"><a href="#nap"><span class="dir">Trước</span>← Nạp &amp; Top Nạp</a><a href="#chuyenchuc"><span class="dir">Tiếp theo</span>Chuyển Chức →</a></div>
+</article>
+
+<article class="page" id="chuyenchuc">
+  <div class="crumb">Wiki / Sau Lv 125</div>
+  <h1>Chuyển Chức &amp; Lv 250</h1>
+  <p class="lead">Nhân vật hạng <b>SS / SSS</b> vượt giới hạn Lv 125 bằng 3 lần Chuyển Chức, mỗi lần mở thêm cấp và làm kỹ năng mạnh lên. Nhân vật B / S dừng ở Lv 125.</p>
+  <h2>Ba lần Chuyển Chức</h2>
+  <div class="tbl"><table>
+    <tr><th>Lần</th><th>Khi đạt</th><th>Mở tới</th><th>Vàng</th><th>Tinh Hoa Trùm</th><th>Lõi Sao</th></tr>
+    <tr><td><b>I · Giác Tỉnh</b></td><td>Lv 125</td><td>Lv 175</td><td>4 triệu</td><td>10</td><td>—</td></tr>
+    <tr><td><b>II · Siêu Việt</b></td><td>Lv 175</td><td>Lv 225</td><td>8 triệu</td><td>20</td><td>3</td></tr>
+    <tr><td><b>III · Thần Hóa</b></td><td>Lv 225</td><td>Lv 250</td><td>15 triệu</td><td>30</td><td>8</td></tr>
+  </table></div>
+  <p>Mở <kbd>/chuyenchuc</kbd> ở Trại. <b>Lõi Sao</b> rơi từ trùm <a href="#cong">Viêm Trảo</a> (1 / 2 / 3 theo độ khó). Mỗi lần còn phải <b>thắng thử thách Tâm Ma</b>.</p>
+  <h2>Thử thách Tâm Ma</h2>
+  <p>Đánh <b>một mình</b> với <b>bản sao của chính bạn</b> — cùng da, giáp, vũ khí. Máu của nó tự đo theo sát thương thật của bạn, trận kéo dài khoảng 75 / 95 / 115 giây (lần I / II / III).</p>
+  <ul>
+    <li><b>Ảnh Trảm</b> — lướt chém theo đường đỏ báo trước. <b>Tâm Luân</b> — vòng nổ quanh thân.</li>
+    <li><b>Vòng Kiếm</b> — quạt kiếm màu nhân vật. <b>Phân Thân</b> (từ 70%) — 2 bản sao bắn quạt.</li>
+    <li><b>Thế Gương</b> (lần II+) — nó đứng yên lóe trắng 2 giây: <b>ngừng đánh</b>, đánh vào là bị phản đòn.</li>
+    <li><b>Tâm Ma Thức Tỉnh</b> (40%) — cả đài nổ, chỉ 2 vòng xanh là an toàn.</li>
+  </ul>
+  <p>Lần đầu vượt Tâm Ma ở mỗi bậc nhận thêm <b>10 Mảnh Trang Sức</b>.</p>
+  <h2>Kỹ năng &amp; Ấn Nghề</h2>
+  <p>Mỗi lần Chuyển Chức, kỹ năng lên <b>bậc 6 / 7 / 8</b> (+25% mỗi bậc) và mở <b>Ấn Nghề</b> — chọn hướng cho <b>từng kỹ năng</b>:</p>
+  <div class="tbl"><table>
+    <tr><th>Ấn Nghề</th><th>I · Giác Tỉnh</th><th>II · Siêu Việt</th><th>III · Thần Hóa</th></tr>
+    <tr><td><b>◎ Diện Rộng</b><br><span class="dim">sát thương chính −15%</span></td><td>Vùng kỹ năng rộng hơn, mỗi đòn lan 30% sang quái quanh đó</td><td>Lan 40% + <b>Dư Chấn</b>: 20% nổ chậm thêm 50% sau 1 giây</td><td>Lan 50%, vùng rộng nhất</td></tr>
+    <tr><td><b>◆ Tập Trung</b></td><td>Sát thương kỹ năng +40%</td><td>+25% thêm lên trùm dưới 30% máu</td><td>Mỗi đòn thứ 5 lên cùng mục tiêu = <b>Tuyệt Sát x2</b></td></tr>
+  </table></div>
+  <p>Đổi Ấn Nghề tốn 200.000 vàng. Sau Thần Hóa, mỗi lần dùng tuyệt kỹ còn kích <b>Thần Hóa Ấn</b>: 3 nhịp nổ quanh người.</p>
+  <div class="callout">Nhận xét nhanh: <b>Diện Rộng</b> dọn quái nhanh (Liệt Giới, cổng đông quái); <b>Tập Trung</b> đánh trùm mạnh hơn.</div>
+  <h2>Lên cấp sau 125</h2>
+  <ul>
+    <li>EXP cần cho mỗi cấp sau 125 tăng dần — đi lên Lv 250 là chặng đường dài.</li>
+    <li><b>Linh Căn</b> chỉ tính tới 125 điểm; lên cấp sau đó không cộng thêm điểm.</li>
+    <li>Quái ở Đền thử thách, Liệt Giới, Cự Thần lớn dần theo cấp đội tới Lv 250.</li>
+  </ul>
+  <div class="pn"><a href="#lenh"><span class="dir">Trước</span>← Lệnh</a><a href="#thientinh"><span class="dir">Tiếp theo</span>Thiên Tinh →</a></div>
+</article>
+
+<article class="page" id="thientinh">
+  <div class="crumb">Wiki / Sau Lv 125</div>
+  <h1>Thiên Tinh — đập đồ</h1>
+  <p class="lead">Đập sao cho món đồ đang mặc từ <b>+0 tới +20</b>, mỗi sao cộng thêm chỉ số. Mở <kbd>/thientinh</kbd> hoặc chọn món trong Trang Bị (chỉ ở Trại).</p>
+  <h2>Luật đập</h2>
+  <ul>
+    <li>Tỉ lệ thành công giảm dần: +0 khoảng 95% → +19 khoảng 25%.</li>
+    <li>Từ <b>+11</b>: đập hỏng <b>tụt 1 sao</b>. Riêng <b>+15</b> là mốc an toàn — hỏng thì giữ nguyên.</li>
+    <li>Từ <b>+15</b>: có tỉ lệ nhỏ <b>vỡ</b> (1% → 3%), món đồ về <b>+12</b>.</li>
+    <li><b>Cơ Hội Vàng</b>: tụt 2 lần liên tiếp thì lần sau <b>chắc chắn thành công</b>.</li>
+    <li><b>Bắt Sao</b>: trước mỗi lần đập, bấm chuột trái khi sao chạy vào vùng vàng: trúng <b>+5%</b>, chính giữa <b>+10%</b> tỉ lệ (tính trên tỉ lệ gốc).</li>
+  </ul>
+  <h2>Giá</h2>
+  <p>Giá tăng mạnh từ <b>+10</b>, đồ cấp cao đắt hơn đồ cấp thấp, trang sức Lv 125–250 đắt hơn nữa. Tham khảo cho một món Lv 100 (đã tính cả thất bại):</p>
+  <div class="tbl"><table>
+    <tr><th>Mục tiêu</th><th>Vàng trung bình</th></tr>
+    <tr><td>+10</td><td class="dim">~0.3 triệu</td></tr>
+    <tr><td>+15</td><td class="dim">~9 triệu</td></tr>
+    <tr><td>+17</td><td class="dim">~13 triệu</td></tr>
+    <tr><td>+20</td><td class="dim">~90 triệu</td></tr>
+  </table></div>
+  <h2>Bùa Hộ Tinh</h2>
+  <p>Bật bùa khi đập <b>+15 / +16 / +17</b>: món đồ <b>không thể vỡ</b>, mỗi lần đập dùng 1 bùa. Bùa <b>chỉ mua bằng SHP</b> (nút bùa trong Lò Thiên Tinh): 1 bùa 60P · 5 bùa 280P · 10 bùa 520P · 30 bùa 1450P. Lúc Cơ Hội Vàng không tốn bùa.</p>
+  <h2>Mỗi sao cộng gì</h2>
+  <ul>
+    <li><b>Vũ khí</b>: Sát thương. <b>Giáp</b> (mũ, áo, quần, giày): Máu + Giáp. <b>Trang sức</b>: Sát thương + Máu (Khuyên Tai, Đai Lưng, Vai Giáp thiên Máu + Giáp).</li>
+    <li>Sao +16 → +20 cộng nhiều gấp 2.5 lần sao thường. Món cấp cao nhận nhiều hơn món cấp thấp.</li>
+    <li>Mốc <b>+10 / +15 / +20</b> có hoạt cảnh riêng và thông báo cả server.</li>
+  </ul>
+  <div class="pn"><a href="#chuyenchuc"><span class="dir">Trước</span>← Chuyển Chức</a><a href="#trangsuc"><span class="dir">Tiếp theo</span>Trang Sức →</a></div>
+</article>
+
+<article class="page" id="trangsuc">
+  <div class="crumb">Wiki / Sau Lv 125</div>
+  <h1>Trang Sức &amp; Tiềm Năng</h1>
+  <p class="lead">Sau Lv 125 mở thêm 9 ô trang sức. Chỉ số gốc của trang sức <b>thấp</b> — sức mạnh thật nằm ở <b>3 dòng tiềm năng</b> (Khối Huyền) và <b>Thiên Tinh</b>.</p>
+  <h2>9 ô mới</h2>
+  <p>Vào <kbd>/trangbi</kbd> → nút <b>✦ Trang Sức</b>. Ô chưa mở hiện ổ khóa và điều kiện.</p>
+  <div class="tbl"><table>
+    <tr><th>Ô</th><th>Mở khi</th><th>Chỉ số gốc</th></tr>
+    <tr><td>Mặt Nạ</td><td>Lv 125</td><td>Sát thương + ST lên Trùm</td></tr>
+    <tr><td>Khuyên Tai</td><td>Lv 125</td><td>Chí mạng + Máu</td></tr>
+    <tr><td>Ấn Huy</td><td>Chuyển Chức I</td><td>ST Kỹ năng + Năng lượng tuyệt kỹ</td></tr>
+    <tr><td>Nhãn Ấn</td><td>Lv 150</td><td>ST chí mạng + Xuyên giáp</td></tr>
+    <tr><td>Găng Tay</td><td>Lv 150</td><td>ST đánh thường + Tốc đánh</td></tr>
+    <tr><td>Đai Lưng</td><td>Chuyển Chức II</td><td>Máu % + Giáp</td></tr>
+    <tr><td>Vai Giáp</td><td>Lv 200</td><td>Giảm hồi chiêu + Máu</td></tr>
+    <tr><td>Nhẫn III</td><td>Chuyển Chức III</td><td>Như nhẫn thường</td></tr>
+    <tr><td>Phi Phong</td><td>Lv 250</td><td>4 chỉ số (Sát thương, Chí mạng, ST chí mạng, Máu %)</td></tr>
+  </table></div>
+  <p class="dim">Nhân vật B / S (dừng ở Lv 125) vẫn đeo được Mặt Nạ và Khuyên Tai.</p>
+  <h2>Tiềm năng (Khối Huyền)</h2>
+  <ul>
+    <li>Mỗi trang sức có <b>3 dòng tiềm năng</b>, ban đầu bậc <b>Hiếm</b>. Quay bằng Khối Đỏ / Khối Đen để đổi dòng và lên bậc <b>Sử Thi → Độc Nhất → Huyền Thoại</b>.</li>
+    <li><b>Nhẫn I / II và Dây chuyền</b> cũng có tiềm năng từ Lv 125.</li>
+    <li>Tiềm năng chỉ có hiệu lực khi nhân vật <b>từ Lv 125</b>.</li>
+    <li>Mở: bấm món đang đeo trong trang Trang Sức → <b>◆ Khối Huyền</b>.</li>
+  </ul>
+  <h2>Mảnh Trang Sức &amp; Xưởng</h2>
+  <p>Trang sức không rơi từ quái — ghép ở <b>⚒ Xưởng Trang Sức</b> (nút trong trang Trang Sức):</p>
+  <ul>
+    <li>Giá: <b>20 Mảnh + 300.000 vàng</b>, chọn ô muốn ghép, cấp món = cấp hiện tại của bạn.</li>
+    <li>Độ hiếm: Hiếm 45% · Sử Thi 35% · <b>Huyền Thoại 20%</b>.</li>
+    <li>Nguồn Mảnh: <a href="#cong">Viêm Trảo</a> 3 / 5 / 8 · Đền thử thách &amp; Cự Thần (khi Lv 125+) 1 / 2 / 3 · lần đầu vượt Tâm Ma mỗi bậc 10.</li>
+  </ul>
+  <div class="callout">Lộ trình gợi ý: đeo đủ ô đang mở → quay Khối Huyền lên Sử Thi / Độc Nhất cho món tốt → đập Thiên Tinh +10 / +15 → ghép lại món Huyền Thoại khi đủ mảnh.</div>
+  <div class="pn"><a href="#thientinh"><span class="dir">Trước</span>← Thiên Tinh</a><span></span></div>
 </article>
 
 </main>
